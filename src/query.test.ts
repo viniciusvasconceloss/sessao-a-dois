@@ -72,3 +72,14 @@ test('Offer Types restrict which Offers count for the Provider filter', () => {
 test('Offer Types alone show Films with an Offer of that type on any Provider', () => {
   expect(where({ offerTypes: ['rent', 'buy'] })).toEqual([2, 3])
 })
+
+test('search matches the pt-BR or original title, ignoring case and accents', () => {
+  const films = [
+    film(1, { sarateves: 0 }, { title: 'Dias Perfeitos', originalTitle: 'Perfect Days' }),
+    film(2, { sarateves: 1 }, { title: 'O Mundo dos Pequeninos', originalTitle: '借りぐらしのアリエッティ' }),
+    film(3, { sarateves: 2 }, { title: 'Parasita', originalTitle: '기생충' }),
+  ]
+  expect(ids(query(films, { ...all, search: 'perfect' }))).toEqual([1])
+  expect(ids(query(films, { ...all, search: 'PEQUENÍNOS' }))).toEqual([2])
+  expect(ids(query(films, { ...all, search: ' ' }))).toEqual([1, 2, 3])
+})

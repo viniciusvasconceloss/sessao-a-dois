@@ -15,3 +15,4 @@
 ## Comments
 
 - Decided with Vinicius: "Como" alone (no Provider) filters on its own, showing Films with an Offer of a selected type on any Provider. "Onde" logos are ordered by number of Films, most first.
+- Added on request: "Buscar serviço" field filters the "Onde" logos as you type (Enter selects the first); "Buscar filme" in the top row filters the grid by pt-BR or original title (Query `search`, case/accent-insensitive).

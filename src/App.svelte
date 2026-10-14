@@ -2,7 +2,7 @@
   import data from '../data/combined-watchlist.json'
   import { img, OFFER_TYPES, type CombinedWatchlist, type Offer, type OfferType } from './contract'
   import { MEMBERS } from './members'
-  import { query, type Filters, type OwnersFilter, type Sort } from './query'
+  import { matches, query, type Filters, type OwnersFilter, type Sort } from './query'
   import Card from './Card.svelte'
 
   const watchlist = data as CombinedWatchlist
@@ -23,7 +23,9 @@
     return [...byId.values()].sort((a, b) => b.films.size - a.films.size).map(p => p.offer)
   })()
 
-  let filters: Required<Filters> = $state({ owners: 'all', providers: [], offerTypes: [] })
+  let filters: Required<Filters> = $state({ owners: 'all', providers: [], offerTypes: [], search: '' })
+  let providerSearch = $state('')
+  const shownProviders = $derived(PROVIDERS.filter(p => matches(p.provider, providerSearch)))
   const toggle = <T,>(list: T[], item: T) => (list.includes(item) ? list.filter(x => x !== item) : [...list, item])
   let sort: Sort = $state('added')
 
@@ -44,12 +46,16 @@
     </fieldset>
     <fieldset>
       <legend>Onde</legend>
+      <input type="search" placeholder="Buscar serviço" aria-label="Buscar serviço" bind:value={providerSearch}
+        onkeydown={e => e.key === 'Enter' && shownProviders[0] && (filters.providers = toggle(filters.providers, shownProviders[0].providerId))} />
       <div class="prov">
-        {#each PROVIDERS as p (p.providerId)}
+        {#each shownProviders as p (p.providerId)}
           <button title={p.provider} aria-pressed={filters.providers.includes(p.providerId)}
             onclick={() => (filters.providers = toggle(filters.providers, p.providerId))}>
             <img src={img('w92', p.logo)} alt={p.provider} loading="lazy" />
           </button>
+        {:else}
+          <p class="none">Nenhum serviço</p>
         {/each}
       </div>
     </fieldset>
@@ -65,6 +71,7 @@
 
   <main class="wrap">
     <div class="head">
+      <input class="find" type="search" placeholder="Buscar filme" aria-label="Buscar filme" bind:value={filters.search} />
       <p>{films.length} {films.length === 1 ? 'filme' : 'filmes'}</p>
       <label>Ordenar
         <select bind:value={sort}>
@@ -111,6 +118,10 @@
   .prov img { border-radius: 9px; width: 100% }
   .prov button:hover { opacity: 1 }
   .prov button[aria-pressed="true"] { opacity: 1; box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent) }
+  input[type=search] { width: 100%; background: var(--panel); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; font: inherit; font-size: 14px }
+  .who + fieldset input { margin-bottom: 10px }
+  .none { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 13px }
+  .head .find { flex: 1 1 220px; max-width: 360px; margin-right: auto }
   .types { display: flex; flex-wrap: wrap; gap: 6px }
   .types button { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 4px 12px; font: inherit; font-size: 13px; color: var(--muted); cursor: pointer }
   .types button[aria-pressed="true"] { border-color: var(--accent); color: var(--fg); background: color-mix(in srgb, var(--accent) 18%, transparent) }

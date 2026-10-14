@@ -7,7 +7,12 @@ export interface Filters {
   owners: OwnersFilter
   providers?: number[] // TMDB provider ids, OR'ed; [] = any
   offerTypes?: OfferType[] // which Offers count; [] = all
+  search?: string // part of the pt-BR or original title
 }
+
+// Case- and accent-insensitive "contains".
+const fold = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim()
+export const matches = (text: string, search: string) => fold(text).includes(fold(search))
 
 // ponytail: ranks from two Watchlists aren't comparable in time; the smallest rank interleaves them.
 // Swap for real dates if Sync ever gets them.
@@ -33,5 +38,6 @@ export function query(films: Film[], filters: Filters = { owners: 'all' }, sort:
   const key = SORT_KEY[sort]
   return films
     .filter(f => ownedBy(f, filters.owners) && available(f, filters))
+    .filter(f => !filters.search || matches(f.title, filters.search) || matches(f.originalTitle, filters.search))
     .toSorted((a, b) => key(a) - key(b) || addedRank(a) - addedRank(b))
 }
