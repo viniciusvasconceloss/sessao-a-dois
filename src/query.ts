@@ -1,4 +1,4 @@
-import type { Film, OfferType } from './contract'
+import { OFFER_TYPES, type Film, type OfferType } from './contract'
 
 // 'all', 'both', or a Member's Letterboxd username
 export type OwnersFilter = 'all' | 'both' | (string & {})
@@ -15,6 +15,8 @@ export interface Filters {
   language?: string // ISO 639-1; '' = any
   minRating?: number // TMDB, 0 = any
 }
+
+export const NO_FILTERS: Required<Filters> = { owners: 'all', providers: [], offerTypes: [], search: '', genre: '', decade: 0, runtime: '', country: '', language: '', minRating: 0 }
 
 // Runtime ranges in minutes.
 export const RUNTIMES = {
@@ -65,4 +67,34 @@ export function query(films: Film[], filters: Filters = { owners: 'all' }, sort:
     .filter(f => ownedBy(f, filters.owners) && available(f, filters) && describedBy(f, filters))
     .filter(f => !filters.search || matches(f.title, filters.search) || matches(f.originalTitle, filters.search))
     .toSorted((a, b) => key(a) - key(b) || addedRank(a) - addedRank(b))
+}
+
+// Display names for the ids kept in Filters.
+export interface Names {
+  owners: Record<string, string>
+  providers: Record<number, string>
+  countries: Record<string, string>
+  languages: Record<string, string>
+}
+
+// One active filter choice, and the filters without it.
+export interface Chip {
+  label: string
+  without: Required<Filters>
+}
+
+// The search is left out: it's always on screen.
+export function activeFilters(f: Required<Filters>, names: Names): Chip[] {
+  const chips: Chip[] = []
+  const add = (on: unknown, label: string, without: Partial<Filters>) => on && chips.push({ label, without: { ...f, ...without } })
+  add(f.owners !== 'all', names.owners[f.owners], { owners: NO_FILTERS.owners })
+  for (const p of f.providers) add(true, names.providers[p], { providers: f.providers.filter(x => x !== p) })
+  for (const t of f.offerTypes) add(true, OFFER_TYPES[t], { offerTypes: f.offerTypes.filter(x => x !== t) })
+  add(f.genre, f.genre, { genre: NO_FILTERS.genre })
+  add(f.decade, `Anos ${f.decade}`, { decade: NO_FILTERS.decade })
+  add(f.runtime, f.runtime && RUNTIMES[f.runtime].label, { runtime: NO_FILTERS.runtime })
+  add(f.country, names.countries[f.country], { country: NO_FILTERS.country })
+  add(f.language, names.languages[f.language], { language: NO_FILTERS.language })
+  add(f.minRating, `Nota ≥ ${f.minRating.toLocaleString('pt-BR')}`, { minRating: NO_FILTERS.minRating })
+  return chips
 }

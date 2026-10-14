@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import type { Film, Offer } from './contract'
-import { query, type Filters } from './query'
+import { activeFilters, NO_FILTERS as NONE, query, type Filters, type Names } from './query'
 
 const film = (tmdbId: number, owners: Film['owners'], rest: Partial<Film> = {}) => ({ tmdbId, owners, ...rest }) as Film
 
@@ -142,4 +142,33 @@ test('runtime ranges include their limits: 1h40 is short, 2h10 is mid, 2h11 is l
   expect(ids(query(films, { ...all, runtime: 'short' }))).toEqual([1])
   expect(ids(query(films, { ...all, runtime: 'mid' }))).toEqual([1, 2, 3])
   expect(ids(query(films, { ...all, runtime: 'long' }))).toEqual([4])
+})
+
+const names: Names = {
+  owners: { both: 'Os dois', sarateves: 'Sara' },
+  providers: { [NETFLIX]: 'Netflix', [MUBI]: 'MUBI' },
+  countries: { KR: 'Coreia do Sul' },
+  languages: { ko: 'Coreano' },
+}
+
+test('no active filters, no chips; search is not a chip', () => {
+  expect(activeFilters({ ...NONE, search: 'parasita' }, names)).toEqual([])
+})
+
+test('each Owner and Provider choice is a chip that removes only itself', () => {
+  const f = { ...NONE, owners: 'both', providers: [NETFLIX, MUBI] }
+  const chips = activeFilters(f, names)
+  expect(chips.map(c => c.label)).toEqual(['Os dois', 'Netflix', 'MUBI'])
+  expect(chips[0].without).toEqual({ ...f, owners: 'all' })
+  expect(chips[1].without).toEqual({ ...f, providers: [MUBI] })
+})
+
+test('Offer Types and every "O quê" filter and the minimum rating are chips too, in sidebar order', () => {
+  const f: Required<Filters> = { ...NONE, offerTypes: ['rent'], genre: 'Drama', decade: 1990, runtime: 'short', country: 'KR', language: 'ko', minRating: 7.5 }
+  const chips = activeFilters(f, names)
+  expect(chips.map(c => c.label)).toEqual(['Aluguel', 'Drama', 'Anos 1990', 'Até 1h40', 'Coreia do Sul', 'Coreano', 'Nota ≥ 7,5'])
+  expect(chips.map(c => c.without)).toEqual([
+    { ...f, offerTypes: [] }, { ...f, genre: '' }, { ...f, decade: 0 }, { ...f, runtime: '' },
+    { ...f, country: '' }, { ...f, language: '' }, { ...f, minRating: 0 },
+  ])
 })

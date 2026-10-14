@@ -2,7 +2,8 @@
   import data from '../data/combined-watchlist.json'
   import { img, OFFER_TYPES, type CombinedWatchlist, type Offer, type OfferType } from './contract'
   import { MEMBERS } from './members'
-  import { decadeOf, matches, query, RUNTIMES, type Filters, type OwnersFilter, type Sort } from './query'
+  import { activeFilters, decadeOf, matches, NO_FILTERS, query, RUNTIMES, type Filters, type Names, type OwnersFilter, type Sort } from './query'
+  import { tick } from 'svelte'
   import Card from './Card.svelte'
 
   const watchlist = data as CombinedWatchlist
@@ -37,7 +38,6 @@
   // TMDB uses 'cn' for Cantonese.
   const LANGUAGES = uniq(watchlist.films.map(f => f.language)).map(l => [l, capital(lang.of(l === 'cn' ? 'yue' : l) ?? l)] as [string, string]).sort(byLabel)
 
-  const NO_FILTERS: Required<Filters> = { owners: 'all', providers: [], offerTypes: [], search: '', genre: '', decade: 0, runtime: '', country: '', language: '', minRating: 0 }
   let filters: Required<Filters> = $state({ ...NO_FILTERS })
   let providerSearch = $state('')
   const reset = () => {
@@ -48,13 +48,45 @@
   const toggle = <T,>(list: T[], item: T) => (list.includes(item) ? list.filter(x => x !== item) : [...list, item])
   let sort: Sort = $state('added')
 
+  const NAMES: Names = {
+    owners: Object.fromEntries(OWNERS),
+    providers: Object.fromEntries(PROVIDERS.map(p => [p.providerId, p.provider])),
+    countries: Object.fromEntries(COUNTRIES),
+    languages: Object.fromEntries(LANGUAGES),
+  }
+  const chips = $derived(activeFilters(filters, NAMES))
+
+  // Phone / iPad portrait: the sidebar is a bottom sheet, closed on every visit and on rotation.
+  const phoneQuery = matchMedia('(max-width: 900px)')
+  const OPEN_KEY = 'sidebar-open'
+  const stored = () => {
+    try { return localStorage.getItem(OPEN_KEY) !== 'false' } catch { return true }
+  }
+  let phone = $state(phoneQuery.matches)
+  let open = $state(!phoneQuery.matches && stored())
+  phoneQuery.addEventListener('change', e => {
+    phone = e.matches
+    open = !phone && stored()
+  })
+  let aside: HTMLElement, toggleButton: HTMLButtonElement
+  const setOpen = (value: boolean) => {
+    open = value
+    // Focus waits for the DOM to drop inert.
+    if (phone) return tick().then(() => (value ? aside : toggleButton).focus())
+    try { localStorage.setItem(OPEN_KEY, String(value)) } catch {}
+  }
+  const sheetOpen = $derived(phone && open)
+
   const films = $derived(query(watchlist.films, filters, sort))
   const ownersCount = (owners: OwnersFilter) => query(watchlist.films, { ...filters, owners }).length
 </script>
 
-<div class="layout">
-  <aside class="wrap">
-    <h1 class="mark">Sessão a Dois 🍿🍿</h1>
+<svelte:window onkeydown={e => e.key === 'Escape' && sheetOpen && setOpen(false)} />
+
+<div class="layout" class:closed={!open}>
+  <button class="backdrop" aria-label="Fechar filtros" tabindex="-1" onclick={() => setOpen(false)}></button>
+  <aside id="filters" class="wrap" inert={!open} aria-label="Filtros" bind:this={aside} tabindex="-1"
+    role={sheetOpen ? 'dialog' : undefined} aria-modal={sheetOpen || undefined}>
     <fieldset class="who">
       <legend>De quem</legend>
       {#each OWNERS as [value, label] (value)}
@@ -116,8 +148,12 @@
     <button class="reset" onclick={reset}>Limpar filtros</button>
   </aside>
 
-  <main class="wrap">
+  <main class="wrap" inert={sheetOpen}>
     <div class="head">
+      <h1 class="mark">Sessão a Dois 🍿🍿</h1>
+      <button class="toggle" bind:this={toggleButton} aria-expanded={open} aria-controls="filters" onclick={() => setOpen(!open)}>
+        Filtros{chips.length ? ` (${chips.length})` : ''}
+      </button>
       <input class="find" type="search" placeholder="Buscar filme" aria-label="Buscar filme" bind:value={filters.search} />
       <p>{films.length} {films.length === 1 ? 'filme' : 'filmes'}</p>
       <label>Ordenar
@@ -126,6 +162,13 @@
         </select>
       </label>
     </div>
+    {#if !open && chips.length}
+      <ul class="chips" aria-label="Filtros ativos">
+        {#each chips as chip (chip.label)}
+          <li><button aria-label="Remover {chip.label}" onclick={() => (filters = chip.without)}>{chip.label} <span aria-hidden="true">×</span></button></li>
+        {/each}
+      </ul>
+    {/if}
     <div class="grid">
       {#each films as film (film.tmdbId)}
         <Card {film} />
@@ -134,7 +177,7 @@
   </main>
 </div>
 
-<footer class="wrap">
+<footer class="wrap" inert={sheetOpen}>
   <p>
     Dados de filmes do <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a>
     e de onde assistir do <a href="https://www.justwatch.com/br" target="_blank" rel="noopener">JustWatch</a>.
@@ -143,14 +186,26 @@
 </footer>
 
 <style>
-  .layout { display: grid; grid-template-columns: 280px minmax(0, 1fr) }
+  .layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); transition: grid-template-columns .25s ease }
+  .layout.closed { grid-template-columns: 0 minmax(0, 1fr) }
   aside {
     position: sticky; top: 0; height: 100vh; overflow-y: auto;
     border-right: 1px solid var(--line);
-    padding-block: max(32px, env(safe-area-inset-top, 0px)) 48px;
+    padding-block: max(28px, env(safe-area-inset-top, 0px)) 48px;
     display: grid; gap: 30px; align-content: start;
+    overflow-x: hidden; transition: padding .25s, border-width .25s;
   }
-  .mark { font: 700 26px/1.1 var(--display); letter-spacing: -.01em; margin: 0 }
+  /* Fixed-width content so collapsing clips it instead of reflowing it. */
+  aside > * { min-width: 248px }
+  /* Visibility only delayed on the way out, so the opened sidebar can take focus at once. */
+  .closed aside { visibility: hidden; padding-inline: 0; border-right-width: 0; transition: padding .25s, border-width .25s, visibility .25s }
+  .backdrop { display: none }
+  .mark { font: 700 22px/1.1 var(--display); letter-spacing: -.01em; margin: 0; color: var(--fg) }
+  .toggle, .chips button { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 5px 12px; font: inherit; font-size: 14px; color: var(--fg); cursor: pointer }
+  .toggle[aria-expanded="true"], .chips button:hover { border-color: var(--accent) }
+  .chips { list-style: none; margin: 0; padding: 12px 0 0; display: flex; flex-wrap: wrap; gap: 6px }
+  .chips button { font-size: 13px; padding: 3px 10px }
+  .chips span { color: var(--muted) }
   fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 2px }
   legend { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; padding: 0; margin-bottom: 10px }
   .who button {
@@ -168,7 +223,7 @@
   input[type=search] { width: 100%; background: var(--panel); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; font: inherit; font-size: 14px }
   .who + fieldset input { margin-bottom: 10px }
   .none { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 13px }
-  .head .find { flex: 1 1 220px; max-width: 360px; margin-right: auto }
+  .head .find { flex: 1 1 200px; max-width: 360px; margin-right: auto }
   .types { display: flex; flex-wrap: wrap; gap: 6px }
   .types button { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 4px 12px; font: inherit; font-size: 13px; color: var(--muted); cursor: pointer }
   .types button[aria-pressed="true"] { border-color: var(--accent); color: var(--fg); background: color-mix(in srgb, var(--accent) 18%, transparent) }
@@ -192,8 +247,16 @@
   footer { color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px) }
   footer p { max-width: 70ch }
   @media (max-width: 900px) {
-    .layout { grid-template-columns: minmax(0, 1fr) }
-    aside { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--line); padding-bottom: 20px }
+    .layout, .layout.closed { grid-template-columns: minmax(0, 1fr) }
+    aside {
+      position: fixed; inset: auto 0 0; z-index: 2; height: auto; max-height: 85vh;
+      background: var(--bg); border: 1px solid var(--line); border-radius: 16px 16px 0 0;
+      padding-block: 24px max(32px, env(safe-area-inset-bottom, 0px));
+      transition: transform .25s ease;
+    }
+    .closed aside { transform: translateY(100%); transition: transform .25s ease, visibility .25s; padding-inline: max(16px, env(safe-area-inset-left, 0px)) }
+    .backdrop { display: block; position: fixed; inset: 0; z-index: 1; border: 0; background: rgb(0 0 0 / .5) }
+    .closed .backdrop { display: none }
   }
   @media (max-width: 640px) {
     .grid { grid-template-columns: repeat(3, 1fr); gap: 10px 8px; padding-top: 12px }
