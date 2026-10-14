@@ -1,0 +1,578 @@
+<!doctype html><!--wrap-->
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body><!--wrap-->
+<title>Sessão a Dois</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<!--
+  PROTOTYPE, throwaway. Answers: "What should the Combined Watchlist UI look like?"
+  Three structurally different variants on one page, switch with the bottom bar, ←/→, or ?variant=A|B|C (#A|#B|#C also works).
+    A "Foyer"     top bar + provider chip row, dense poster grid, side drawer detail (bottom sheet on phone)
+    B "Programa"  editorial: filter sidebar (sheet on phone), titled posters, full-screen cinematic detail
+    C "Bilheteria" sentence-style filters, master/detail split with a sticky detail pane
+  Data: real TMDB pt-BR metadata + real BR streaming Offers (scraped 2026-10-14). Rent/buy Offers on Apple TV/Google Play are MOCK.
+  Owners and date-added order are made up.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* Shared chrome only; each variant owns its layout + tokens (body.vA / .vB / .vC). Single dark look on purpose (cinema). */
+:root { color-scheme: dark; --bg: #131316; --fg: #ecebe6 }
+* { box-sizing: border-box }
+body { margin: 0; background: var(--bg); color: var(--fg); -webkit-font-smoothing: antialiased; min-height: 100vh }
+button, select, input { font: inherit; color: inherit }
+button { cursor: pointer }
+img { max-width: 100%; display: block }
+a { color: inherit }
+:focus-visible { outline: 2px solid var(--accent, #fff); outline-offset: 2px }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+dialog { color: var(--fg); padding: 0; border: 0 }
+dialog::backdrop { background: rgba(5, 5, 8, .72); backdrop-filter: blur(3px) }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important } }
+.empty { grid-column: 1 / -1; padding: 48px 0; color: var(--muted) }
+.empty button { margin-left: 8px; background: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px }
+
+/* prototype switcher: deliberately NOT part of any design */
+#proto { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 50;
+  display: flex; align-items: center; gap: 2px; background: #fff; color: #111; border-radius: 999px; padding: 4px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .6); font: 600 13px/1 system-ui, sans-serif; white-space: nowrap }
+#proto button { border: 0; background: #ececec; color: #111; width: 34px; height: 34px; border-radius: 50%; font-size: 16px }
+#proto span { padding: 0 12px }
+
+/* ============ A — Foyer ============ */
+/* layout: sticky two-row toolbar (Owners segment + sort / Provider chips), dense poster grid, side drawer detail */
+body.vA { --bg: #141417; --panel: #1d1d22; --line: #2c2c33; --fg: #ecebe6; --muted: #9d9ca5; --accent: #cfae6e; --sara: #e3a6a1; --vini: #93b5dc;
+  --display: "Fraunces", Georgia, serif; font: 15px/1.5 "Manrope", system-ui, sans-serif }
+.vA .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line) }
+.vA .bar { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding-block: 14px 10px }
+.vA .mark { font: 600 26px/1 var(--display); letter-spacing: -.01em; margin: 0; margin-right: auto; font-variation-settings: "opsz" 144 }
+.vA .seg { display: flex; background: var(--panel); border-radius: 999px; padding: 3px; border: 1px solid var(--line) }
+.vA .seg button { border: 0; background: none; padding: 6px 14px; border-radius: 999px; color: var(--muted); font-weight: 600; font-size: 14px }
+.vA .seg button[aria-pressed="true"] { background: var(--accent); color: #1a1407 }
+.vA .sort { color: var(--muted); font-size: 14px; display: flex; gap: 8px; align-items: center }
+.vA select, .vA .field input { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px }
+.vA .chips { display: flex; gap: 8px; overflow-x: auto; padding-block: 2px 12px; scrollbar-width: none }
+.vA .chip { flex: none; display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: none; border-radius: 999px; padding: 4px 12px 4px 4px; font-size: 13px; color: var(--muted) }
+.vA .chip img { width: 24px; height: 24px; border-radius: 6px }
+.vA .chip[aria-pressed="true"] { border-color: var(--accent); color: var(--fg); background: color-mix(in srgb, var(--accent) 14%, transparent) }
+.vA .chip.more { padding: 4px 14px; color: var(--fg); border-color: var(--muted) }
+.vA .chip.plain { padding: 4px 12px }
+.vA .count { color: var(--muted); font-size: 14px; margin: 18px 0 14px }
+.vA .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px 14px; padding-bottom: 96px }
+.vA .card { position: relative; border: 0; padding: 0; background: var(--panel); border-radius: 6px; aspect-ratio: 2 / 3; overflow: hidden; text-align: left;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06); transition: transform .18s, box-shadow .18s }
+.vA .card > img { width: 100%; height: 100%; object-fit: cover }
+.vA .card:hover { transform: translateY(-3px); box-shadow: 0 0 0 2px var(--accent), 0 14px 30px rgba(0, 0, 0, .5) }
+.vA .card .own { position: absolute; top: 6px; left: 6px }
+.vA .card .offers { position: absolute; left: 0; right: 0; bottom: 0; display: flex; gap: 4px; padding: 26px 6px 6px; background: linear-gradient(transparent, rgba(0, 0, 0, .85)) }
+.vA .card.na > img { filter: grayscale(.85) brightness(.7) }
+.vA .na-badge { font-size: 11px; font-weight: 600; color: var(--muted); background: rgba(0, 0, 0, .7); border-radius: 4px; padding: 2px 6px }
+.vA .tip { position: absolute; inset: auto 0 0; padding: 40px 10px 10px; background: linear-gradient(transparent, rgba(0, 0, 0, .95) 45%); opacity: 0; transition: opacity .15s }
+.vA .tip b { display: block; font: 600 15px/1.2 var(--display) }
+.vA .tip small { color: var(--muted) }
+.vA .card:hover .tip, .vA .card:focus-visible .tip { opacity: 1 }
+.vA .sheet { max-width: 100vw; width: min(460px, 100vw); max-height: 100vh; height: 100vh; margin: 0 0 0 auto; background: var(--panel); border-left: 1px solid var(--line) }
+.vA .sheet-in { padding: 24px max(20px, env(safe-area-inset-right, 0px)) 24px 24px; display: grid; gap: 22px }
+.vA .sheet h2 { font: 600 22px var(--display); margin: 0 }
+.vA .field { display: grid; gap: 8px; font-size: 13px; color: var(--muted) }
+.vA .field .chips { flex-wrap: wrap; padding: 0 }
+.vA .sheet-foot { display: flex; gap: 10px; position: sticky; bottom: 0; background: var(--panel); padding-block: 12px }
+.vA .btn { flex: 1; border: 0; border-radius: 10px; padding: 12px; font-weight: 700; background: var(--accent); color: #1a1407 }
+.vA .btn.ghost { background: none; color: var(--fg); border: 1px solid var(--line); flex: none }
+.vA .drawer { max-width: 100vw; width: min(560px, 100vw); height: 100vh; max-height: 100vh; margin: 0 0 0 auto; background: var(--panel); overflow-y: auto; border-left: 1px solid var(--line) }
+.vA .drawer[open] { animation: aIn .28s cubic-bezier(.2, .8, .2, 1) }
+@keyframes aIn { from { transform: translateX(40px); opacity: 0 } }
+.vA .bd { aspect-ratio: 16 / 9; max-width: 100%; background: center / cover; position: relative }
+.vA .bd::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 40%, var(--panel)) }
+.vA .x { position: absolute; top: calc(12px + env(safe-area-inset-top, 0px)); right: 12px; z-index: 2; width: 38px; height: 38px; border-radius: 50%; border: 0; background: rgba(0, 0, 0, .6); font-size: 20px }
+.vA .dbody { padding: 0 24px 40px; margin-top: -72px; position: relative; display: grid; gap: 20px }
+.vA .dhead { display: flex; gap: 18px; align-items: flex-end }
+.vA .dhead img { width: 110px; border-radius: 6px; box-shadow: 0 12px 30px rgba(0, 0, 0, .6) }
+.vA .dhead h2 { font: 600 30px/1.08 var(--display); margin: 0 0 6px; text-wrap: balance }
+.vA .orig { color: var(--muted); margin: 0; font-style: italic }
+.vA .meta { color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0 }
+.vA .ov { margin: 0; line-height: 1.65; max-width: 62ch }
+.vA h3 { font: 600 13px/1 "Manrope", sans-serif; color: var(--muted); margin: 0 0 10px; letter-spacing: .02em }
+.vA .olist { display: grid; gap: 8px }
+.vA .orow { display: flex; align-items: center; gap: 12px }
+.vA .orow img { width: 36px; height: 36px; border-radius: 8px }
+.vA .orow .tags { margin-left: auto; display: flex; gap: 6px }
+.vA .tag { font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; color: var(--muted) }
+.vA .links { display: flex; gap: 10px; flex-wrap: wrap }
+.vA .links a { text-decoration: none; border: 1px solid var(--line); border-radius: 10px; padding: 10px 16px; font-weight: 600 }
+.vA .links a:hover { border-color: var(--accent) }
+@media (max-width: 640px) {
+  .vA .bar { gap: 12px }
+  .vA .seg { order: 3; width: 100%; justify-content: space-between }
+  .vA .seg button { flex: 1; padding: 7px 4px }
+  .vA .grid { grid-template-columns: repeat(3, 1fr); gap: 10px 8px }
+  .vA .sheet, .vA .drawer { width: 100vw; height: auto; max-height: 92vh; margin: auto 0 0; border-radius: 18px 18px 0 0; border: 0 }
+  .vA .drawer[open] { animation-name: aUp }
+  @keyframes aUp { from { transform: translateY(60px); opacity: 0 } }
+  .vA .x { top: 12px }
+  .vA .dhead img { width: 84px }
+  .vA .dhead h2 { font-size: 24px }
+}
+
+/* ============ B — Programa ============ */
+/* layout: editorial two-column — sticky filter sidebar left, titled poster grid right; full-bleed cinematic detail */
+body.vB { --bg: #17110f; --panel: #211816; --line: #3a2b27; --fg: #f0e6d6; --muted: #a8968a; --accent: #c4566a; --sara: #e9a07f; --vini: #9fb7c9;
+  --display: "Bodoni Moda", "Didot", Georgia, serif; font: 15px/1.55 "Work Sans", system-ui, sans-serif }
+.vB .layout { display: grid; grid-template-columns: 300px minmax(0, 1fr) }
+.vB aside { position: sticky; top: 0; height: 100vh; overflow-y: auto; border-right: 1px solid var(--line); padding: 36px 28px 120px; display: grid; gap: 30px; align-content: start }
+.vB .mark { font: italic 400 34px/1 var(--display); margin: 0 }
+.vB .mark small { display: block; font: 400 13px/1.4 "Work Sans", sans-serif; color: var(--muted); font-style: normal; margin-top: 10px }
+.vB fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 6px }
+.vB legend { font: 600 12px/1 "Work Sans", sans-serif; color: var(--accent); letter-spacing: .06em; padding: 0; margin-bottom: 10px }
+.vB .who button { display: flex; justify-content: space-between; align-items: baseline; width: 100%; border: 0; background: none; padding: 2px 0; font: 400 22px/1.3 var(--display); color: var(--muted); text-align: left }
+.vB .who button small { font: 400 13px "Work Sans", sans-serif; font-variant-numeric: tabular-nums }
+.vB .who button[aria-pressed="true"] { color: var(--fg); font-style: italic }
+.vB .prov { display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 8px }
+.vB .prov button { border: 0; padding: 0; background: none; border-radius: 9px; opacity: .45; transition: opacity .15s }
+.vB .prov button img { border-radius: 9px; width: 100% }
+.vB .prov button[aria-pressed="true"] { opacity: 1; box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent) }
+.vB .prov button:hover { opacity: 1 }
+.vB .types { display: flex; flex-wrap: wrap; gap: 6px }
+.vB .types button, .vB .sortrow button { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 4px 12px; font-size: 13px; color: var(--muted) }
+.vB .types button[aria-pressed="true"], .vB .sortrow button[aria-pressed="true"] { border-color: var(--accent); color: var(--fg); background: color-mix(in srgb, var(--accent) 18%, transparent) }
+.vB select, .vB input[type=range] { width: 100%; accent-color: var(--accent) }
+.vB select { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px }
+.vB .two { display: grid; gap: 6px }
+.vB .reset { justify-self: start; border: 0; background: none; color: var(--muted); text-decoration: underline; padding: 0 }
+.vB main { padding-block: 40px 120px; min-width: 0 }
+.vB .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 32px }
+.vB .head h1 { font: 400 clamp(34px, 5vw, 64px)/1 var(--display); margin: 0; letter-spacing: -.02em }
+.vB .head h1 i { color: var(--muted) }
+.vB .sortrow { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; color: var(--muted); font-size: 13px }
+.vB .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 40px 26px }
+.vB .card { border: 0; background: none; padding: 0; text-align: left; display: grid; gap: 10px; align-content: start }
+.vB .poster { position: relative; aspect-ratio: 2 / 3; overflow: hidden; border-radius: 3px; background: var(--panel) }
+.vB .poster img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.2, .8, .2, 1) }
+.vB .card:hover .poster img { transform: scale(1.04) }
+.vB .card.na .poster img { filter: grayscale(1) brightness(.65) }
+.vB .na-badge { position: absolute; left: 0; right: 0; bottom: 14px; text-align: center; font: italic 400 15px var(--display); color: var(--fg) }
+.vB .card h2 { font: 600 19px/1.15 var(--display); margin: 0; text-wrap: balance }
+.vB .card p { margin: 0; color: var(--muted); font-size: 13px }
+.vB .cardfoot { display: flex; align-items: center; gap: 10px; justify-content: space-between }
+.vB .logos { display: flex; gap: 4px }
+.vB .logos img { width: 22px; height: 22px; border-radius: 5px }
+.vB .who-line { font-size: 12px; color: var(--muted) }
+.vB .who-line b { font-weight: 500 }
+.vB .fab { display: none }
+.vB .full { width: 100vw; height: 100vh; max-width: none; max-height: none; background: var(--bg); overflow-y: auto }
+.vB .full[open] { animation: bIn .5s ease-out }
+@keyframes bIn { from { opacity: 0 } }
+.vB .hero { position: relative; min-height: min(68vh, 720px); background: center 20% / cover; display: flex; align-items: flex-end }
+.vB .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23, 17, 15, .2), rgba(23, 17, 15, .1) 40%, var(--bg)), linear-gradient(90deg, rgba(23, 17, 15, .7), transparent 70%) }
+.vB .hero-in { position: relative; z-index: 1; padding-block: 0 28px; max-width: 1100px }
+.vB .hero h2 { font: 400 clamp(40px, 8vw, 104px)/.95 var(--display); margin: 0; letter-spacing: -.025em; text-wrap: balance }
+.vB .hero .orig { font: italic 400 clamp(18px, 2.4vw, 26px) var(--display); color: var(--muted); margin: 12px 0 0 }
+.vB .x { position: fixed; top: calc(16px + env(safe-area-inset-top, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); z-index: 3; border: 1px solid rgba(255, 255, 255, .3); background: rgba(0, 0, 0, .4); border-radius: 999px; padding: 8px 16px; backdrop-filter: blur(8px) }
+.vB .dgrid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 56px; padding-block: 20px 120px; max-width: 1100px }
+.vB .dgrid .ov { font: 400 19px/1.7 var(--display); margin: 0 0 28px; max-width: 60ch }
+.vB dl { display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; margin: 0; font-size: 14px }
+.vB dt { color: var(--muted) }
+.vB dd { margin: 0 }
+.vB .side { display: grid; gap: 28px; align-content: start }
+.vB .orow { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line) }
+.vB .orow img { width: 34px; height: 34px; border-radius: 8px }
+.vB .orow span:last-child { margin-left: auto; color: var(--muted); font-size: 13px }
+.vB .links { display: flex; gap: 12px; flex-wrap: wrap }
+.vB .links a { text-decoration: none; padding: 12px 20px; border: 1px solid var(--fg); border-radius: 999px; font-weight: 500 }
+.vB .links a:first-child { background: var(--fg); color: var(--bg) }
+@media (max-width: 900px) {
+  .vB .layout { grid-template-columns: minmax(0, 1fr) }
+  .vB aside { position: fixed; z-index: 20; inset: auto 0 0; height: auto; max-height: 86vh; background: var(--panel); border: 0; border-radius: 20px 20px 0 0;
+    box-shadow: 0 -20px 60px rgba(0, 0, 0, .6); transform: translateY(105%); transition: transform .3s cubic-bezier(.2, .8, .2, 1); padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)) }
+  body.vB.sheet-open aside { transform: none }
+  .vB .fab { display: block; position: fixed; z-index: 21; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(64px + env(safe-area-inset-bottom, 0px)); border: 0; border-radius: 999px; padding: 12px 20px; background: var(--accent); color: #fff; font-weight: 600; box-shadow: 0 10px 30px rgba(0, 0, 0, .5) }
+  .vB .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 14px }
+  .vB .card h2 { font-size: 16px }
+  .vB .dgrid { grid-template-columns: minmax(0, 1fr); gap: 32px }
+  .vB .dgrid .ov { font-size: 17px }
+}
+@media (min-width: 560px) and (max-width: 900px) { .vB .grid { grid-template-columns: repeat(3, minmax(0, 1fr)) } }
+
+/* ============ C — Bilheteria ============ */
+/* layout: a sentence is the filter bar; compact poster wall left, sticky detail pane right (full sheet on phone/tablet portrait) */
+body.vC { --bg: #0f1117; --panel: #171a23; --line: #262a37; --fg: #e8e9f0; --muted: #8d92a6; --accent: #b6a5f4; --sara: #f2a6c4; --vini: #8fd3c7;
+  --display: "Instrument Serif", Georgia, serif; font: 14px/1.5 "Geist", system-ui, sans-serif }
+.vC header { padding-block: 26px 22px; border-bottom: 1px solid var(--line) }
+.vC .mark { font: 600 13px/1 "Geist", sans-serif; color: var(--muted); margin: 0 0 14px; display: flex; gap: 10px; align-items: center }
+.vC .mark i { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(90deg, var(--sara) 50%, var(--vini) 50%) }
+.vC .sentence { font: 400 clamp(26px, 3.6vw, 44px)/1.3 var(--display); margin: 0; max-width: 1200px; text-wrap: pretty }
+.vC .sentence select { field-sizing: content; appearance: none; -webkit-appearance: none; border: 0; background: none; font: italic 400 1em var(--display); color: var(--accent);
+  border-bottom: 1.5px dashed color-mix(in srgb, var(--accent) 60%, transparent); padding: 0 2px; max-width: 100%; cursor: pointer }
+.vC .sentence select:hover { border-bottom-style: solid }
+.vC .sentence option { font: 15px "Geist", sans-serif; color: var(--fg); background: var(--panel) }
+.vC .sub { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 16px; color: var(--muted) }
+.vC .pill { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 6px 14px; font-weight: 500 }
+.vC .pill b { color: var(--accent) }
+.vC .split { display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 28px; padding-block: 22px 100px; align-items: start }
+.vC .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 12px }
+.vC .card { position: relative; border: 0; padding: 0; background: var(--panel); aspect-ratio: 2 / 3; border-radius: 4px; overflow: hidden; opacity: .82; transition: opacity .15s }
+.vC .card:hover, .vC .card[aria-current="true"] { opacity: 1 }
+.vC .card[aria-current="true"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent) }
+.vC .card img { width: 100%; height: 100%; object-fit: cover }
+.vC .card.na img { filter: grayscale(1) brightness(.6) }
+.vC .card .na-badge { position: absolute; top: 6px; right: 6px; font-size: 10px; background: rgba(0, 0, 0, .75); border-radius: 3px; padding: 2px 5px; color: var(--muted) }
+.vC .obar { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; display: flex }
+.vC .obar i { flex: 1 }
+.vC .obar .s { background: var(--sara) }
+.vC .obar .v { background: var(--vini) }
+.vC .pane { position: sticky; top: calc(16px + env(safe-area-inset-top, 0px)); max-height: calc(100vh - 32px); overflow-y: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; scrollbar-width: thin }
+.vC .pbd { aspect-ratio: 16 / 9; max-width: 100%; background: center / cover; border-radius: 14px 14px 0 0 }
+.vC .pin { padding: 20px 22px 26px; display: grid; gap: 18px }
+.vC .pin h2 { font: 400 40px/1 var(--display); margin: 0; text-wrap: balance }
+.vC .pin .orig { margin: 6px 0 0; color: var(--muted); font-family: var(--display); font-style: italic; font-size: 19px }
+.vC .whos { display: flex; gap: 6px }
+.vC .who { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; color: #111 }
+.vC .who.s { background: var(--sara) }
+.vC .who.v { background: var(--vini) }
+.vC .pin .ov { margin: 0; color: #c9ccd8; line-height: 1.6 }
+.vC dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0 }
+.vC dt { color: var(--muted); font-size: 12px }
+.vC dd { margin: 0; font-weight: 500; font-variant-numeric: tabular-nums }
+.vC table { width: 100%; border-collapse: collapse }
+.vC td { padding: 8px 0; border-top: 1px solid var(--line) }
+.vC td img { width: 30px; height: 30px; border-radius: 7px }
+.vC td:last-child { text-align: right; color: var(--muted) }
+.vC .links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px }
+.vC .links a { text-align: center; text-decoration: none; padding: 11px; border-radius: 10px; background: var(--accent); color: #15112a; font-weight: 600 }
+.vC .links a + a { background: none; color: var(--fg); border: 1px solid var(--line) }
+.vC .x { display: none }
+.vC .sheet { max-width: calc(100vw - 24px); width: 520px; background: var(--panel); border-radius: 16px; border: 1px solid var(--line) }
+.vC .sheet-in { padding: 24px; display: grid; gap: 16px }
+.vC .sheet h2 { font: 400 30px var(--display); margin: 0 }
+.vC .sheet label { display: grid; gap: 6px; color: var(--muted); font-size: 13px }
+.vC .sheet select, .vC .sheet input { width: 100%; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; accent-color: var(--accent) }
+.vC .sheet .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px }
+.vC .tchips { display: flex; flex-wrap: wrap; gap: 6px }
+.vC .tchips button { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 5px 12px; color: var(--muted) }
+.vC .tchips button[aria-pressed="true"] { border-color: var(--accent); color: var(--fg) }
+.vC .sheet .done { border: 0; border-radius: 10px; padding: 12px; background: var(--accent); color: #15112a; font-weight: 600 }
+@media (max-width: 1000px) {
+  .vC .split { grid-template-columns: minmax(0, 1fr) }
+  .vC .pane { display: none; position: fixed; inset: 0; z-index: 30; max-height: none; border-radius: 0; border: 0; padding-bottom: env(safe-area-inset-bottom, 0px) }
+  body.vC.pane-open .pane { display: block; animation: cUp .25s ease-out }
+  @keyframes cUp { from { transform: translateY(30px); opacity: 0 } }
+  .vC .pbd { border-radius: 0 }
+  .vC .pin { padding-bottom: 96px }
+  .vC .x { display: block; position: fixed; top: calc(12px + env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(0, 0, 0, .6); font-size: 20px; z-index: 31 }
+}
+@media (max-width: 560px) {
+  .vC .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px }
+  .vC .sentence { font-size: 25px }
+  .vC .pin h2 { font-size: 34px }
+}
+/* Owners badge (A) */
+.own { display: inline-flex }
+.own i { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font: 700 11px/1 "Manrope", sans-serif; font-style: normal; color: #141417; box-shadow: 0 0 0 2px rgba(0, 0, 0, .55) }
+.own i + i { margin-left: -6px }
+.own .s { background: var(--sara) }
+.own .v { background: var(--vini) }
+.logo { position: relative; flex: none }
+.logo img { width: 26px; height: 26px; border-radius: 6px }
+.logo b { position: absolute; right: -3px; bottom: -3px; font: 700 8px/1 system-ui, sans-serif; background: var(--fg); color: #111; border-radius: 3px; padding: 2px 3px }
+.plus { align-self: center; font-size: 11px; color: #ddd; margin-left: 2px }
+</style>
+
+<div id="app"></div>
+<div id="proto" role="toolbar" aria-label="Variação do protótipo">
+  <button id="prev" aria-label="Variação anterior">‹</button><span id="plabel"></span><button id="next" aria-label="Próxima variação">›</button>
+</div>
+
+<script>
+const IMG_LOCAL = false // artifact copy flips this to serve images from published files
+const img = (size, path) => IMG_LOCAL ? `img/${size}${path}` : `https://image.tmdb.org/t/p/${size}${path}`
+const DATA = {"logos":{"Netflix":"/rK1KljqmbvO9HQa1PBFLILWah72.png","Prime Video":"/gMZdpavHmxFNnLpMHwVxfqeux2g.png","Claro tv+":"/olzQMHt2SX7iNy8WDMR299hVFcL.png","Telecine":"/jRpdu5KkWx8ZvPCmBY5c4YHhWuK.png","Globoplay":"/9A6Oxd3F7iXm7mds7CxYOBicojs.png","HBO Max":"/skypuy7SXuugIQeYg0IglmzoKaS.png","Apple TV":"/qdEGArH3lKfFnAtYXMkSYk5wxuG.png","Google Play":"/aZRENwYILujqs0RVOZutTh0BVGV.png","MUBI":"/k7iSlvgWzZuO4zU5PcBjhABMuia.png","Disney+":"/5eZ872CghnHFLB1j8grszbrx0dx.png","Paramount+":"/4N4BMd0Mm0kHAmF7RZgL5lW3cwc.png","Diamond Films":"/yt48Eggj90oJZmbUbK3jtuo66Un.png","Universal+":"/j3Q750FwRyIejO5MrNu25Kia57.png","Sony One":"/COoISLyfBkZ9Vgr5NbjmnxacSb.png","Filmelier Plus":"/qsa5pNRHmZReAhr4CFBQoaPh253.png","Lionsgate+":"/1356slxu4QrHOMrEVDKHJXRo5sW.png","Arte":"/g2hqzXdjzX9PUS2iZtteTGonUxJ.png","Mercado Play":"/1jZnP6bS5nNOqwY7GGJuyLhWEYW.png"},"films":[{"tmdbId":496243,"slug":"parasite-2019","title":"Parasita","originalTitle":"기생충","overview":"Toda a família de Ki-taek está desempregada, vivendo num porão sujo e apertado. Uma obra do acaso faz com que o filho adolescente da família comece a dar aulas de inglês à garota de uma família rica. Fascinados com a vida luxuosa destas pessoas, pai, mãe, filho e filha bolam um plano para se infiltrarem também na família glamorosa, um a um. No entanto, os segredos e mentiras necessários à ascensão social custarão caro a todos.","poster":"/bNGW8zYA91VqTZfV3jnKHPEKKvB.jpg","backdrop":"/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg","rating":8.5,"genres":["Comédia","Thriller","Drama"],"runtime":132,"year":2019,"country":"KR","language":"ko","owners":["Sara","Vinicius"],"added":0,"justwatch":"https://www.justwatch.com/br/filme/parasitas","offers":[{"provider":"Netflix","type":"flatrate"},{"provider":"Prime Video","type":"flatrate"},{"provider":"Claro tv+","type":"flatrate"},{"provider":"Telecine","type":"flatrate"},{"provider":"Netflix","type":"ads"},{"provider":"Prime Video","type":"ads"}]},{"tmdbId":129,"slug":"spirited-away","title":"A Viagem de Chihiro","originalTitle":"千と千尋の神隠し","overview":"Chihiro e seus pais estão se mudando para uma cidade diferente. A caminho da nova casa, o pai decide pegar um atalho. Eles se deparam com uma mesa repleta de comida, embora ninguém esteja por perto. Chihiro sente o perigo, mas seus pais começam a comer. Quando anoitece, eles se transformam em porcos. Agora, apenas Chihiro pode salvá-los.","poster":"/hhoKhsyJ3hFaxEm5pMdZRiTu2lJ.jpg","backdrop":"/6oaL4DP75yABrd5EbC4H2zq5ghc.jpg","rating":8.5,"genres":["Animação","Família","Fantasia"],"runtime":125,"year":2001,"country":"JP","language":"ja","owners":["Sara"],"added":1,"justwatch":"https://www.justwatch.com/br/filme/a-viagem-de-chihiro","offers":[{"provider":"Netflix","type":"flatrate"},{"provider":"Netflix","type":"ads"}]},{"tmdbId":598,"slug":"city-of-god","title":"Cidade de Deus","originalTitle":"Cidade de Deus","overview":"Buscapé é um jovem morador da Cidade de Deus que cresce em meio à violência. Com medo de se tornar um bandido, enxerga na fotografia uma oportunidade de ter uma vida digna.","poster":"/gfnXixcGC060QcG6JPxN6AMdVsq.jpg","backdrop":"/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg","rating":8.4,"genres":["Drama","Crime"],"runtime":130,"year":2002,"country":"BR","language":"pt","owners":["Vinicius"],"added":2,"justwatch":"https://www.justwatch.com/br/filme/cidade-de-deus","offers":[{"provider":"Netflix","type":"flatrate"},{"provider":"Globoplay","type":"flatrate"},{"provider":"HBO Max","type":"flatrate"},{"provider":"Netflix","type":"ads"},{"provider":"Apple TV","type":"rent"},{"provider":"Google Play","type":"rent"},{"provider":"Apple TV","type":"buy"},{"provider":"Google Play","type":"buy"}]},{"tmdbId":1000837,"slug":"im-still-here-2024","title":"Ainda Estou Aqui","originalTitle":"Ainda Estou Aqui","overview":"No início da década de 1970, o Brasil enfrenta o endurecimento da ditadura militar. No Rio de Janeiro, a família Paiva – Rubens, Eunice e seus cinco filhos – vive à beira da praia em uma casa de portas abertas para os amigos. Um dia, Rubens Paiva é levado por militares à paisana e desaparece.","poster":"/zNAw7jK8bwCK56rIW676pdgkwhd.jpg","backdrop":"/j9uruwRe9qM8RnP758dF7ISB8Bj.jpg","rating":7.9,"genres":["Drama","História"],"runtime":135,"year":2024,"country":"BR","language":"pt","owners":["Sara","Vinicius"],"added":3,"justwatch":"https://www.justwatch.com/br/filme/ainda-estou-aqui","offers":[{"provider":"Globoplay","type":"flatrate"},{"provider":"Telecine","type":"flatrate"},{"provider":"Apple TV","type":"rent"},{"provider":"Google Play","type":"rent"}]},{"tmdbId":843,"slug":"in-the-mood-for-love","title":"Amor à Flor da Pele","originalTitle":"花樣年華","overview":"Ambientado em Hong Kong no início dos anos 60, dois vizinhos, Sr. Chow e Sra. Chan, criam um vínculo depois de começarem a suspeitar que seus respectivos cônjuges estão tendo um caso juntos.","poster":"/yCKaf65zoySg2iJdsews4Rafl7C.jpg","backdrop":"/ffQFnAUm2Uu4RU0nijpjPRf9TBT.jpg","rating":8.1,"genres":["Drama","Romance"],"runtime":99,"year":2000,"country":"HK","language":"zh","owners":["Sara"],"added":4,"justwatch":"https://www.justwatch.com/br/filme/disponivel-para-amar","offers":[{"provider":"MUBI","type":"flatrate"}]},{"tmdbId":666277,"slug":"past-lives","title":"Vidas Passadas","originalTitle":"Past Lives","overview":"Nora e Hae Sung são amigos de infância profundamente conectados que se separam quando a família de Nora emigra da Coreia do Sul. Duas décadas depois, se reencontram em Nova York numa semana fatídica enquanto confrontam noções de destino, amor e as escolhas que fazem uma vida, neste romance moderno comovente.","poster":"/toSI71gFF11VnLfz2uiNx6jjNUF.jpg","backdrop":"/7HR38hMBl23lf38MAN63y4pKsHz.jpg","rating":7.7,"genres":["Drama","Romance"],"runtime":106,"year":2023,"country":"US","language":"en","owners":["Sara","Vinicius"],"added":5,"justwatch":"https://www.justwatch.com/br/filme/past-lives","offers":[{"provider":"Netflix","type":"flatrate"},{"provider":"Telecine","type":"flatrate"},{"provider":"Netflix","type":"ads"},{"provider":"Apple TV","type":"rent"},{"provider":"Google Play","type":"rent"},{"provider":"Apple TV","type":"buy"},{"provider":"Google Play","type":"buy"}]},{"tmdbId":531428,"slug":"portrait-of-a-lady-on-fire","title":"Retrato de uma Jovem em Chamas","originalTitle":"Portrait de la jeune fille en feu","overview":"França, 1760. Marianne é contratada para pintar o retrato de casamento de Héloïse, uma jovem mulher que acabou de deixar o convento. Por ela ser uma noiva relutante, Marianne chega sob o disfarce de companhia, observando Héloïse de dia e a pintando secretamente à noite. Conforme as duas mulheres se aproximam, a intimidade e a atração crescem, enquanto compartilham os primeiros e últimos momentos de liberdade de Héloïse, antes do casamento iminente. O retrato de Héloïse logo se torna um ato colaborativo e o testamento do amor delas.","poster":"/c3OkDxs7PQuLB12qiwZUDg7ZMO6.jpg","backdrop":"/ivJ5UzT6IzucLVfbZwCCwiJJoBz.jpg","rating":8.1,"genres":["Drama","Romance"],"runtime":122,"year":2019,"country":"FR","language":"fr","owners":["Sara"],"added":6,"justwatch":"https://www.justwatch.com/br/filme/retrato-da-rapariga-em-chamas","offers":[{"provider":"Prime Video","type":"flatrate"},{"provider":"Telecine","type":"flatrate"},{"provider":"Prime Video","type":"ads"}]},{"tmdbId":965150,"slug":"aftersun","title":"Aftersun","originalTitle":"Aftersun","overview":"Em um resort decadente, Sophie, de 11 anos, aproveita o raro tempo com seu pai amoroso e idealista, Calum. Vinte anos depois, as lembranças de Sophie de suas últimas férias se tornam um retrato poderoso e doloroso do relacionamento deles.","poster":"/kXk5veq5oOh6SefMyXq6xtUBevw.jpg","backdrop":"/4jdduww9j5RyzO4ITRcuBFhqNN1.jpg","rating":7.7,"genres":["Drama"],"runtime":102,"year":2022,"country":"GB","language":"en","owners":["Sara"],"added":7,"justwatch":"https://www.justwatch.com/br/filme/aftersun","offers":[{"provider":"MUBI","type":"flatrate"},{"provider":"Apple TV","type":"rent"},{"provider":"Google Play","type":"rent"}]},{"tmdbId":550,"slug":"fight-club","title":"Clube da Luta","originalTitle":"Fight Club","overview":"Um homem deprimido que sofre de insônia conhece um estranho vendedor de sabonetes chamado Tyler Durden. Eles formam um clube clandestino com regras rígidas onde lutam com outros homens cansados de suas vidas mundanas. Mas sua parceria perfeita é comprometida quando Marla chama a atenção de Tyler.","poster":"/mCICnh7QBH0gzYaTQChBDDVIKdm.jpg","backdrop":"/c6OLXfKAk5BKeR6broC8pYiCquX.jpg","rating":8.4,"genres":["Drama","Thriller"],"runtime":139,"year":1999,"country":"US","language":"en","owners":["Vinicius"],"added":8,"justwatch":"https://www.justwatch.com/br/filme/clube-da-luta","offers":[{"provider":"Netflix","type":"flatrate"},{"provider":"Disney+","type":"flatrate"},{"provider":"Paramount+","type":"flatrate"},{"provider":"Claro tv+","type":"flatrate"},{"provider":"Telecine","type":"flatrate"},{"provider":"Netflix","type":"ads"}]},{"tmdbId":157336,"slug":"interstellar","title":"Interestelar","originalTitle":"Interstellar","overview":"As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.","poster":"/tR1XVa5bxgdh2bRw2u0DzrgkO2l.jpg","backdrop":"/8sNiAPPYU14PUepFNeSNGUTiHW.jpg","rating":8.5,"genres":["Aventura","Drama","Ficção científica"],"runtime":169,"year":2014,"country":"US","language":"en","owners":["Vinicius"],"added":9,"justwatch":"https://www.justwatch.com/br/filme/interestelar","offers":[{"provider":"Prime Video","type":"flatrate"},{"provider":"HBO Max","type":"flatrate"},{"provider":"Prime Video","type":"ads"},{"provider":"Apple TV","type":"buy"},{"provider":"Google Play","type":"buy"}]},{"tmdbId":545611,"slug":"everything-everywhere-all-at-once","title":"Tudo em Todo o Lugar ao Mesmo Tempo","originalTitle":"Everything Everywhere All at Once","overview":"Uma imigrante chinesa parte rumo a uma aventura onde, sozinha, precisará salvar o mundo, explorando outros universos e outras vidas que poderia ter vivido. Contudo, as coisas se complicam quando ela fica presa nessa infinidade de possibilidades sem conseguir retornar para casa.","poster":"/2dSZQGwijlXvMSyuGe0FSgrXnv0.jpg","backdrop":"/fIwiFha3WPu5nHkBeMQ4GzEk0Hv.jpg","rating":7.7,"genres":["Ação","Aventura","Ficção científica"],"runtime":139,"year":2022,"country":"US","language":"en","owners":["Sara","Vinicius"],"added":10,"justwatch":"https://www.justwatch.com/br/filme/everything-everywhere-all-at-once","offers":[{"provider":"Prime Video","type":"flatrate"},{"provider":"HBO Max","type":"flatrate"},{"provider":"Claro tv+","type":"flatrate"},{"provider":"Diamond Films","type":"flatrate"},{"provider":"Prime Video","type":"ads"}]},{"tmdbId":872585,"slug":"oppenheimer-2023","title":"Oppenheimer","originalTitle":"Oppenheimer","overview":"A história do físico americano J. Robert Oppenheimer, seu papel no Projeto Manhattan e no desenvolvimento da bomba atômica durante a Segunda Guerra Mundial, e o quanto isso mudaria a história do mundo para sempre.","poster":"/dUPQszWoRSE9FucJTbVp2bwEi9G.jpg","backdrop":"/neeNHeXjMF5fXoCJRsOmkNGC7q.jpg","rating":8.0,"genres":["Drama","História"],"runtime":181,"year":2023,"country":"US","language":"en","owners":["Vinicius"],"added":11,"justwatch":"https://www.justwatch.com/br/filme/oppenheimer","offers":[{"provider":"Claro tv+","type":"flatrate"},{"provider":"Universal+","type":"flatrate"}]},{"tmdbId":693134,"slug":"dune-part-two","title":"Duna: Parte Dois","originalTitle":"Dune: Part Two","overview":"A jornada de Paul Atreides continua. Ele está determinado a buscar vingança contra aqueles que destruíram sua família e seu lar. Com a ajuda de Chani e dos Fremen, ele embarca em uma jornada espiritual, mística e marcial. Se torna Muad'Dib, o líder messiânico dos Fremen, enquanto luta para evitar um futuro sombrio que ele testemunhou em visões. No entanto, suas ações inadvertidamente desencadeiam uma Guerra Santa em seu nome, que se espalha pelo universo conhecido. Enquanto enfrenta escolhas difíceis entre o amor por Chani e o destino de seu povo, Paul precisa usar suas habilidades e conhecimentos para evitar o terrível futuro que previu.","poster":"/VMy4UGsI2u3f4fALGeCqCdsQBb.jpg","backdrop":"/eZ239CUp1d6OryZEBPnO2n87gMG.jpg","rating":8.1,"genres":["Ficção científica","Aventura"],"runtime":166,"year":2024,"country":"US","language":"en","owners":["Vinicius"],"added":12,"justwatch":"https://www.justwatch.com/br/filme/dune-part-two","offers":[{"provider":"HBO Max","type":"flatrate"},{"provider":"Claro tv+","type":"flatrate"},{"provider":"Universal+","type":"flatrate"}]},{"tmdbId":194,"slug":"amelie","title":"O Fabuloso Destino de Amélie Poulain","originalTitle":"Le Fabuleux Destin d'Amélie Poulain","overview":"Após deixar a vida de subúrbio que levava com a família, a inocente Amélie muda-se para o bairro parisiense de Montmartre, onde começa a trabalhar como garçonete. Certo dia encontra uma caixa escondida no banheiro de sua casa e, pensando que pertencesse ao antigo morador, decide procurá-lo ­e é assim que encontra Dominique. Ao ver que ele chora de alegria ao reaver o seu objeto, a moça fica impressionada e adquire uma nova visão do mundo. Então, a partir de pequenos gestos, ela passa a ajudar as pessoas que a rodeiam, vendo nisto um novo sentido para sua existência. Contudo, ainda sente falta de um grande amor.","poster":"/oAYKYALxamhAB1wKUGmOo05Vf92.jpg","backdrop":"/6n53UI4mX9QMfe2S0Pgt8mGebY1.jpg","rating":7.9,"genres":["Comédia","Romance"],"runtime":122,"year":2001,"country":"FR","language":"fr","owners":["Sara"],"added":13,"justwatch":"https://www.justwatch.com/br/filme/o-fabuloso-destino-de-amelie-poulain","offers":[]},{"tmdbId":244786,"slug":"whiplash-2014","title":"Whiplash: Em Busca da Perfeição","originalTitle":"Whiplash","overview":"Andrew sonha em ser o melhor baterista de sua geração. Ele chama a atenção do impiedoso mestre do jazz Terence Fletcher, que ultrapassa os limites e transforma seu sonho em uma obsessão, colocando em risco a saúde física e mental do jovem músico.","poster":"/2msJb27jMeuA101ox4MuTQK4mDa.jpg","backdrop":"/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg","rating":8.4,"genres":["Drama","Música","Thriller"],"runtime":107,"year":2014,"country":"US","language":"en","owners":["Sara","Vinicius"],"added":14,"justwatch":"https://www.justwatch.com/br/filme/whiplash-em-busca-da-perfeicao","offers":[{"provider":"Sony One","type":"flatrate"}]},{"tmdbId":313369,"slug":"la-la-land","title":"La La Land: Cantando Estações","originalTitle":"La La Land","overview":"O pianista Sebastian conhece a atriz Mia, e os dois se apaixonam perdidamente. Em busca de oportunidades para suas carreiras na competitiva Los Angeles, os jovens tentam fazer o relacionamento amoroso dar certo, enquanto perseguem fama e sucesso.","poster":"/AvMietG6xuobpSSdmVnKuTjv4bL.jpg","backdrop":"/nlPCdZlHtRNcF6C9hzUH4ebmV1w.jpg","rating":7.9,"genres":["Comédia","Drama","Romance"],"runtime":128,"year":2016,"country":"US","language":"en","owners":["Sara"],"added":15,"justwatch":"https://www.justwatch.com/br/filme/la-la-land","offers":[{"provider":"Filmelier Plus","type":"flatrate"},{"provider":"Lionsgate+","type":"flatrate"},{"provider":"Apple TV","type":"rent"},{"provider":"Google Play","type":"rent"}]},{"tmdbId":76341,"slug":"mad-max-fury-road","title":"Mad Max: Estrada da Fúria","originalTitle":"Mad Max: Fury Road","overview":"Em um mundo apocalíptico, Max Rockatansky acredita que a melhor forma de sobreviver é não depender de ninguém. Porém, após ser capturado pelo tirano Immortan Joe e seus rebeldes, Max se vê no meio de uma guerra mortal, iniciada pela imperatriz Furiosa que tenta salvar um grupo de garotas. Também tentando fugir, Max aceita ajudar Furiosa. Dessa vez, o tirano Joe está ainda mais implacável pois teve algo insubstituível roubado.","poster":"/tH64gzAHDFg7EFcgfkkZyHdGM5P.jpg","backdrop":"/gqrnQA6Xppdl8vIb2eJc58VC1tW.jpg","rating":7.6,"genres":["Ação","Aventura","Ficção científica"],"runtime":120,"year":2015,"country":"AU","language":"en","owners":["Vinicius"],"added":16,"justwatch":"https://www.justwatch.com/br/filme/mad-max-estrada-da-furia","offers":[{"provider":"Prime Video","type":"flatrate"},{"provider":"HBO Max","type":"flatrate"},{"provider":"Prime Video","type":"ads"}]},{"tmdbId":152601,"slug":"her","title":"Ela","originalTitle":"Her","overview":"Em um futuro próximo, um escritor solitário desenvolve um relacionamento improvável com um sistema operacional projetado para atender todas as suas necessidades.","poster":"/yyDGhBY8RYXyXYADeFq1BDxpLkl.jpg","backdrop":"/1YnZchmaGc8dchgRPDpR1KGrixA.jpg","rating":7.8,"genres":["Romance","Ficção científica","Drama"],"runtime":126,"year":2013,"country":"US","language":"en","owners":["Sara"],"added":17,"justwatch":"https://www.justwatch.com/br/filme/ela","offers":[]},{"tmdbId":419430,"slug":"get-out-2017","title":"Corra!","originalTitle":"Get Out","overview":"Agora que Chris e sua namorada, Rose, chegaram à fase de conhecer os pais no namoro, ela o convida para um fim de semana no interior com Missy e Dean. A princípio, Chris acha que o comportamento excessivamente agradável dos dois como tentativas nervosas de lidar com o relacionamento inter-racial da filha, mas, conforme o fim de semana avança, uma série de descobertas cada vez mais perturbadoras o levam a uma verdade que ele jamais poderia ter imaginado.","poster":"/A0RoSZh8PEYJgDMgM2EV7Ycz3dR.jpg","backdrop":"/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg","rating":7.6,"genres":["Mistério","Thriller","Terror"],"runtime":104,"year":2017,"country":"US","language":"en","owners":["Sara","Vinicius"],"added":18,"justwatch":"https://www.justwatch.com/br/filme/get-out","offers":[{"provider":"Prime Video","type":"flatrate"},{"provider":"Telecine","type":"flatrate"},{"provider":"Prime Video","type":"ads"}]},{"tmdbId":376867,"slug":"moonlight-2016","title":"Moonlight: Sob a Luz do Luar","originalTitle":"Moonlight","overview":"Moonlight narra a vida de um jovem gay afro-americano, desde a infância até a vida adulta e sua luta para encontrar seu lugar no mundo enquanto cresce num bairro violento de Miami. Ao mesmo tempo um retrato essencial da vida contemporânea do afro-americano e uma reflexão intensa, pessoal e poética sobre identidade, família e amizade. A direção de Barry Jenkins traz sua visão única e profundamente comovente sobre o caleidoscópio de momentos, pessoas e forças desconhecidas que determinam nossas vidas e nos fazem ser quem somos.","poster":"/AekOkoT88EhDHikUQXQcKri2q4B.jpg","backdrop":"/jm1oD3eB08LImSwL1LrzF9AJQ5b.jpg","rating":7.4,"genres":["Drama"],"runtime":111,"year":2016,"country":"US","language":"en","owners":["Sara"],"added":19,"justwatch":"https://www.justwatch.com/br/filme/moonlight","offers":[{"provider":"Prime Video","type":"flatrate"},{"provider":"Diamond Films","type":"flatrate"},{"provider":"Prime Video","type":"ads"}]},{"tmdbId":666,"slug":"central-station","title":"Central do Brasil","originalTitle":"Central do Brasil","overview":"Dora escreve cartas para analfabetos na estação Central do Brasil. Uma das clientes de Dora é Ana, que vem escrever uma carta com o seu filho, Josué, um garoto de nove anos, que sonha encontrar o pai que nunca conheceu. Na saída da estação, Ana é atropelada e Josué fica abandonado. Mesmo a contragosto, Dora acaba acolhendo o menino e envolvendo-se com ele. Termina por levar Josué para o interior do Nordeste, à procura do pai. À medida em que vão entrando país adentro, esses dois personagens, tão diferentes, vão se aproximando... Começa então uma viagem fascinate ao coração do Brasil, à procura do pai desaparecido, e uma viagem profundamente emotiva ao coração de cada um dos personagens do filme.","poster":"/qfyWFhUhqeNRU9HmCaBDAxVKRZ9.jpg","backdrop":"/lrLIy9OFRQg4VkhrCyolfNXJEUH.jpg","rating":8.1,"genres":["Drama"],"runtime":110,"year":1998,"country":"BR","language":"pt","owners":["Sara","Vinicius"],"added":20,"justwatch":"https://www.justwatch.com/br/filme/central-do-brasil","offers":[{"provider":"Netflix","type":"flatrate"},{"provider":"Globoplay","type":"flatrate"},{"provider":"Telecine","type":"flatrate"},{"provider":"Netflix","type":"ads"}]},{"tmdbId":670,"slug":"oldboy","title":"Oldboy","originalTitle":"올드보이","overview":"Dae-Su é raptado e mantido em cativeiro por 15 anos num quarto de hotel, sem qualquer contato com o mundo externo. Quando ele é inexplicavelmente solto, descobre que é acusado pelo assassinato da esposa e embarca numa missão obsessiva por vingança.","poster":"/vHHxEpNwnHNJTPFxaSfSF0b2kBH.jpg","backdrop":"/rwf5SUTiEsmfkXAgy15R0UtJUtv.jpg","rating":8.2,"genres":["Thriller","Mistério"],"runtime":120,"year":2003,"country":"KR","language":"ko","owners":["Vinicius"],"added":21,"justwatch":"https://www.justwatch.com/br/filme/oldboy","offers":[{"provider":"MUBI","type":"flatrate"}]},{"tmdbId":8392,"slug":"my-neighbor-totoro","title":"Meu Amigo Totoro","originalTitle":"となりのトトロ","overview":"Duas irmãs se mudam para o campo com o pai para ficarem mais próximas da mãe hospitalizada e descobrem que as árvores ao redor são habitadas por Totoros, espíritos mágicos da floresta. Quando a mais nova foge de casa, a irmã mais velha busca a ajuda dos espíritos para encontrá-la.","poster":"/23KKTxDg6rxZVc66bloQQdPSr29.jpg","backdrop":"/zkThiZAaAie8Lw7RAc5yPTOewBV.jpg","rating":8.1,"genres":["Fantasia","Animação","Família"],"runtime":87,"year":1988,"country":"JP","language":"ja","owners":["Sara","Vinicius"],"added":22,"justwatch":"https://www.justwatch.com/br/filme/o-meu-vizinho-totoro","offers":[{"provider":"Netflix","type":"flatrate"},{"provider":"Netflix","type":"ads"}]},{"tmdbId":346,"slug":"seven-samurai","title":"Os Sete Samurais","originalTitle":"七人の侍","overview":"Um bando de bandidos aterroriza os habitantes de uma pequena cidade, saqueando-os periodicamente sem piedade. Para repelir estes ataques, os aldeões decidem contratar mercenários. Por fim, obtêm os serviços de 7 guerreiros, 7 samurais dispostos a defendê-los em troca apenas de abrigo e comida.","poster":"/2f3Aw6GCzpn1qw56xq78dH0VBgn.jpg","backdrop":"/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg","rating":8.5,"genres":["Ação","Drama"],"runtime":207,"year":1954,"country":"JP","language":"ja","owners":["Vinicius"],"added":23,"justwatch":"https://www.justwatch.com/br/filme/os-sete-samurais","offers":[{"provider":"Arte","type":"flatrate"},{"provider":"Apple TV","type":"rent"},{"provider":"Google Play","type":"rent"}]},{"tmdbId":1022789,"slug":"inside-out-2","title":"Divertida Mente 2","originalTitle":"Inside Out 2","overview":"\"Divertida Mente 2\", da Disney e da Pixar, retorna à mente da adolescente Riley, e o faz no momento em que a sala de comando está passando por uma demolição repentina para dar lugar a algo totalmente inesperado: novas emoções! Alegria, Tristeza, Raiva, Medo e Nojinho não sabem bem como reagir quando Ansiedade aparece, e tudo indica que ela não está sozinha.","poster":"/lHKNS35r4RTa9GO72vdadMLxoiV.jpg","backdrop":"/p5ozvmdgsmbWe0H8Xk7Rc8SCwAB.jpg","rating":7.5,"genres":["Animação","Aventura","Comédia","Família"],"runtime":100,"year":2024,"country":"US","language":"en","owners":["Sara"],"added":24,"justwatch":"https://www.justwatch.com/br/filme/divertida-mente-2","offers":[{"provider":"Disney+","type":"flatrate"},{"provider":"Apple TV","type":"buy"},{"provider":"Google Play","type":"buy"}]},{"tmdbId":37165,"slug":"the-truman-show","title":"O Show de Truman: O Show da Vida","originalTitle":"The Truman Show","overview":"Truman Burbank é um pacato vendedor de seguros que leva um vida simples com sua esposa Meryl Burbank. Porém algumas coisas ao seu redor fazem com que ele passe a estranhar sua cidade, seus supostos amigos e até sua mulher. Após conhecer a misteriosa Lauren, ele fica intrigado e acaba descobrindo que toda sua vida foi monitorada por câmeras e transmitida em rede nacional.","poster":"/3mEoGWyJCZTSoYyjFD3gFd6hzU4.jpg","backdrop":"/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg","rating":8.2,"genres":["Comédia","Drama"],"runtime":103,"year":1998,"country":"US","language":"en","owners":["Sara","Vinicius"],"added":25,"justwatch":"https://www.justwatch.com/br/filme/o-show-de-truman","offers":[{"provider":"Mercado Play","type":"ads"},{"provider":"Apple TV","type":"rent"},{"provider":"Google Play","type":"rent"},{"provider":"Apple TV","type":"buy"},{"provider":"Google Play","type":"buy"}]},{"tmdbId":933260,"slug":"the-substance","title":"A Substância","originalTitle":"The Substance","overview":"Uma estrela em declínio descobre uma substância misteriosa que lhe permite criar uma versão mais jovem e perfeita de si mesma. No entanto, o que parece ser uma solução milagrosa para recuperar sua glória logo se transforma em um pesadelo perturbador quando as consequências desta decisão começam a se manifestar de formas sombrias e irreversíveis.","poster":"/vWeOgzlhnP1sS23H3rzctGHB9Nb.jpg","backdrop":"/bVSOgrxasVJF6V71T7v2KfBRSzu.jpg","rating":7.1,"genres":["Terror","Ficção científica"],"runtime":140,"year":2024,"country":"GB","language":"en","owners":["Vinicius"],"added":26,"justwatch":"https://www.justwatch.com/br/filme/the-substance","offers":[{"provider":"Netflix","type":"flatrate"},{"provider":"MUBI","type":"flatrate"},{"provider":"Netflix","type":"ads"}]},{"tmdbId":467244,"slug":"the-zone-of-interest","title":"Zona de Interesse","originalTitle":"The Zone of Interest","overview":"O comandante Rudolf Höss e sua esposa Hedwig, desfrutam de uma vida aparentemente comum em uma casa com um belo jardim. Mas, por trás da fachada de tranquilidade, a família feliz vive, na verdade, ao lado do campo de concentração de Auschwitz. O dia-a dia destes personagens se desenrola entre os gritos abafados de desespero de um genocídio do qual eles tem as mãos manchadas de sangue.","poster":"/iQoyDhBjHwo1HTR0DuTzR8o1CqI.jpg","backdrop":"/pnTSOKcYnvdpQNQElAtJM1rWOxH.jpg","rating":7.0,"genres":["Drama","História","Guerra"],"runtime":105,"year":2023,"country":"GB","language":"de","owners":["Sara"],"added":27,"justwatch":"https://www.justwatch.com/br/filme/the-zone-of-interest","offers":[{"provider":"Prime Video","type":"flatrate"},{"provider":"Diamond Films","type":"flatrate"},{"provider":"Prime Video","type":"ads"}]}]}
+
+const FILMS = DATA.films
+const TYPE = { flatrate: 'Assinatura', free: 'Grátis', ads: 'Com anúncios', rent: 'Aluguel', buy: 'Compra' }
+const TYPE_MARK = { ads: 'AD', rent: 'R$', buy: 'R$', free: '0' }
+const COUNTRY = { KR: 'Coreia do Sul', JP: 'Japão', BR: 'Brasil', HK: 'Hong Kong', US: 'EUA', FR: 'França', GB: 'Reino Unido', AU: 'Austrália' }
+const LANG = { ko: 'Coreano', ja: 'Japonês', pt: 'Português', zh: 'Cantonês', en: 'Inglês', fr: 'Francês', de: 'Alemão' }
+const SORTS = [['added', 'Adicionados recentemente'], ['year', 'Ano'], ['runtime', 'Duração'], ['rating', 'Nota TMDB']]
+const RUNTIMES = [['short', 'Até 1h40'], ['mid', 'Até 2h10'], ['long', 'Mais de 2h10']]
+const uniq = a => [...new Set(a)]
+const count = (arr) => Object.entries(arr.reduce((m, x) => (m[x] = (m[x] || 0) + 1, m), {})).sort((a, b) => b[1] - a[1]).map(e => e[0])
+const PROVIDERS = count(FILMS.flatMap(f => uniq(f.offers.map(o => o.provider))))
+const GENRES = uniq(FILMS.flatMap(f => f.genres)).sort((a, b) => a.localeCompare(b, 'pt'))
+const DECADES = uniq(FILMS.map(f => Math.floor(f.year / 10) * 10)).sort((a, b) => b - a)
+const COUNTRIES = uniq(FILMS.map(f => f.country)).sort((a, b) => COUNTRY[a].localeCompare(COUNTRY[b], 'pt'))
+const LANGS = uniq(FILMS.map(f => f.language)).sort((a, b) => LANG[a].localeCompare(LANG[b], 'pt'))
+
+const S = { owners: 'all', providers: new Set(), types: new Set(), genre: '', decade: '', runtime: '', country: '', language: '', minRating: 0, sort: 'added', sel: FILMS[0].tmdbId }
+const blank = JSON.stringify({ ...S, providers: [], types: [], sel: 0 })
+
+// Query semantics straight from the spec (the real Query module will own this)
+function query(s = S, skip) {
+  const r = FILMS.filter(f => {
+    if (skip !== 'owners' && s.owners === 'both' && f.owners.length < 2) return false
+    if (skip !== 'owners' && (s.owners === 'Sara' || s.owners === 'Vinicius') && !f.owners.includes(s.owners)) return false
+    const offs = f.offers.filter(o => !s.types.size || s.types.has(o.type))
+    if (s.types.size && !offs.length) return false
+    if (s.providers.size && !offs.some(o => s.providers.has(o.provider))) return false
+    if (s.genre && !f.genres.includes(s.genre)) return false
+    if (s.decade && Math.floor(f.year / 10) * 10 !== +s.decade) return false
+    if (s.runtime === 'short' && f.runtime > 100) return false
+    if (s.runtime === 'mid' && f.runtime > 130) return false
+    if (s.runtime === 'long' && f.runtime <= 130) return false
+    if (s.country && f.country !== s.country) return false
+    if (s.language && f.language !== s.language) return false
+    return f.rating >= s.minRating
+  })
+  const by = { added: f => f.added, year: f => -f.year, runtime: f => f.runtime, rating: f => -f.rating }[s.sort]
+  return r.sort((a, b) => by(a) - by(b))
+}
+const ownersCount = o => query({ ...S, owners: o }).length
+const activeCount = () => [S.providers.size, S.types.size, S.genre, S.decade, S.runtime, S.country, S.language, S.minRating].filter(Boolean).length
+
+// tiny formatting helpers
+const h = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
+const rt = m => `${Math.floor(m / 60)}h${m % 60 ? ` ${m % 60}min` : ''}`
+const num = n => n.toFixed(1).replace('.', ',')
+const films = n => `${n} ${n === 1 ? 'filme' : 'filmes'}`
+const ownersText = f => f.owners.length > 1 ? 'Sara e Vinicius' : f.owners[0]
+const byId = id => FILMS.find(f => f.tmdbId === +id)
+const logoOf = p => img('w92', DATA.logos[p])
+const byProvider = f => { // [{provider, types[]}], subscription-ish first
+  const m = {}
+  f.offers.forEach(o => (m[o.provider] ||= []).push(o.type))
+  const rank = t => ['flatrate', 'free', 'ads', 'rent', 'buy'].indexOf(t)
+  return Object.entries(m).map(([provider, types]) => ({ provider, types: types.sort((a, b) => rank(a) - rank(b)) })).sort((a, b) => rank(a.types[0]) - rank(b.types[0]))
+}
+const opts = (list, sel, all) => (all ? `<option value="">${all}</option>` : '') + list.map(([v, l]) => `<option value="${h(v)}"${String(sel) === String(v) ? ' selected' : ''}>${h(l)}</option>`).join('')
+const ownBadge = f => `<span class="own" title="${ownersText(f)}">${f.owners.includes('Sara') ? '<i class="s">S</i>' : ''}${f.owners.includes('Vinicius') ? '<i class="v">V</i>' : ''}</span>`
+const cardLogos = (f, max) => {
+  const ps = byProvider(f), shown = ps.slice(0, max)
+  return shown.map(p => `<span class="logo" title="${h(p.provider)}: ${p.types.map(t => TYPE[t]).join(', ')}"><img src="${logoOf(p.provider)}" alt="${h(p.provider)}" loading="lazy">${p.types[0] !== 'flatrate' ? `<b>${TYPE_MARK[p.types[0]]}</b>` : ''}</span>`).join('') + (ps.length > max ? `<span class="plus">+${ps.length - max}</span>` : '')
+}
+const lbUrl = f => `https://letterboxd.com/film/${f.slug}/`
+const jwUrl = f => f.justwatch || `https://www.justwatch.com/br/busca?q=${encodeURIComponent(f.title)}`
+
+const fieldSel = (key, list, all) => `<select data-f="${key}" id="${V.key}-${key}">${opts(list, S[key], all)}</select>`
+const F = {
+  genre: () => fieldSel('genre', GENRES.map(g => [g, g]), 'Todos os gêneros'),
+  decade: () => fieldSel('decade', DECADES.map(d => [d, `Anos ${String(d).slice(2)}`.replace('Anos 00', 'Anos 2000').replace('Anos 10', 'Anos 2010').replace('Anos 20', 'Anos 2020')]), 'Qualquer década'),
+  runtime: () => fieldSel('runtime', RUNTIMES, 'Qualquer duração'),
+  country: () => fieldSel('country', COUNTRIES.map(c => [c, COUNTRY[c]]), 'Todos os países'),
+  language: () => fieldSel('language', LANGS.map(l => [l, LANG[l]]), 'Todos os idiomas'),
+  sort: () => fieldSel('sort', SORTS),
+  rating: () => `<input type="range" min="0" max="9" step="0.5" value="${S.minRating}" data-f="minRating" id="${V.key}-rating" aria-label="Nota mínima TMDB">`,
+  types: (cls = '') => Object.entries(TYPE).map(([t, l]) => `<button class="${cls}" data-toggle="types:${t}" aria-pressed="false">${l}</button>`).join(''),
+}
+
+/* ---------------- Variant A: Foyer ---------------- */
+const A = {
+  key: 'A', name: 'Foyer',
+  render: () => `
+  <header class="top"><div class="wrap">
+    <div class="bar">
+      <h1 class="mark">Sessão a dois</h1>
+      <div class="seg" role="group" aria-label="Owners">${[['all', 'Todos'], ['Sara', 'Sara'], ['Vinicius', 'Vinicius'], ['both', 'Os dois']].map(([v, l]) => `<button data-owner="${v}">${l}</button>`).join('')}</div>
+      <label class="sort">Ordenar ${F.sort()}</label>
+    </div>
+    <div class="chips" aria-label="Provider">
+      <button class="chip more" data-open="filters">Filtros<span data-region="nf"></span></button>
+      ${PROVIDERS.map(p => `<button class="chip" data-toggle="providers:${h(p)}" aria-pressed="false"><img src="${logoOf(p)}" alt="">${h(p)}</button>`).join('')}
+    </div>
+  </div></header>
+  <main class="wrap"><p class="count" data-region="count"></p><div class="grid" data-region="grid"></div></main>
+  <dialog id="filters" class="sheet"><div class="sheet-in">
+    <h2>Filtros</h2>
+    <div class="field">Tipo de oferta<div class="chips">${F.types('chip plain')}</div></div>
+    <label class="field">Gênero ${F.genre()}</label>
+    <label class="field">Década ${F.decade()}</label>
+    <label class="field">Duração ${F.runtime()}</label>
+    <label class="field">País ${F.country()}</label>
+    <label class="field">Idioma ${F.language()}</label>
+    <label class="field">Nota TMDB mínima: <span data-region="rating"></span> ${F.rating()}</label>
+    <div class="sheet-foot"><button class="btn ghost" data-reset>Limpar</button><button class="btn" data-close data-region="seeN"></button></div>
+  </div></dialog>
+  <dialog id="detail" class="drawer"></dialog>`,
+  regions: {
+    nf: () => activeCount() ? ` (${activeCount()})` : '',
+    count: () => `${films(query().length)} na fila`,
+    grid: () => query().map(f => `<button class="card${f.offers.length ? '' : ' na'}" data-film="${f.tmdbId}" aria-label="${h(f.title)}">
+        <img src="${img('w342', f.poster)}" alt="" loading="lazy">${ownBadge(f)}
+        <span class="offers">${f.offers.length ? cardLogos(f, 3) : '<span class="na-badge">indisponível</span>'}</span>
+        <span class="tip"><b>${h(f.title)}</b><small>${f.year}, ${rt(f.runtime)}</small></span></button>`).join('') || empty(),
+    rating: () => S.minRating ? num(S.minRating) : 'qualquer',
+    seeN: () => `Ver ${films(query().length)}`,
+  },
+  open: f => {
+    const d = document.getElementById('detail')
+    d.innerHTML = `<button class="x" data-close aria-label="Fechar">×</button>
+      <div class="bd" style="background-image:url(${img('w1280', f.backdrop)})"></div>
+      <div class="dbody">
+        <div class="dhead"><img src="${img('w342', f.poster)}" alt=""><div><h2>${h(f.title)}</h2>${f.originalTitle !== f.title ? `<p class="orig">${h(f.originalTitle)}</p>` : ''}</div></div>
+        <p class="meta"><span>${f.year}</span><span>${rt(f.runtime)}</span><span>${COUNTRY[f.country]}</span><span>${LANG[f.language]}</span><span>★ ${num(f.rating)} TMDB</span></p>
+        <p class="meta"><span>${f.genres.join(', ')}</span></p>
+        <div style="display:flex;gap:10px;align-items:center">${ownBadge(f)}<span>Na lista de ${ownersText(f)}</span></div>
+        <p class="ov">${h(f.overview)}</p>
+        <div><h3>Onde assistir no Brasil</h3><div class="olist">${byProvider(f).map(p => `<div class="orow"><img src="${logoOf(p.provider)}" alt=""><span>${h(p.provider)}</span><span class="tags">${p.types.map(t => `<span class="tag">${TYPE[t]}</span>`).join('')}</span></div>`).join('') || '<p class="meta">Indisponível em streaming, aluguel ou compra no Brasil.</p>'}</div></div>
+        <div class="links"><a href="${lbUrl(f)}" target="_blank" rel="noopener">Ver no Letterboxd</a><a href="${jwUrl(f)}" target="_blank" rel="noopener">Ver no JustWatch</a></div>
+      </div>`
+    d.showModal(); d.scrollTop = 0
+  },
+}
+
+/* ---------------- Variant B: Programa ---------------- */
+const B = {
+  key: 'B', name: 'Programa',
+  render: () => `<div class="layout">
+  <aside class="wrap" aria-label="Filtros">
+    <h1 class="mark">Sessão a dois<small>A lista de Sara e Vinicius, com onde ver cada filme no Brasil.</small></h1>
+    <fieldset class="who"><legend>De quem</legend><div data-region="who" style="display:grid;gap:2px"></div></fieldset>
+    <fieldset><legend>Onde</legend><div class="prov">${PROVIDERS.map(p => `<button data-toggle="providers:${h(p)}" aria-pressed="false" title="${h(p)}"><img src="${logoOf(p)}" alt="${h(p)}"></button>`).join('')}</div></fieldset>
+    <fieldset><legend>Como</legend><div class="types">${F.types()}</div></fieldset>
+    <fieldset><legend>O quê</legend>${F.genre()}<div class="two">${F.decade()}${F.runtime()}</div><div class="two">${F.country()}${F.language()}</div></fieldset>
+    <fieldset><legend>Nota TMDB mínima: <span data-region="rating"></span></legend>${F.rating()}</fieldset>
+    <button class="reset" data-reset>Limpar filtros</button>
+  </aside>
+  <main class="wrap">
+    <div class="head"><h1 data-region="title"></h1>
+      <div class="sortrow">Ordenar por ${SORTS.map(([v, l]) => `<button data-sortbtn="${v}" aria-pressed="false">${l}</button>`).join('')}</div></div>
+    <div class="grid" data-region="grid"></div>
+  </main>
+  <button class="fab" data-sheet data-region="fab"></button>
+  <dialog id="detail" class="full"></dialog></div>`,
+  regions: {
+    who: () => [['all', 'Todos'], ['Sara', 'Sara'], ['Vinicius', 'Vinicius'], ['both', 'Os dois']].map(([v, l]) => `<button data-owner="${v}" aria-pressed="${S.owners === v}">${l}<small>${ownersCount(v)}</small></button>`).join(''),
+    title: () => {
+      const n = query().length, who = { all: 'para ver juntos', Sara: 'da Sara', Vinicius: 'do Vinicius', both: 'que os dois querem' }[S.owners]
+      return `${films(n)} <i>${who}</i>`
+    },
+    grid: () => query().map(f => `<button class="card${f.offers.length ? '' : ' na'}" data-film="${f.tmdbId}">
+        <span class="poster"><img src="${img('w342', f.poster)}" alt="" loading="lazy">${f.offers.length ? '' : '<span class="na-badge">indisponível</span>'}</span>
+        <h2>${h(f.title)}</h2><p>${f.year}, ${rt(f.runtime)}</p>
+        <span class="cardfoot"><span class="who-line">${f.owners.length > 1 ? '<b>Os dois</b>' : f.owners[0]}</span><span class="logos">${cardLogos(f, 4)}</span></span></button>`).join('') || empty(),
+    rating: () => S.minRating ? num(S.minRating) : 'qualquer',
+    fab: () => `Filtrar${activeCount() ? ` (${activeCount()})` : ''}`,
+  },
+  open: f => {
+    const d = document.getElementById('detail')
+    d.innerHTML = `<button class="x" data-close>Fechar</button>
+      <div class="hero" style="background-image:url(${img('w1280', f.backdrop)})"><div class="hero-in wrap"><h2>${h(f.title)}</h2>${f.originalTitle !== f.title ? `<p class="orig">${h(f.originalTitle)}</p>` : ''}</div></div>
+      <div class="dgrid wrap">
+        <div><p class="ov">${h(f.overview)}</p>
+          <dl><dt>Ano</dt><dd>${f.year}</dd><dt>Duração</dt><dd>${rt(f.runtime)}</dd><dt>Gêneros</dt><dd>${f.genres.join(', ')}</dd><dt>País</dt><dd>${COUNTRY[f.country]}</dd><dt>Idioma</dt><dd>${LANG[f.language]}</dd><dt>Nota TMDB</dt><dd>${num(f.rating)}</dd><dt>Na lista de</dt><dd>${ownersText(f)}</dd></dl></div>
+        <div class="side"><fieldset><legend>Onde assistir</legend>${byProvider(f).map(p => `<div class="orow"><img src="${logoOf(p.provider)}" alt=""><span>${h(p.provider)}</span><span>${p.types.map(t => TYPE[t]).join(', ')}</span></div>`).join('') || '<p>Indisponível no Brasil por enquanto.</p>'}</fieldset>
+          <div class="links"><a href="${lbUrl(f)}" target="_blank" rel="noopener">Letterboxd</a><a href="${jwUrl(f)}" target="_blank" rel="noopener">JustWatch</a></div></div>
+      </div>`
+    d.showModal(); d.scrollTop = 0
+  },
+}
+
+/* ---------------- Variant C: Bilheteria ---------------- */
+const C = {
+  key: 'C', name: 'Bilheteria',
+  render: () => `<header class="wrap">
+    <p class="mark"><i></i>Sessão a dois</p>
+    <p class="sentence">Mostrando
+      <select data-f="owners" id="C-owners" aria-label="Owners">${opts([['all', 'todos os filmes'], ['Sara', 'a lista da Sara'], ['Vinicius', 'a lista do Vinicius'], ['both', 'o que os dois querem']], S.owners)}</select>
+      em <select data-f="provider1" id="C-provider" aria-label="Provider">${opts(PROVIDERS.map(p => [p, p]), [...S.providers][0] || '', 'qualquer serviço')}</select>,
+      com <select data-f="runtime" id="C-runtime" aria-label="Duração">${opts(RUNTIMES.map(([v, l]) => [v, l.toLowerCase()]), S.runtime, 'qualquer duração')}</select>,
+      por <select data-f="sort" id="C-sort" aria-label="Ordenar">${opts([['added', 'mais recentes na lista'], ['year', 'ano'], ['runtime', 'mais curtos'], ['rating', 'melhor nota']], S.sort)}</select>.
+    </p>
+    <div class="sub"><span data-region="count"></span><button class="pill" data-open="filters">Mais filtros<span data-region="nf"></span></button></div>
+  </header>
+  <div class="split wrap"><main class="grid" data-region="grid"></main><aside class="pane" data-region="pane"></aside></div>
+  <dialog id="filters" class="sheet"><form method="dialog" class="sheet-in">
+    <h2>Mais filtros</h2>
+    <label>Tipo de oferta<span class="tchips">${F.types()}</span></label>
+    <div class="two"><label>Gênero ${F.genre()}</label><label>Década ${F.decade()}</label></div>
+    <div class="two"><label>País ${F.country()}</label><label>Idioma ${F.language()}</label></div>
+    <label>Nota TMDB mínima: <span data-region="rating"></span> ${F.rating()}</label>
+    <button class="done" data-region="seeN"></button>
+  </form></dialog>`,
+  regions: {
+    count: () => films(query().length),
+    nf: () => { const n = activeCount() - (S.providers.size ? 1 : 0) - (S.runtime ? 1 : 0); return n ? ` (${n})` : '' },
+    grid: () => query().map(f => `<button class="card${f.offers.length ? '' : ' na'}" data-film="${f.tmdbId}" aria-current="${S.sel === f.tmdbId}" aria-label="${h(f.title)}">
+        <img src="${img('w342', f.poster)}" alt="" loading="lazy">${f.offers.length ? '' : '<span class="na-badge">indisponível</span>'}
+        <span class="obar">${f.owners.includes('Sara') ? '<i class="s"></i>' : ''}${f.owners.includes('Vinicius') ? '<i class="v"></i>' : ''}</span></button>`).join('') || empty(),
+    pane: () => {
+      const f = byId(S.sel)
+      return `<button class="x" data-closepane aria-label="Fechar">×</button>
+      <div class="pbd" style="background-image:url(${img('w780', f.backdrop)})"></div>
+      <div class="pin">
+        <div><h2>${h(f.title)}</h2>${f.originalTitle !== f.title ? `<p class="orig">${h(f.originalTitle)}</p>` : ''}</div>
+        <div class="whos">${f.owners.map(o => `<span class="who ${o[0].toLowerCase()}">${o}</span>`).join('')}</div>
+        <dl><div><dt>Ano</dt><dd>${f.year}</dd></div><div><dt>Duração</dt><dd>${rt(f.runtime)}</dd></div><div><dt>TMDB</dt><dd>${num(f.rating)}</dd></div>
+          <div><dt>País</dt><dd>${COUNTRY[f.country]}</dd></div><div><dt>Idioma</dt><dd>${LANG[f.language]}</dd></div><div><dt>Gêneros</dt><dd>${f.genres.slice(0, 2).join(', ')}</dd></div></dl>
+        <p class="ov">${h(f.overview)}</p>
+        ${f.offers.length ? `<table>${byProvider(f).map(p => `<tr><td style="width:42px"><img src="${logoOf(p.provider)}" alt=""></td><td>${h(p.provider)}</td><td>${p.types.map(t => TYPE[t]).join(', ')}</td></tr>`).join('')}</table>` : '<p style="margin:0;color:var(--muted)">Indisponível no Brasil por enquanto.</p>'}
+        <div class="links"><a href="${jwUrl(f)}" target="_blank" rel="noopener">JustWatch</a><a href="${lbUrl(f)}" target="_blank" rel="noopener">Letterboxd</a></div>
+      </div>`
+    },
+    rating: () => S.minRating ? num(S.minRating) : 'qualquer',
+    seeN: () => `Ver ${films(query().length)}`,
+  },
+  open: f => {
+    S.sel = f.tmdbId; update()
+    document.body.classList.add('pane-open')
+    document.querySelector('.pane').scrollTop = 0
+  },
+}
+
+/* ---------------- wiring ---------------- */
+const VARIANTS = [A, B, C]
+let V
+const empty = () => `<p class="empty">Nenhum filme com esses filtros.<button data-reset>Limpar filtros</button></p>`
+
+function update() {
+  document.querySelectorAll('[data-region]').forEach(el => { el.innerHTML = V.regions[el.dataset.region]() })
+  document.querySelectorAll('[data-toggle]').forEach(b => { const [k, v] = b.dataset.toggle.split(':'); b.setAttribute('aria-pressed', S[k].has(v)) })
+  document.querySelectorAll('[data-owner]').forEach(b => b.setAttribute('aria-pressed', S.owners === b.dataset.owner))
+  document.querySelectorAll('[data-sortbtn]').forEach(b => b.setAttribute('aria-pressed', S.sort === b.dataset.sortbtn))
+  document.querySelectorAll('[data-f]').forEach(el => { const k = el.dataset.f; el.value = k === 'provider1' ? ([...S.providers][0] || '') : S[k] })
+}
+function show(key) {
+  V = VARIANTS.find(v => v.key === key) || A
+  document.body.className = 'v' + V.key
+  document.getElementById('app').innerHTML = V.render()
+  document.getElementById('plabel').textContent = `${V.key} (${V.name})`
+  const u = new URL(location); u.searchParams.set('variant', V.key); u.hash = V.key
+  try { history.replaceState(null, '', u) } catch { }
+  update()
+}
+const step = d => show(VARIANTS[(VARIANTS.indexOf(V) + d + VARIANTS.length) % VARIANTS.length].key)
+
+document.addEventListener('click', e => {
+  const t = e.target
+  if (t.tagName === 'DIALOG') return t.close() // backdrop click
+  const el = t.closest('[data-owner],[data-toggle],[data-film],[data-open],[data-close],[data-reset],[data-sortbtn],[data-sheet],[data-closepane]')
+  if (!el) return
+  const d = el.dataset
+  if (d.owner) S.owners = d.owner
+  if (d.sortbtn) S.sort = d.sortbtn
+  if (d.toggle) { const [k, v] = d.toggle.split(':'); S[k].has(v) ? S[k].delete(v) : S[k].add(v) }
+  if (d.film) return V.open(byId(d.film))
+  if (d.open) return document.getElementById(d.open).showModal()
+  if ('close' in d) return el.closest('dialog').close()
+  if ('sheet' in d) return document.body.classList.toggle('sheet-open')
+  if ('closepane' in d) return document.body.classList.remove('pane-open')
+  if ('reset' in d) Object.assign(S, JSON.parse(blank), { providers: new Set(), types: new Set(), sel: S.sel })
+  update()
+})
+document.addEventListener('input', e => {
+  const k = e.target.dataset.f
+  if (!k) return
+  if (k === 'provider1') S.providers = new Set(e.target.value ? [e.target.value] : [])
+  else S[k] = k === 'minRating' ? +e.target.value : e.target.value
+  update()
+})
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.body.classList.remove('pane-open', 'sheet-open')
+  if (e.target.closest('input,select,textarea,[contenteditable]') || document.querySelector('dialog[open]')) return
+  if (e.key === 'ArrowLeft') step(-1)
+  if (e.key === 'ArrowRight') step(1)
+})
+document.getElementById('prev').onclick = () => step(-1)
+document.getElementById('next').onclick = () => step(1)
+show(new URLSearchParams(location.search).get('variant') || location.hash.slice(1) || 'A')
+const openId = new URLSearchParams(location.search).get('open') // screenshot helper: ?open=<tmdbId>
+if (openId) V.open(byId(openId))
+</script>
+</body></html><!--wrap-->

@@ -4,7 +4,7 @@
 
 - Scaffold the site with Vite + Svelte + TypeScript (see spec, Implementation Decisions).
 - Define the data contract (the single JSON file the site reads; see spec "Data contract") as a TypeScript type shared by site and Sync.
-- Convert the prototype's embedded sample data (`const DATA` in `.scratch/watchlist-app/prototype-ui.html` on branch `prototype/watchlist-ui`) into a fixture that conforms to the contract.
+- Convert the prototype's embedded sample data (`const DATA` in `.scratch/watchlist-app/prototype-ui.html`) into a fixture that conforms to the contract.
 - Members config lives in the repo: Sara = Letterboxd `sarateves`, Vinicius = Letterboxd `v_inicius` (display name + username + badge colour).
 - Cards, grid, typography and tokens from variant A, per the spec UI section and `/tmp/handoff-watchlist-ui.md` if still present (else read the prototype on the branch).
 

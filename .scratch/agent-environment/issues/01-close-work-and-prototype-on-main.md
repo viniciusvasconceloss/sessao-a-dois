@@ -4,12 +4,12 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] The issue-tracker doc has a "Closing work" section: `Status: done`, every acceptance box ticked, both in the commit that delivers the ticket
-- [ ] The same section says: when the last ticket of a spec is done, set the spec's Status to done in that commit
-- [ ] `done` is in the triage-labels vocabulary, so the reviewer stops flagging it
-- [ ] The `implement` skill tells the agent to close the ticket (via the issue-tracker doc) before committing
-- [ ] The prototype HTML is committed in the watchlist-app folder in `.scratch`
-- [ ] The spec has a one-line pointer to it
-- [ ] Ask the user whether to delete the `prototype/watchlist-ui` branch (local and remote). Do not delete it without a yes
+- [x] The issue-tracker doc has a "Closing work" section: `Status: done`, every acceptance box ticked, both in the commit that delivers the ticket
+- [x] The same section says: when the last ticket of a spec is done, set the spec's Status to done in that commit
+- [x] `done` is in the triage-labels vocabulary, so the reviewer stops flagging it
+- [x] The `implement` skill tells the agent to close the ticket (via the issue-tracker doc) before committing
+- [x] The prototype HTML is committed in the watchlist-app folder in `.scratch`
+- [x] The spec has a one-line pointer to it
+- [x] Ask the user whether to delete the `prototype/watchlist-ui` branch (local and remote). Do not delete it without a yes (user said yes; deleted)

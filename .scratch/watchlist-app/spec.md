@@ -67,7 +67,7 @@ A private-in-spirit (but publicly hosted) website that shows the Combined Watchl
   - Typography and palette from A: Fraunces (display) + Manrope (body), graphite background, brass accent.
   - New: the sidebar collapses completely (toggle with active-filter count) so the selected films can be seen without it; state remembered per browser. On phone it is a bottom sheet, closed by default.
   - Detail panel: A's side drawer (bottom sheet on phone), by default; the user did not comment on it.
-  - Prototype (primary source): branch `prototype/watchlist-ui`, file `.scratch/watchlist-app/prototype-ui.html` (`?variant=A|B|C`).
+  - Prototype (primary source): [`prototype-ui.html`](prototype-ui.html), next to this spec (`?variant=A|B|C`).
 - Secrets: TMDB API key stored as a GitHub Actions secret; never shipped to the site.
 - Setup guide documented in the repo (Pages, Action, secret, usernames).
 
@@ -94,4 +94,4 @@ A private-in-spirit (but publicly hosted) website that shows the Combined Watchl
 
 - Glossary: `GLOSSARY.md`. Architecture decision: `docs/adr/0001-static-site-synced-by-github-actions.md`.
 - Verified during design: public Watchlist pages expose `data-item-slug` without login; film pages expose `data-tmdb-id`.
-- Visual direction was chosen in a prototype session (three variations); see the UI decision above and branch `prototype/watchlist-ui`.
+- Visual direction was chosen in a prototype session (three variations); see the UI decision above and [`prototype-ui.html`](prototype-ui.html).

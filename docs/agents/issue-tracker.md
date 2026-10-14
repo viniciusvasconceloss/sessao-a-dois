@@ -10,6 +10,16 @@ Issues and specs for this repo live as markdown files in `.scratch/`.
 - Triage state is recorded as a `Status:` line near the top of each issue file (see `triage-labels.md` for the role strings)
 - Comments and conversation history append to the bottom of the file under a `## Comments` heading
 
+## Closing work
+
+In the same commit that delivers a ticket:
+
+- Set its `Status:` line to `done`
+- Tick every acceptance box (`- [x]`)
+- If it was the last open ticket of the spec, set the spec's `Status:` to `done` too
+
+`resolved` (below) is for wayfinder tickets only.
+
 ## When a skill says "publish to the issue tracker"
 
 Create a new file under `.scratch/<feature-slug>/` (creating the directory if needed).
