@@ -4,7 +4,7 @@
   "BR": {
    "link": "https://www.themoviedb.org/movie/976893-perfect-days/watch?locale=BR",
    "flatrate": [
-    { "logo_path": "/mubi-roku.jpg", "provider_id": 2000, "provider_name": "MUBI Roku Premium Channel", "display_priority": 60 }
+    { "logo_path": "/mubi-roku.jpg", "provider_id": 2000, "provider_name": "MUBI Roku Premium channel", "display_priority": 60 }
    ]
   }
  }

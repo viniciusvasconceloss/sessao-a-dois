@@ -117,7 +117,7 @@ export async function sync(opts: SyncOptions): Promise<CombinedWatchlist> {
 }
 
 // ponytail: known reseller stores only; add one here if TMDB shows a new "<Provider> <Store> Channel"
-const CHANNEL = / (Amazon|Apple TV|Roku Premium) Channel$/
+const CHANNEL = / (Amazon|Apple TV|Roku Premium) Channel$/i
 const sameName = (a: string, b: string) => {
   const key = (s: string) => s.toLowerCase().replaceAll('+', 'plus').replace(/[^a-z0-9]/g, '')
   return key(a) === key(b)
