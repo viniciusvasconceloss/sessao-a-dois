@@ -74,7 +74,8 @@
   /* Fills the dialog so a click on it is a click outside the content. */
   .in { position: relative; min-height: 100% }
   .x {
-    position: absolute; top: max(12px, env(safe-area-inset-top, 0px)); right: 12px; z-index: 1;
+    /* Sticky so it stays reachable while the panel scrolls; the negative margin keeps it out of the flow. */
+    position: sticky; top: max(12px, env(safe-area-inset-top, 0px)); z-index: 1; display: block; margin: 12px 12px -50px auto;
     width: 38px; height: 38px; border-radius: 50%; border: 0; background: rgb(0 0 0 / .6); color: var(--fg); font-size: 20px; cursor: pointer;
   }
   .bd { aspect-ratio: 16 / 9; background: var(--bg) center / cover; position: relative }
