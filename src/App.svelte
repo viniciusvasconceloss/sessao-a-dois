@@ -19,7 +19,7 @@
 
 <div class="layout">
   <aside class="wrap">
-    <h1 class="mark">🎬🍿 Sessão a Dois<small>Nossas watchlists, podendo filtrar por serviço.</small></h1>
+    <h1 class="mark">Sessão a Dois 🍿🍿</h1>
     <fieldset class="who">
       <legend>De quem</legend>
       {#each OWNERS as [value, label] (value)}
@@ -64,7 +64,6 @@
     display: grid; gap: 30px; align-content: start;
   }
   .mark { font: 700 26px/1.1 var(--display); letter-spacing: -.01em; margin: 0 }
-  .mark small { display: block; font: 400 13px/1.4 "Manrope", sans-serif; color: var(--muted); letter-spacing: 0; margin-top: 10px }
   fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 2px }
   legend { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; padding: 0; margin-bottom: 10px }
   .who button {
