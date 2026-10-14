@@ -7,7 +7,7 @@
   --fg: #ecebe6;
   --muted: #9d9ca5;
   --accent: #cfae6e;
-  --display: "Fraunces", Georgia, serif;
+  --display: "Manrope", system-ui, sans-serif;
 }
 * { box-sizing: border-box }
 body {

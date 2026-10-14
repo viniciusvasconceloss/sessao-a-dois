@@ -19,7 +19,7 @@
 
 <div class="layout">
   <aside class="wrap">
-    <h1 class="mark">Sessão a dois<small>A lista de Sara e Vinicius, com onde ver cada filme no Brasil.</small></h1>
+    <h1 class="mark">🎬🍿 Sessão a Dois<small>Nossas watchlists, podendo filtrar por serviço.</small></h1>
     <fieldset class="who">
       <legend>De quem</legend>
       {#each OWNERS as [value, label] (value)}
@@ -63,17 +63,17 @@
     padding-block: max(32px, env(safe-area-inset-top, 0px)) 48px;
     display: grid; gap: 30px; align-content: start;
   }
-  .mark { font: 600 30px/1 var(--display); letter-spacing: -.01em; margin: 0; font-variation-settings: "opsz" 144 }
+  .mark { font: 700 26px/1.1 var(--display); letter-spacing: -.01em; margin: 0 }
   .mark small { display: block; font: 400 13px/1.4 "Manrope", sans-serif; color: var(--muted); letter-spacing: 0; margin-top: 10px }
   fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 2px }
   legend { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; padding: 0; margin-bottom: 10px }
   .who button {
     display: flex; justify-content: space-between; align-items: baseline; width: 100%;
     border: 0; background: none; padding: 2px 0; text-align: left; cursor: pointer;
-    font: 400 21px/1.3 var(--display); color: var(--muted);
+    font: 500 19px/1.4 var(--display); color: var(--muted);
   }
   .who button:hover { color: var(--fg) }
-  .who button[aria-pressed="true"] { color: var(--fg); font-style: italic }
+  .who button[aria-pressed="true"] { color: var(--fg); font-weight: 700 }
   .who small { font: 400 13px "Manrope", sans-serif; font-variant-numeric: tabular-nums }
 
   main { min-width: 0 }
