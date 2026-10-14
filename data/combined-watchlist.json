@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-14T14:55:30.359Z",
+  "syncedAt": "2026-10-14T17:04:55.058Z",
   "films": [
     {
       "tmdbId": 172533,
@@ -65,6 +65,10 @@
       "owners": {
         "sarateves": 0,
         "v_inicius": 168
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -93,6 +97,10 @@
       "owners": {
         "sarateves": 1,
         "v_inicius": 5
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -169,6 +177,10 @@
       "owners": {
         "sarateves": 2,
         "v_inicius": 199
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -205,6 +217,10 @@
       "owners": {
         "sarateves": 3,
         "v_inicius": 211
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -265,6 +281,10 @@
       "owners": {
         "sarateves": 4,
         "v_inicius": 151
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -324,6 +344,10 @@
       "owners": {
         "sarateves": 5,
         "v_inicius": 96
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -413,6 +437,10 @@
       "owners": {
         "sarateves": 6,
         "v_inicius": 95
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -474,6 +502,10 @@
       "owners": {
         "sarateves": 7,
         "v_inicius": 26
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -541,6 +573,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 8
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -568,6 +603,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 9
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -596,6 +634,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 10
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -667,6 +708,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 11
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -694,6 +738,10 @@
       "owners": {
         "sarateves": 12,
         "v_inicius": 8
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -722,6 +770,10 @@
       "owners": {
         "sarateves": 13,
         "v_inicius": 6
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -749,6 +801,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 14
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -776,6 +831,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 15
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -808,6 +866,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 16
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -835,6 +896,10 @@
       "owners": {
         "sarateves": 17,
         "v_inicius": 141
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -870,6 +935,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 18
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -897,6 +965,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 19
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -979,6 +1050,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 20
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1027,6 +1101,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 21
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1053,6 +1130,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 22
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1086,6 +1166,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 23
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1139,6 +1222,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 24
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1180,6 +1266,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 25
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1238,6 +1327,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 26
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1273,6 +1365,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 27
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1337,6 +1432,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 28
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1394,6 +1492,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 29
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1465,6 +1566,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 30
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1501,6 +1605,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 31
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1546,6 +1653,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 32
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1585,6 +1695,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 33
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1649,6 +1762,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 34
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1677,6 +1793,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 35
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1710,6 +1829,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 36
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1745,6 +1867,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 37
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1786,6 +1911,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 38
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1856,6 +1984,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 39
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1884,6 +2015,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 40
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1910,6 +2044,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 41
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -1943,6 +2080,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 42
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2008,6 +2148,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 43
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2097,6 +2240,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 44
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2150,6 +2296,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 45
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2203,6 +2352,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 46
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2286,6 +2438,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 47
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2321,6 +2476,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 48
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2358,6 +2516,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 49
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2387,6 +2548,10 @@
       "owners": {
         "sarateves": 50,
         "v_inicius": 2
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2428,6 +2593,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 51
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2493,6 +2661,10 @@
       "owners": {
         "sarateves": 52,
         "v_inicius": 55
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2531,6 +2703,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 53
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2578,6 +2753,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 54
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2631,6 +2809,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 55
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2662,6 +2843,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 56
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2706,6 +2890,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 57
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2770,6 +2957,10 @@
       "owners": {
         "sarateves": 58,
         "v_inicius": 24
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2834,6 +3025,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 59
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2898,6 +3092,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 60
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2932,6 +3129,10 @@
       "owners": {
         "sarateves": 61,
         "v_inicius": 4
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -2995,6 +3196,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 62
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3034,6 +3238,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 63
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3062,6 +3269,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 64
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3090,6 +3300,10 @@
       "owners": {
         "sarateves": 65,
         "v_inicius": 61
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3117,6 +3331,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 66
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3152,6 +3369,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 67
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3211,6 +3431,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 68
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3249,6 +3472,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 69
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3277,6 +3503,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 70
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3312,6 +3541,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 71
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3338,6 +3570,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 72
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3366,6 +3601,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 73
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3408,6 +3646,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 74
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3449,6 +3690,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 75
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3478,6 +3722,10 @@
       "owners": {
         "sarateves": 76,
         "v_inicius": 14
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3508,6 +3756,10 @@
       "owners": {
         "sarateves": 77,
         "v_inicius": 10
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3537,6 +3789,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 78
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3592,6 +3847,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 79
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3628,6 +3886,10 @@
       "owners": {
         "sarateves": 80,
         "v_inicius": 18
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3700,6 +3962,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 81
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3735,6 +4000,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 82
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3770,6 +4038,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 83
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3818,6 +4089,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 84
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3865,6 +4139,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 85
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3893,6 +4170,10 @@
       "owners": {
         "sarateves": 86,
         "v_inicius": 249
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3929,6 +4210,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 87
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3965,6 +4249,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 88
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -3992,6 +4279,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 89
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4034,6 +4324,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 90
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4062,6 +4355,10 @@
       "owners": {
         "sarateves": 91,
         "v_inicius": 50
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4119,6 +4416,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 92
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4150,6 +4450,10 @@
       "owners": {
         "sarateves": 93,
         "v_inicius": 3
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4186,6 +4490,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 94
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4244,6 +4551,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 95
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4297,6 +4607,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 96
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4372,6 +4685,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 97
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4400,6 +4716,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 98
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4427,6 +4746,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 99
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4498,6 +4820,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 100
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4524,6 +4849,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 101
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4550,6 +4878,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 102
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4578,6 +4909,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 103
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4613,6 +4947,10 @@
       "owners": {
         "sarateves": 104,
         "v_inicius": 209
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4640,6 +4978,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 105
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4667,6 +5008,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 106
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4700,6 +5044,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 107
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4734,6 +5081,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 108
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4769,6 +5119,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 109
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4805,6 +5158,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 110
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4895,6 +5251,10 @@
       "owners": {
         "sarateves": 111,
         "v_inicius": 196
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4934,6 +5294,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 112
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -4974,6 +5337,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 113
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5001,6 +5367,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 114
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5029,6 +5398,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 115
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5064,6 +5436,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 116
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5124,6 +5499,10 @@
       "owners": {
         "sarateves": 117,
         "v_inicius": 27
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5157,6 +5536,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 118
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5184,6 +5566,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 119
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5243,6 +5628,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 120
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5284,6 +5672,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 121
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5311,6 +5702,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 122
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5370,6 +5764,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 123
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5398,6 +5795,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 124
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5426,6 +5826,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 125
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5459,6 +5862,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 126
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5512,6 +5918,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 127
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5554,6 +5963,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 128
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5588,6 +6000,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 129
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5622,6 +6037,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 130
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5680,6 +6098,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 131
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5715,6 +6136,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 132
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5752,6 +6176,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 133
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5805,6 +6232,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 134
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5832,6 +6262,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 135
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5860,6 +6293,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 136
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5943,6 +6379,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 137
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -5983,6 +6422,10 @@
       "owners": {
         "sarateves": 138,
         "v_inicius": 85
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6042,6 +6485,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 139
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6103,6 +6549,10 @@
       "owners": {
         "sarateves": 140,
         "v_inicius": 0
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6173,6 +6623,10 @@
       "owners": {
         "sarateves": 141,
         "v_inicius": 218
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6209,6 +6663,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 142
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6244,6 +6701,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 143
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6308,6 +6768,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 144
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6349,6 +6812,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 145
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6375,6 +6841,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 146
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6402,6 +6871,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 147
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6436,6 +6908,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 148
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6471,6 +6946,10 @@
       "owners": {
         "sarateves": 149,
         "v_inicius": 263
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6523,6 +7002,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 150
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6561,6 +7043,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 151
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6595,6 +7080,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 152
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6627,6 +7115,10 @@
       "owners": {
         "sarateves": 153,
         "v_inicius": 125
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6661,6 +7153,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 154
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6688,6 +7183,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 155
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6716,6 +7214,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 156
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6787,6 +7288,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 157
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6845,6 +7349,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 158
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6873,6 +7380,10 @@
       "owners": {
         "sarateves": 159,
         "v_inicius": 134
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6930,6 +7441,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 160
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -6984,6 +7498,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 161
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7019,6 +7536,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 162
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7081,6 +7601,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 163
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7116,6 +7639,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 164
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7151,6 +7677,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 165
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7210,6 +7739,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 166
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7261,6 +7793,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 167
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7307,6 +7842,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 168
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7335,6 +7873,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 169
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7409,6 +7950,10 @@
       "owners": {
         "sarateves": 170,
         "v_inicius": 182
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7439,6 +7984,10 @@
       "owners": {
         "sarateves": 171,
         "v_inicius": 15
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7522,6 +8071,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 172
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7598,6 +8150,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 173
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7646,6 +8201,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 174
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7717,6 +8275,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 175
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7751,6 +8312,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 176
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7788,6 +8352,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 177
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7823,6 +8390,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 178
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7858,6 +8428,10 @@
       "owners": {
         "sarateves": 179,
         "v_inicius": 87
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7904,6 +8478,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 180
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -7962,6 +8539,10 @@
       "owners": {
         "sarateves": 181,
         "v_inicius": 140
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8040,6 +8621,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 182
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8093,6 +8677,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 183
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8135,6 +8722,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 184
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8171,6 +8761,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 185
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8235,6 +8828,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 186
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8303,6 +8899,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 187
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8344,6 +8943,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 188
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8397,6 +8999,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 189
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8456,6 +9061,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 190
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8538,6 +9146,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 191
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8598,6 +9209,10 @@
       "owners": {
         "sarateves": 192,
         "v_inicius": 66
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8650,6 +9265,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 193
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8678,6 +9296,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 194
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8743,6 +9364,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 195
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8814,6 +9438,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 196
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8850,6 +9477,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 197
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8903,6 +9533,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 198
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -8940,6 +9573,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 199
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9010,6 +9646,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 200
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9053,6 +9692,10 @@
       "owners": {
         "sarateves": 201,
         "v_inicius": 121
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9087,6 +9730,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 202
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9121,6 +9767,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 203
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9198,6 +9847,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 204
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9233,6 +9885,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 205
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9285,6 +9940,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 206
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9357,6 +10015,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 207
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9416,6 +10077,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 208
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9476,6 +10140,10 @@
       "owners": {
         "sarateves": 209,
         "v_inicius": 202
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9539,6 +10207,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 210
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9612,6 +10283,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 211
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9655,6 +10329,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 212
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9709,6 +10386,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 213
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9786,6 +10466,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 214
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9829,6 +10512,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 215
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9910,6 +10596,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 216
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -9993,6 +10682,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 217
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10052,6 +10744,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 218
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10088,6 +10783,10 @@
       "owners": {
         "sarateves": 219,
         "v_inicius": 81
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10152,6 +10851,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 220
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10223,6 +10925,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 221
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10276,6 +10981,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 222
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10309,6 +11017,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 223
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10345,6 +11056,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 224
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10398,6 +11112,10 @@
       "owners": {
         "sarateves": 225,
         "v_inicius": 170
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10434,6 +11152,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 226
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10523,6 +11244,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 227
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10549,6 +11273,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 228
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10632,6 +11359,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 229
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10672,6 +11402,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 230
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10731,6 +11464,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 231
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10789,6 +11525,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 232
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10817,6 +11556,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 233
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10858,6 +11600,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 234
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10913,6 +11658,10 @@
       "owners": {
         "sarateves": 235,
         "v_inicius": 154
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -10948,6 +11697,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 236
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11032,6 +11784,10 @@
       "owners": {
         "sarateves": 237,
         "v_inicius": 110
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11077,6 +11833,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 238
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11113,6 +11872,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 239
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11141,6 +11903,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 240
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11170,6 +11935,10 @@
       "owners": {
         "sarateves": 241,
         "v_inicius": 84
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11235,6 +12004,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 242
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11308,6 +12080,10 @@
       "owners": {
         "sarateves": 243,
         "v_inicius": 115
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11335,6 +12111,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 244
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11394,6 +12173,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 245
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11424,6 +12206,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 246
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11459,6 +12244,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 247
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11495,6 +12283,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 248
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11530,6 +12321,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 249
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11569,6 +12363,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 250
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11640,6 +12437,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 251
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11700,6 +12500,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 252
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11764,6 +12567,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 253
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11828,6 +12634,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 254
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11865,6 +12674,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 255
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11931,6 +12743,10 @@
       "owners": {
         "sarateves": 256,
         "v_inicius": 51
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -11971,6 +12787,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 257
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12006,6 +12825,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 258
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12034,6 +12856,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 259
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12087,6 +12912,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 260
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12205,6 +13033,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 261
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12241,6 +13072,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 262
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12295,6 +13129,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 263
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12379,6 +13216,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 264
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12452,6 +13292,10 @@
       "owners": {
         "sarateves": 265,
         "v_inicius": 106
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12486,6 +13330,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 266
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12515,6 +13362,10 @@
       "owners": {
         "sarateves": 267,
         "v_inicius": 23
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12555,6 +13406,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 268
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12591,6 +13445,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 269
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12620,6 +13477,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 270
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12654,6 +13514,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 271
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12702,6 +13565,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 272
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12753,6 +13619,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 273
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12819,6 +13688,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 274
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12859,6 +13731,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 275
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12887,6 +13762,10 @@
       "owners": {
         "sarateves": 276,
         "v_inicius": 118
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12914,6 +13793,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 277
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -12950,6 +13832,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 278
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13015,6 +13900,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 279
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13097,6 +13985,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 280
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13125,6 +14016,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 281
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13153,6 +14047,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 282
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13187,6 +14084,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 283
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13214,6 +14114,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 284
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13261,6 +14164,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 285
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13287,6 +14193,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 286
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13359,6 +14268,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 287
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13387,6 +14299,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 288
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13414,6 +14329,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 289
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13440,6 +14358,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 290
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13480,6 +14401,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 291
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13514,6 +14438,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 292
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13543,6 +14470,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 293
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13570,6 +14500,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 294
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13635,6 +14568,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 295
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13663,6 +14599,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 296
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13716,6 +14655,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 297
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13751,6 +14693,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 298
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13805,6 +14750,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 299
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13897,6 +14845,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 300
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13932,6 +14883,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 301
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -13959,6 +14913,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 302
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14037,6 +14994,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 303
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14064,6 +15024,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 304
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14098,6 +15061,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 305
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14139,6 +15105,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 306
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14167,6 +15136,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 307
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14201,6 +15173,10 @@
       "owners": {
         "sarateves": 308,
         "v_inicius": 190
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14256,6 +15232,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 309
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14284,6 +15263,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 310
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14317,6 +15299,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 311
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14350,6 +15335,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 312
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14377,6 +15365,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 313
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14410,6 +15401,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 314
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14461,6 +15455,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 315
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14488,6 +15485,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 316
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14575,6 +15575,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 317
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14616,6 +15619,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 318
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14642,6 +15648,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 319
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14676,6 +15685,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 320
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14702,6 +15714,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 321
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14731,6 +15746,10 @@
       "owners": {
         "sarateves": 322,
         "v_inicius": 208
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14788,6 +15807,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 323
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14854,6 +15876,10 @@
       "owners": {
         "sarateves": 324,
         "v_inicius": 74
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14890,6 +15916,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 325
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -14961,6 +15990,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 326
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15007,6 +16039,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 327
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15033,6 +16068,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 328
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15075,6 +16113,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 329
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15110,6 +16151,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 330
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15150,6 +16194,10 @@
       "owners": {
         "sarateves": 331,
         "v_inicius": 162
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15185,6 +16233,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 332
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15246,6 +16297,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 333
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15311,6 +16365,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 334
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15346,6 +16403,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 335
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15417,6 +16477,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 336
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15481,6 +16544,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 337
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15508,6 +16574,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 338
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15561,6 +16630,10 @@
       "owners": {
         "sarateves": 339,
         "v_inicius": 226
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15606,6 +16679,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 340
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15661,6 +16737,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 341
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15714,6 +16793,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 342
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15757,6 +16839,10 @@
       "owners": {
         "sarateves": 343,
         "v_inicius": 262
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15810,6 +16896,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 344
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15838,6 +16927,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 345
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15881,6 +16973,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 346
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15908,6 +17003,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 347
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -15967,6 +17065,10 @@
       "owners": {
         "sarateves": 348,
         "v_inicius": 99
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16000,6 +17102,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 349
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16029,6 +17134,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 350
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16058,6 +17166,10 @@
       "owners": {
         "sarateves": 351,
         "v_inicius": 210
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16095,6 +17207,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 352
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16123,6 +17238,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 353
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16176,6 +17294,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 354
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16231,6 +17352,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 355
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16284,6 +17408,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 356
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16347,6 +17474,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 357
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16375,6 +17505,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 358
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16408,6 +17541,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 359
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16436,6 +17572,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 360
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16465,6 +17604,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 361
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16505,6 +17647,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 362
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16538,6 +17683,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 363
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16579,6 +17727,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 364
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16644,6 +17795,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 365
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16687,6 +17841,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 366
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16716,6 +17873,10 @@
       "owners": {
         "sarateves": 367,
         "v_inicius": 195
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16774,6 +17935,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 368
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16820,6 +17984,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 369
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16866,6 +18033,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 370
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16894,6 +18064,10 @@
       "owners": {
         "sarateves": 371,
         "v_inicius": 246
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -16965,6 +18139,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 372
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17054,6 +18231,10 @@
       "owners": {
         "sarateves": 373,
         "v_inicius": 200
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z",
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17089,6 +18270,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 374
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17125,6 +18309,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 375
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17151,6 +18338,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 376
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17216,6 +18406,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 377
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17293,6 +18486,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 378
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17320,6 +18516,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 379
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17365,6 +18564,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 380
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17393,6 +18595,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 381
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17420,6 +18625,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 382
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17491,6 +18699,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 383
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17550,6 +18761,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 384
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17577,6 +18791,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 385
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17629,6 +18846,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "sarateves": 386
+      },
+      "addedAt": {
+        "sarateves": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17665,6 +18885,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 1
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17693,6 +18916,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 7
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17729,6 +18955,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 9
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17757,6 +18986,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 11
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17792,6 +19024,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 12
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17857,6 +19092,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 13
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17887,6 +19125,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 16
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17923,6 +19164,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 17
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17989,6 +19233,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 19
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18024,6 +19271,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 20
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18059,6 +19309,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 21
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18092,6 +19345,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 22
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18152,6 +19408,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 25
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18179,6 +19438,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 28
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18206,6 +19468,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 29
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18247,6 +19512,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 30
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18276,6 +19544,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 32
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18307,6 +19578,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 33
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18378,6 +19652,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 34
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18405,6 +19682,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 35
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18432,6 +19712,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 36
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18458,6 +19741,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 37
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18487,6 +19773,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 38
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18521,6 +19810,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 39
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18555,6 +19847,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 40
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18608,6 +19903,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 41
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18644,6 +19942,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 42
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18678,6 +19979,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 43
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18744,6 +20048,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 44
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18777,6 +20084,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 45
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18803,6 +20113,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 46
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18856,6 +20169,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 47
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18915,6 +20231,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 48
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -18974,6 +20293,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 49
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19009,6 +20331,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 52
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19079,6 +20404,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 53
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19126,6 +20454,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 54
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19191,6 +20522,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 56
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19226,6 +20560,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 57
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19261,6 +20598,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 58
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19314,6 +20654,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 59
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19373,6 +20716,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 60
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19401,6 +20747,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 62
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19460,6 +20809,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 63
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19494,6 +20846,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 64
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19557,6 +20912,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 65
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19583,6 +20941,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 67
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19628,6 +20989,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 68
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19675,6 +21039,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 69
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19722,6 +21089,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 70
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19780,6 +21150,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 71
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19813,6 +21186,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 72
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19848,6 +21224,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 73
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19874,6 +21253,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 75
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19907,6 +21289,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 76
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19960,6 +21345,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 77
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -19995,6 +21383,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 78
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20057,6 +21448,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 79
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20090,6 +21484,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 80
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20160,6 +21557,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 82
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20229,6 +21629,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 83
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20274,6 +21677,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 86
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20326,6 +21732,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 88
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20353,6 +21762,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 89
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20425,6 +21837,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 90
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20451,6 +21866,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 91
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20517,6 +21935,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 92
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20598,6 +22019,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 93
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20669,6 +22093,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 94
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20755,6 +22182,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 97
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20789,6 +22219,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 98
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20831,6 +22264,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 100
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20871,6 +22307,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 101
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20930,6 +22369,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 102
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -20995,6 +22437,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 103
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21035,6 +22480,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 104
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21094,6 +22542,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 105
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21136,6 +22587,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 107
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21169,6 +22623,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 108
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21202,6 +22659,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 109
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21247,6 +22707,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 111
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21282,6 +22745,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 112
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21309,6 +22775,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 113
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21379,6 +22848,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 114
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21406,6 +22878,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 116
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21476,6 +22951,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 117
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21503,6 +22981,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 119
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21532,6 +23013,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 120
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21585,6 +23069,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 122
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21656,6 +23143,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 123
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21697,6 +23187,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 124
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21737,6 +23230,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 126
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21788,6 +23284,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 127
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21821,6 +23320,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 128
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21861,6 +23363,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 129
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21889,6 +23394,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 130
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21919,6 +23427,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 131
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -21946,6 +23457,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 132
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22029,6 +23543,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 133
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22070,6 +23587,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 135
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22103,6 +23623,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 136
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22156,6 +23679,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 137
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22215,6 +23741,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 138
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22254,6 +23783,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 139
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22281,6 +23813,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 142
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22307,6 +23842,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 143
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22333,6 +23871,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 144
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22369,6 +23910,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 145
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22397,6 +23941,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 146
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22424,6 +23971,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 147
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22464,6 +24014,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 148
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22534,6 +24087,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 149
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22561,6 +24117,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 150
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22603,6 +24162,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 152
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22661,6 +24223,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 153
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22688,6 +24253,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 155
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22714,6 +24282,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 156
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22755,6 +24326,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 157
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22789,6 +24363,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 158
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22815,6 +24392,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 159
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22844,6 +24424,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 160
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22871,6 +24454,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 161
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22897,6 +24483,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 163
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22931,6 +24520,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 164
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -22977,6 +24569,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 165
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23011,6 +24606,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 166
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23039,6 +24637,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 167
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23065,6 +24666,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 169
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23106,6 +24710,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 171
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23133,6 +24740,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 172
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23200,6 +24810,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 173
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23284,6 +24897,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 174
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23313,6 +24929,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 175
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23379,6 +24998,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 176
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23449,6 +25071,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 177
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23482,6 +25107,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 178
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23508,6 +25136,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 179
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23549,6 +25180,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 180
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23583,6 +25217,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 181
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23609,6 +25246,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 183
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23643,6 +25283,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 184
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23671,6 +25314,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 185
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23705,6 +25351,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 186
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23732,6 +25381,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 187
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23797,6 +25449,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 188
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23823,6 +25478,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 189
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23850,6 +25508,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 191
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23883,6 +25544,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 192
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23942,6 +25606,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 193
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -23989,6 +25656,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 194
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24040,6 +25710,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 197
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24074,6 +25747,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 198
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24138,6 +25814,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 201
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24215,6 +25894,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 203
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24267,6 +25949,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 204
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24339,6 +26024,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 205
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24410,6 +26098,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 206
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24451,6 +26142,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 207
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24508,6 +26202,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 212
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24566,6 +26263,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 213
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24600,6 +26300,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 214
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24640,6 +26343,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 215
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24667,6 +26373,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 216
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24701,6 +26410,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 217
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24741,6 +26453,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 219
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24806,6 +26521,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 220
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24832,6 +26550,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 221
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24860,6 +26581,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 222
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24887,6 +26611,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 223
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24937,6 +26664,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 224
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24965,6 +26695,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 225
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -24993,6 +26726,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 227
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25020,6 +26756,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 228
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25059,6 +26798,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 229
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25086,6 +26828,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 230
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25119,6 +26864,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 231
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25145,6 +26893,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 232
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25169,6 +26920,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 233
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25195,6 +26949,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 234
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25260,6 +27017,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 235
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25295,6 +27055,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 236
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25322,6 +27085,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 237
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25355,6 +27121,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 238
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25408,6 +27177,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 239
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25473,6 +27245,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 240
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25537,6 +27312,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 241
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25591,6 +27369,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 242
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25656,6 +27437,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 243
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25682,6 +27466,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 244
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25708,6 +27495,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 245
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25741,6 +27531,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 247
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25788,6 +27581,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 248
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25834,6 +27630,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 250
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25875,6 +27674,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 251
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25901,6 +27703,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 252
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25934,6 +27739,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 253
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25960,6 +27768,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 254
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -25996,6 +27807,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 256
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -26022,6 +27836,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 257
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -26049,6 +27866,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 258
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -26076,6 +27896,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 259
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -26115,6 +27938,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 260
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -26173,6 +27999,9 @@
       "offersFetchedAt": "2026-10-14T14:55:30.359Z",
       "owners": {
         "v_inicius": 261
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     }
   ]
