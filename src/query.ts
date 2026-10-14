@@ -1,4 +1,5 @@
-import { OFFER_TYPES, type Film, type OfferType } from './contract'
+import type { Film, OfferType } from './contract'
+import { OFFER_TYPES } from './format'
 
 // 'all', 'both', or a Member's Letterboxd username
 export type OwnersFilter = 'all' | 'both' | (string & {})
@@ -24,7 +25,7 @@ export const RUNTIMES = {
   mid: { min: 1, max: 130, label: 'Até 2h10' },
   long: { min: 131, max: Infinity, label: 'Mais de 2h10' },
 }
-export type Runtime = keyof typeof RUNTIMES
+type Runtime = keyof typeof RUNTIMES
 
 // Case- and accent-insensitive "contains".
 const fold = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim()
@@ -80,7 +81,7 @@ export interface Names {
 }
 
 // One active filter choice, and the filters without it.
-export interface Chip {
+interface Chip {
   label: string
   without: Required<Filters>
 }

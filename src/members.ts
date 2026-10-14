@@ -1,4 +1,4 @@
-export interface Member {
+interface Member {
   name: string
   username: string // Letterboxd
   colour: string // Owners badge

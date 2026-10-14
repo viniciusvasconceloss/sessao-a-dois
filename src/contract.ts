@@ -1,12 +1,7 @@
-// The data contract between Sync and site: the single JSON file the site reads.
-// Image paths are TMDB CDN paths: https://image.tmdb.org/t/p/{size}{path}
+// The data contract between Sync and site: the single JSON file the site reads. Types only.
+// Image paths are TMDB CDN paths; the site builds URLs with img() in format.ts.
 
 export type OfferType = 'subscription' | 'free' | 'ads' | 'rent' | 'buy'
-
-// Labels, best Offer Type first.
-export const OFFER_TYPES: Record<OfferType, string> = { subscription: 'Assinatura', free: 'Grátis', ads: 'Com anúncios', rent: 'Aluguel', buy: 'Compra' }
-
-export const img = (size: string, path: string) => `https://image.tmdb.org/t/p/${size}${path}`
 
 export interface Offer {
   providerId: number // TMDB provider id

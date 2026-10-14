@@ -4,13 +4,13 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] A short `CODING_STANDARDS.md` with only the judgement rules:
+- [x] A short `CODING_STANDARDS.md` with only the judgement rules:
   - identifiers use GLOSSARY terms
   - each value has one source of truth (no defaults or labels copied between files)
   - tests cover boundaries and empty or unknown values
   - comments are updated when behaviour changes
-- [ ] The data contract is types only (no runtime helpers imported by Sync). This is enforced by a check that fails if the contract exports a runtime value
-- [ ] An unused export fails a check (the `noUnusedLocals` compiler flag already catches unused imports)
-- [ ] The `code-review` skill finds the file without needing a pointer, or gets one
+- [x] The data contract is types only (no runtime helpers imported by Sync). This is enforced by a check that fails if the contract exports a runtime value
+- [x] An unused export fails a check (the `noUnusedLocals` compiler flag already catches unused imports)
+- [x] The `code-review` skill finds the file without needing a pointer, or gets one

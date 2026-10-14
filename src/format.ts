@@ -1,5 +1,10 @@
-// pt-BR display helpers for the site.
-import { OFFER_TYPES, type Offer, type OfferType } from './contract'
+// Display helpers for the site: pt-BR labels and TMDB image URLs.
+import type { Offer, OfferType } from './contract'
+
+// Labels, best Offer Type first.
+export const OFFER_TYPES: Record<OfferType, string> = { subscription: 'Assinatura', free: 'Grátis', ads: 'Com anúncios', rent: 'Aluguel', buy: 'Compra' }
+
+export const img = (size: string, path: string) => `https://image.tmdb.org/t/p/${size}${path}`
 
 export const runtimeLabel = (min: number) => `${Math.floor(min / 60)}h${min % 60 ? ` ${min % 60}min` : ''}`
 

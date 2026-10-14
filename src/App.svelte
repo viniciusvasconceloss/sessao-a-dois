@@ -1,7 +1,7 @@
 <script lang="ts">
   import data from '../data/combined-watchlist.json'
-  import { img, OFFER_TYPES, type CombinedWatchlist, type Film, type Offer, type OfferType } from './contract'
-  import { countryName, languageName } from './format'
+  import type { CombinedWatchlist, Film, Offer, OfferType } from './contract'
+  import { countryName, img, languageName, OFFER_TYPES } from './format'
   import { MEMBERS } from './members'
   import { activeFilters, decadeOf, matches, NO_FILTERS, query, RUNTIMES, type Filters, type Names, type OwnersFilter, type Sort } from './query'
   import { tick } from 'svelte'

@@ -4,7 +4,7 @@ import type { CombinedWatchlist, Film, Offer } from '../src/contract.ts'
 // GET url, resolve with the body; reject on a non-2xx response.
 export type Http = (url: string, headers?: Record<string, string>) => Promise<string>
 
-export interface SyncOptions {
+interface SyncOptions {
   usernames: string[] // Letterboxd
   previous: CombinedWatchlist | null // last data file, used as the cache
   http: Http

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { img, OFFER_TYPES, type Film } from './contract'
-  import { countryName, languageName, providersOf, runtimeLabel } from './format'
+  import type { Film } from './contract'
+  import { countryName, img, languageName, OFFER_TYPES, providersOf, runtimeLabel } from './format'
   import { MEMBERS } from './members'
 
   let { film, onclose }: { film: Film | null; onclose: () => void } = $props()
