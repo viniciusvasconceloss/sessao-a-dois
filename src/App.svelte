@@ -188,7 +188,7 @@
 </footer>
 
 <style>
-  .layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); transition: grid-template-columns .25s ease }
+  .layout { display: grid; grid-template-columns: 310px minmax(0, 1fr); transition: grid-template-columns .25s ease }
   .layout.closed { grid-template-columns: 0 minmax(0, 1fr) }
   aside {
     position: sticky; top: 0; height: 100vh; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--line) transparent;
@@ -237,7 +237,11 @@
 
   main { min-width: 0 }
   /* Breathing room between the sidebar and the posters. */
-  @media (min-width: 901px) { main { padding-inline: 32px } }
+  @media (min-width: 901px) {
+    main { padding-inline: 32px }
+    /* Keeps the counts and logos clear of the scrollbar. */
+    aside { padding-right: 24px }
+  }
   .head { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 20px 0; color: var(--muted); font-size: 14px }
   .head p { margin: 0 }
   .head label { display: flex; gap: 8px; align-items: center }
