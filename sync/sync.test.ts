@@ -56,6 +56,7 @@ test('a Watchlist becomes Films with pt-BR details, in Watchlist order', async (
       poster: '/evKz85EKouVbIr51zy5fOtpNRPg.jpg',
       backdrop: '/7yCXDq2Mq1PTaMr1gc2dzXzmSY8.jpg',
       owners: { v_inicius: 0 },
+      addedAt: { v_inicius: '2026-10-15T06:00:00.000Z' },
       offers: [
         { providerId: 11, provider: 'MUBI', logo: '/mubi.jpg', type: 'subscription' },
         { providerId: 300, provider: 'Pluto TV', logo: '/plutotv.jpg', type: 'free' },
@@ -93,6 +94,21 @@ test('both Watchlists merge across pages; a Film in both has both Owners', async
   expect(requests.filter(u => u.includes('/movie/965150?'))).toHaveLength(1)
 })
 
+test('each Owner keeps the time the Sync first saw the Film in their Watchlist', async () => {
+  const earlier = await sync({
+    usernames: ['sarateves'], previous: null, http: recordedHttp().http, tmdbToken: 'test-token', delayMs: 0,
+    now: new Date('2026-10-01T06:00:00.000Z'),
+  })
+  const data = await run(['sarateves', 'v_inicius'], recordedHttp().http, earlier)
+
+  expect(data.films.map(f => [f.slug, f.addedAt])).toEqual([
+    ['parasite-2019', { sarateves: '2026-10-01T06:00:00.000Z' }],
+    ['aftersun', { sarateves: '2026-10-01T06:00:00.000Z', v_inicius: '2026-10-15T06:00:00.000Z' }],
+    ['perfect-days-2023', { sarateves: '2026-10-01T06:00:00.000Z' }],
+    ['the-secret-world-of-arrietty', { v_inicius: '2026-10-15T06:00:00.000Z' }],
+  ])
+})
+
 test('a Watchlist that comes back empty aborts the Sync instead of dropping its Films', async () => {
   const previous = await run(['v_inicius'], recordedHttp().http)
   const blocked = previous.films.map(f => ({ ...f, owners: { blocked: 0 } }))
@@ -127,7 +143,7 @@ test('a later run only fetches new Films, and drops Films removed from every Wat
   expect(requests).not.toContain('https://letterboxd.com/film/aftersun/')
   expect(requests.filter(u => u.includes('/movie/965150?'))).toEqual([])
   expect(data.films).toEqual([
-    { ...cachedAftersun, owners: { v_inicius: 0 } },
+    { ...cachedAftersun, owners: { v_inicius: 0 }, addedAt: { v_inicius: '2026-10-15T06:00:00.000Z' } },
     expect.objectContaining({ slug: 'the-secret-world-of-arrietty', owners: { v_inicius: 1 } }),
   ])
 })

@@ -15,6 +15,18 @@ test('default order is date added, newest first, interleaving both Watchlists', 
   expect(query(films).map(f => f.tmdbId)).toEqual([2, 4, 3, 5, 1])
 })
 
+test('Films the Sync saw later come first; Films seen in the same run interleave by Watchlist position', () => {
+  const OCT1 = '2026-10-01T06:00:00.000Z', OCT15 = '2026-10-15T06:00:00.000Z'
+  const films = [
+    film(1, { sarateves: 0 }, { addedAt: { sarateves: OCT15 } }),
+    film(2, { v_inicius: 0 }, { addedAt: { v_inicius: OCT1 } }),
+    film(3, { sarateves: 1 }, { addedAt: { sarateves: OCT15 } }),
+    film(4, { sarateves: 2, v_inicius: 2 }, { addedAt: { sarateves: OCT1, v_inicius: OCT15 } }),
+    film(5, { sarateves: 3 }, { addedAt: { sarateves: OCT1 } }),
+  ]
+  expect(query(films).map(f => f.tmdbId)).toEqual([1, 3, 4, 2, 5])
+})
+
 const ids = (films: Film[]) => films.map(f => f.tmdbId)
 const all = { owners: 'all' } as const
 const saraVini = [film(1, { sarateves: 0 }), film(2, { v_inicius: 0 }), film(3, { sarateves: 1, v_inicius: 1 })]

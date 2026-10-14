@@ -31,6 +31,9 @@ export interface Film {
   backdrop: string | null
   // Letterboxd username → position in that Member's Watchlist (0 = most recently added)
   owners: Record<string, number>
+  // Letterboxd username → when Sync first saw the Film in that Member's Watchlist (ISO timestamp).
+  // Stands in for the date added, which Watchlist pages don't show. Absent in data files written before Sync stamped it.
+  addedAt?: Record<string, string>
   offers: Offer[] // region BR
   justwatch: string | null
   filmFetchedAt: string // ISO timestamp

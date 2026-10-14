@@ -48,13 +48,14 @@ export async function sync(opts: SyncOptions): Promise<CombinedWatchlist> {
           console.warn(`skipped ${slug}: no TMDB movie on its Letterboxd page`)
           continue
         }
-        film = { ...fetched, owners: {} }
+        film = { ...fetched, owners: {}, addedAt: {} }
       } catch (e) {
         console.warn(`skipped ${slug}: ${e}`)
         continue
       }
     }
-    film = { ...film, owners: filmOwners }
+    const addedAt = Object.fromEntries(Object.keys(filmOwners).map(u => [u, film!.addedAt?.[u] ?? now.toISOString()]))
+    film = { ...film, owners: filmOwners, addedAt }
     if (now.getTime() - Date.parse(film.offersFetchedAt) >= OFFERS_MAX_AGE_MS) {
       // On failure the old Offers and timestamp stay, so the refresh is retried on the next run.
       try {
@@ -67,7 +68,7 @@ export async function sync(opts: SyncOptions): Promise<CombinedWatchlist> {
   }
   return { syncedAt: now.toISOString(), films }
 
-  async function fetchFilm(slug: string): Promise<Omit<Film, 'owners'> | null> {
+  async function fetchFilm(slug: string): Promise<Omit<Film, 'owners' | 'addedAt'> | null> {
     const bodyTag = (await getLetterboxd(`/film/${slug}/`)).match(/<body[^>]*>/)?.[0] ?? ''
     const id = bodyTag.match(/data-tmdb-id="(\d+)"/)?.[1]
     // ponytail: TV-backed entries (miniseries) are skipped; fetch /tv/{id} if they're ever wanted

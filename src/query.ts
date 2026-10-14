@@ -30,9 +30,11 @@ export type Runtime = keyof typeof RUNTIMES
 const fold = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim()
 export const matches = (text: string, search: string) => fold(text).includes(fold(search))
 
-// ponytail: ranks from two Watchlists aren't comparable in time; the smallest rank interleaves them.
-// Swap for real dates if Sync ever gets them.
+// Newest first by when Sync first saw the Film in any Owner's Watchlist. Within one Sync run there's no time,
+// and ranks from two Watchlists aren't comparable in time, so the smallest rank interleaves them.
+const lastAdded = (f: Film) => Math.max(0, ...Object.values(f.addedAt ?? {}).map(Date.parse))
 const addedRank = (f: Film) => Math.min(...Object.values(f.owners))
+const byAdded = (a: Film, b: Film) => lastAdded(b) - lastAdded(a) || addedRank(a) - addedRank(b)
 
 const ownedBy = (f: Film, owners: OwnersFilter) =>
   owners === 'all' || (owners === 'both' ? Object.keys(f.owners).length > 1 : owners in f.owners)
@@ -54,7 +56,7 @@ const describedBy = (f: Film, { genre, decade, runtime, country, language, minRa
 
 // Ascending keys; ties fall back to date added.
 const SORT_KEY = {
-  added: addedRank,
+  added: () => 0,
   year: (f: Film) => -f.year,
   runtime: (f: Film) => f.runtime || Infinity, // 0 = unknown on TMDB
   rating: (f: Film) => -f.rating,
@@ -66,7 +68,7 @@ export function query(films: Film[], filters: Filters = { owners: 'all' }, sort:
   return films
     .filter(f => ownedBy(f, filters.owners) && available(f, filters) && describedBy(f, filters))
     .filter(f => !filters.search || matches(f.title, filters.search) || matches(f.originalTitle, filters.search))
-    .toSorted((a, b) => key(a) - key(b) || addedRank(a) - addedRank(b))
+    .toSorted((a, b) => key(a) - key(b) || byAdded(a, b))
 }
 
 // Display names for the ids kept in Filters.

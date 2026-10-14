@@ -191,7 +191,7 @@
   .layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); transition: grid-template-columns .25s ease }
   .layout.closed { grid-template-columns: 0 minmax(0, 1fr) }
   aside {
-    position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    position: sticky; top: 0; height: 100vh; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--line) transparent;
     border-right: 1px solid var(--line);
     padding-block: max(28px, env(safe-area-inset-top, 0px)) 48px;
     display: grid; gap: 30px; align-content: start;
@@ -236,6 +236,8 @@
   .who small { font: 400 13px "Manrope", sans-serif; font-variant-numeric: tabular-nums }
 
   main { min-width: 0 }
+  /* Breathing room between the sidebar and the posters. */
+  @media (min-width: 901px) { main { padding-inline: 32px } }
   .head { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 20px 0; color: var(--muted); font-size: 14px }
   .head p { margin: 0 }
   .head label { display: flex; gap: 8px; align-items: center }
