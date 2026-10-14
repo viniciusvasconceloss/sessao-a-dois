@@ -209,7 +209,8 @@
   .chips button { font-size: 13px; padding: 3px 10px }
   .chips span { color: var(--muted) }
   fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 2px }
-  legend { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; padding: 0; margin-bottom: 10px }
+  /* Full width and one line: Safari shrinks a legend in a grid fieldset to its narrowest, one word per line. */
+  legend { width: 100%; white-space: nowrap; font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; padding: 0; margin-bottom: 10px }
   .who button {
     display: flex; justify-content: space-between; align-items: baseline; width: 100%;
     border: 0; background: none; padding: 2px 0; text-align: left; cursor: pointer;
