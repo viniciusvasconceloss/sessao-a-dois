@@ -13,5 +13,5 @@
 - [ ] Letterboxd requests throttled politely; first full run (~600 Films) completes within the Action's limits; later runs only fetch new Films
 - [ ] HTTP is injected; tests run the entry point against recorded Letterboxd HTML and TMDB JSON fixtures and assert on the produced data (merge, Owners, pagination, caching, removal)
 - [ ] Workflow runs on a daily schedule and via manual dispatch, commits only when data changed, and the commit triggers a Pages redeploy
-- [ ] TMDB API key read from a GitHub Actions secret, never shipped to the site
+- [ ] TMDB API Read Access Token (v4, sent as Bearer) read from the GitHub Actions secret `TMDB_API_TOKEN` (already created by Vinicius), never shipped to the site
 - [ ] Setup guide covers getting a TMDB key, adding the secret, and running the Sync manually from GitHub (incl. the mobile app)
