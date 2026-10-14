@@ -4,7 +4,8 @@
 export type OfferType = 'subscription' | 'free' | 'ads' | 'rent' | 'buy'
 
 export interface Offer {
-  provider: string // base Provider name; Amazon Channels already merged by Sync
+  providerId: number // TMDB provider id
+  provider: string // base Provider name; channels (Amazon, Apple TV, Roku) already merged by Sync
   logo: string
   type: OfferType
 }

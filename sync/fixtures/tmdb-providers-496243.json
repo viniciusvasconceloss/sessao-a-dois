@@ -1,0 +1,18 @@
+{
+ "id": 496243,
+ "results": {
+  "BR": {
+   "link": "https://www.themoviedb.org/movie/496243-parasite/watch?locale=BR",
+   "flatrate": [
+    { "logo_path": "/hbomax.jpg", "provider_id": 1899, "provider_name": "HBO Max", "display_priority": 2 },
+    { "logo_path": "/hbomax-amazon.jpg", "provider_id": 1825, "provider_name": "HBO Max Amazon Channel", "display_priority": 20 },
+    { "logo_path": "/paramount-amazon.jpg", "provider_id": 582, "provider_name": "Paramount+ Amazon Channel", "display_priority": 21 },
+    { "logo_path": "/belasartes-apple.jpg", "provider_id": 9999, "provider_name": "Belas Artes à La Carte Apple TV Channel", "display_priority": 50 },
+    { "logo_path": "/belasartes-amazon.jpg", "provider_id": 9998, "provider_name": "Belas Artes à La Carte Amazon Channel ", "display_priority": 51 }
+   ],
+   "rent": [
+    { "logo_path": "/primevideo.jpg", "provider_id": 119, "provider_name": "Amazon Prime Video", "display_priority": 3 }
+   ]
+  }
+ }
+}

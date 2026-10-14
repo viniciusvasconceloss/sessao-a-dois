@@ -1,0 +1,30 @@
+{
+ "id": 965150,
+ "results": {
+  "BR": {
+   "link": "https://www.themoviedb.org/movie/965150-aftersun/watch?locale=BR",
+   "flatrate": [
+    { "logo_path": "/mubi.jpg", "provider_id": 11, "provider_name": "MUBI", "display_priority": 9 }
+   ],
+   "free": [
+    { "logo_path": "/plutotv.jpg", "provider_id": 300, "provider_name": "Pluto TV", "display_priority": 40 }
+   ],
+   "ads": [
+    { "logo_path": "/youtube.jpg", "provider_id": 192, "provider_name": "YouTube", "display_priority": 30 }
+   ],
+   "rent": [
+    { "logo_path": "/appletv.jpg", "provider_id": 2, "provider_name": "Apple TV", "display_priority": 4 }
+   ],
+   "buy": [
+    { "logo_path": "/appletv.jpg", "provider_id": 2, "provider_name": "Apple TV", "display_priority": 4 },
+    { "logo_path": "/googleplay.jpg", "provider_id": 3, "provider_name": "Google Play Movies", "display_priority": 14 }
+   ]
+  },
+  "US": {
+   "link": "https://www.themoviedb.org/movie/965150-aftersun/watch?locale=US",
+   "flatrate": [
+    { "logo_path": "/mubi.jpg", "provider_id": 11, "provider_name": "MUBI", "display_priority": 1 }
+   ]
+  }
+ }
+}

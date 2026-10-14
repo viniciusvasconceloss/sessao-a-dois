@@ -1,0 +1,9 @@
+{
+ "results": [
+  { "display_priority": 2, "logo_path": "/hbomax.jpg", "provider_name": "HBO Max", "provider_id": 1899 },
+  { "display_priority": 9, "logo_path": "/mubi.jpg", "provider_name": "MUBI", "provider_id": 11 },
+  { "display_priority": 10, "logo_path": "/paramount.jpg", "provider_name": "Paramount Plus", "provider_id": 531 },
+  { "display_priority": 20, "logo_path": "/hbomax-amazon.jpg", "provider_name": "HBO Max Amazon Channel", "provider_id": 1825 },
+  { "display_priority": 21, "logo_path": "/paramount-amazon.jpg", "provider_name": "Paramount+ Amazon Channel", "provider_id": 582 }
+ ]
+}
