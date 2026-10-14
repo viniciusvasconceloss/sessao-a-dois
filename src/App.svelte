@@ -84,6 +84,9 @@
   <button class="backdrop" aria-label="Fechar filtros" tabindex="-1" onclick={() => setOpen(false)}></button>
   <aside id="filters" class="wrap" inert={!open} aria-label="Filtros" bind:this={aside} tabindex="-1"
     role={sheetOpen ? 'dialog' : undefined} aria-modal={sheetOpen || undefined}>
+    {#if phone}
+      <div class="sheet-head"><b>Filtros</b><button onclick={() => setOpen(false)}>Aplicar</button></div>
+    {/if}
     <fieldset class="who">
       <legend>De quem</legend>
       {#each OWNERS as [value, label] (value)}
@@ -250,10 +253,21 @@
     aside {
       position: fixed; inset: auto 0 0; z-index: 2; height: auto; max-height: 85vh;
       background: var(--bg); border: 1px solid var(--line); border-radius: 16px 16px 0 0;
-      padding-block: 24px max(32px, env(safe-area-inset-bottom, 0px));
+      padding-block: 0 max(32px, env(safe-area-inset-bottom, 0px));
       transition: transform .25s ease;
     }
     .closed aside { transform: translateY(100%); transition: transform .25s ease, visibility .25s; padding-inline: max(16px, env(safe-area-inset-left, 0px)) }
+    /* Stays put while the filters scroll under it; filters apply live, so Aplicar just closes the sheet. */
+    .sheet-head {
+      position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; align-items: center;
+      margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding: 14px max(16px, env(safe-area-inset-left, 0px));
+      background: var(--bg); border-bottom: 1px solid var(--line);
+    }
+    .sheet-head b { font: 700 18px var(--display) }
+    .sheet-head button {
+      border: 0; border-radius: 999px; padding: 7px 18px; background: var(--accent); color: var(--bg);
+      font: inherit; font-weight: 700; font-size: 14px; cursor: pointer;
+    }
     .backdrop { display: block; position: fixed; inset: 0; z-index: 1; border: 0; background: rgb(0 0 0 / .5) }
     .closed .backdrop { display: none }
   }
