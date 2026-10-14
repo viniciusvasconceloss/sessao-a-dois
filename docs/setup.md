@@ -43,6 +43,9 @@ npm run dev     # local site
 npm test        # unit tests
 npm run check   # typecheck
 TMDB_API_TOKEN=eyJ... npm run sync   # run the Sync locally (needs an official Node.js build ≥ 22.18)
+npm run shot -- / iphone --click .toggle   # screenshot → shots/iphone.jpg
 ```
+
+`npm run shot -- [route|url] [phone|ipad|desktop|iphone] [--click <selector>]` starts and stops its own dev server for a route, writes a DPR-1 JPEG to `shots/<device>.jpg` and exits 1 if the page logged errors. `iphone` renders with WebKit. One-time browser setup: `npm run browsers`, then `sudo npx playwright install-deps chromium webkit`.
 
 The site reads `data/combined-watchlist.json` (contract in `src/contract.ts`), written by the Sync.

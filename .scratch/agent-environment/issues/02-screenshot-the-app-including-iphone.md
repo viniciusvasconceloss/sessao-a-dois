@@ -4,12 +4,12 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] **Human step:** the user runs `sudo npx playwright install-deps webkit` once, since installing it needs sudo. The agent asks for this at the start instead of working around it
-- [ ] Playwright is a dev dependency, and its browser installs with a documented npm script
-- [ ] One npm script takes a URL or route and a device (`phone`, `ipad`, `desktop`) and writes a screenshot to a fixed path
-- [ ] Screenshots use DPR 1 and a compressed format; a phone shot is well under 200KB
-- [ ] The dev server can be started and stopped without `pkill -f vite`, whose exit code 144 broke chained commands, for example by a script that owns the server's lifecycle
-- [ ] A pointer the agent sees (a project `run` skill or one CLAUDE.md line) names the command
-- [ ] The command accepts an `iphone` device that uses WebKit with an iPhone viewport and user agent, and a screenshot of the filter sheet renders without errors
+- [x] **Human step:** the user runs `sudo npx playwright install-deps webkit` once, since installing it needs sudo. The agent asks for this at the start instead of working around it
+- [x] Playwright is a dev dependency, and its browser installs with a documented npm script
+- [x] One npm script takes a URL or route and a device (`phone`, `ipad`, `desktop`) and writes a screenshot to a fixed path
+- [x] Screenshots use DPR 1 and a compressed format; a phone shot is well under 200KB
+- [x] The dev server can be started and stopped without `pkill -f vite`, whose exit code 144 broke chained commands, for example by a script that owns the server's lifecycle
+- [x] A pointer the agent sees (a project `run` skill or one CLAUDE.md line) names the command
+- [x] The command accepts an `iphone` device that uses WebKit with an iPhone viewport and user agent, and a screenshot of the filter sheet renders without errors
