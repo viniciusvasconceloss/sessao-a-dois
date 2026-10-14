@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
-import type { Film } from './contract'
-import { query } from './query'
+import type { Film, Offer } from './contract'
+import { query, type Filters } from './query'
 
 const film = (tmdbId: number, owners: Film['owners'], rest: Partial<Film> = {}) => ({ tmdbId, owners, ...rest }) as Film
 
@@ -42,4 +42,33 @@ test('sorts by year (newest), runtime (shortest) or rating (best), ties falling 
 test('runtime sort puts Films with unknown runtime (0) last', () => {
   const films = [film(1, { sarateves: 0 }, { runtime: 0 }), film(2, { sarateves: 1 }, { runtime: 140 }), film(3, { sarateves: 2 }, { runtime: 80 })]
   expect(ids(query(films, all, 'runtime'))).toEqual([3, 2, 1])
+})
+
+const offer = (providerId: number, type: Offer['type'] = 'subscription') => ({ providerId, type }) as Offer
+const NETFLIX = 8, MUBI = 11, APPLE = 2
+const onDemand = [
+  film(1, { sarateves: 0 }, { offers: [offer(NETFLIX)] }),
+  film(2, { sarateves: 1 }, { offers: [offer(MUBI), offer(APPLE, 'rent')] }),
+  film(3, { sarateves: 2 }, { offers: [offer(APPLE, 'buy')] }),
+  film(4, { sarateves: 3 }, { offers: [] }),
+]
+const where = (f: Partial<Filters>) => ids(query(onDemand, { ...all, providers: [], offerTypes: [], ...f }))
+
+test('a Provider shows only Films with an Offer on it, hiding unavailable Films', () => {
+  expect(where({})).toEqual([1, 2, 3, 4])
+  expect(where({ providers: [NETFLIX] })).toEqual([1])
+})
+
+test('several Providers match a Film on any of them', () => {
+  expect(where({ providers: [NETFLIX, APPLE] })).toEqual([1, 2, 3])
+})
+
+test('Offer Types restrict which Offers count for the Provider filter', () => {
+  expect(where({ providers: [APPLE], offerTypes: ['rent'] })).toEqual([2])
+  expect(where({ providers: [APPLE], offerTypes: ['subscription'] })).toEqual([])
+  expect(where({ providers: [NETFLIX, APPLE], offerTypes: ['subscription', 'buy'] })).toEqual([1, 3])
+})
+
+test('Offer Types alone show Films with an Offer of that type on any Provider', () => {
+  expect(where({ offerTypes: ['rent', 'buy'] })).toEqual([2, 3])
 })

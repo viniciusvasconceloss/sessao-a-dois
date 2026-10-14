@@ -1,6 +1,6 @@
 <script lang="ts">
   import data from '../data/combined-watchlist.json'
-  import type { CombinedWatchlist } from './contract'
+  import { img, OFFER_TYPES, type CombinedWatchlist, type Offer, type OfferType } from './contract'
   import { MEMBERS } from './members'
   import { query, type Filters, type OwnersFilter, type Sort } from './query'
   import Card from './Card.svelte'
@@ -10,7 +10,21 @@
   const OWNERS: [OwnersFilter, string][] = [['all', 'Todos'], ...MEMBERS.map(m => [m.username, m.name] as [OwnersFilter, string]), ['both', 'Os dois']]
   const SORTS: [Sort, string][] = [['added', 'Adicionados recentemente'], ['year', 'Ano'], ['runtime', 'Duração'], ['rating', 'Nota TMDB']]
 
-  let filters: Filters = $state({ owners: 'all' })
+  const TYPES = Object.entries(OFFER_TYPES) as [OfferType, string][]
+
+  // Every Provider in the data, the one with most Films first.
+  const PROVIDERS = (() => {
+    const byId = new Map<number, { offer: Offer; films: Set<number> }>()
+    for (const f of watchlist.films)
+      for (const offer of f.offers) {
+        if (!byId.has(offer.providerId)) byId.set(offer.providerId, { offer, films: new Set() })
+        byId.get(offer.providerId)!.films.add(f.tmdbId)
+      }
+    return [...byId.values()].sort((a, b) => b.films.size - a.films.size).map(p => p.offer)
+  })()
+
+  let filters: Required<Filters> = $state({ owners: 'all', providers: [], offerTypes: [] })
+  const toggle = <T,>(list: T[], item: T) => (list.includes(item) ? list.filter(x => x !== item) : [...list, item])
   let sort: Sort = $state('added')
 
   const films = $derived(query(watchlist.films, filters, sort))
@@ -27,6 +41,25 @@
           {label}<small>{ownersCount(value)}</small>
         </button>
       {/each}
+    </fieldset>
+    <fieldset>
+      <legend>Onde</legend>
+      <div class="prov">
+        {#each PROVIDERS as p (p.providerId)}
+          <button title={p.provider} aria-pressed={filters.providers.includes(p.providerId)}
+            onclick={() => (filters.providers = toggle(filters.providers, p.providerId))}>
+            <img src={img('w92', p.logo)} alt={p.provider} loading="lazy" />
+          </button>
+        {/each}
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Como</legend>
+      <div class="types">
+        {#each TYPES as [value, label] (value)}
+          <button aria-pressed={filters.offerTypes.includes(value)} onclick={() => (filters.offerTypes = toggle(filters.offerTypes, value))}>{label}</button>
+        {/each}
+      </div>
     </fieldset>
   </aside>
 
@@ -73,6 +106,14 @@
   }
   .who button:hover { color: var(--fg) }
   .who button[aria-pressed="true"] { color: var(--fg); font-weight: 700 }
+  .prov { display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 8px }
+  .prov button { border: 0; padding: 0; background: none; border-radius: 9px; opacity: .45; cursor: pointer; transition: opacity .15s }
+  .prov img { border-radius: 9px; width: 100% }
+  .prov button:hover { opacity: 1 }
+  .prov button[aria-pressed="true"] { opacity: 1; box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent) }
+  .types { display: flex; flex-wrap: wrap; gap: 6px }
+  .types button { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 4px 12px; font: inherit; font-size: 13px; color: var(--muted); cursor: pointer }
+  .types button[aria-pressed="true"] { border-color: var(--accent); color: var(--fg); background: color-mix(in srgb, var(--accent) 18%, transparent) }
   .who small { font: 400 13px "Manrope", sans-serif; font-variant-numeric: tabular-nums }
 
   main { min-width: 0 }

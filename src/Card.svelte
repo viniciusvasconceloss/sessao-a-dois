@@ -1,13 +1,11 @@
 <script lang="ts">
-  import type { Film, Offer, OfferType } from './contract'
+  import { img, OFFER_TYPES, type Film, type Offer, type OfferType } from './contract'
   import { MEMBERS } from './members'
 
   let { film }: { film: Film } = $props()
 
-  const img = (size: string, path: string) => `https://image.tmdb.org/t/p/${size}${path}`
-  const RANK: OfferType[] = ['subscription', 'free', 'ads', 'rent', 'buy']
+  const RANK = Object.keys(OFFER_TYPES)
   const MARK: Partial<Record<OfferType, string>> = { ads: 'AD', rent: 'R$', buy: 'R$' }
-  const TYPE: Record<OfferType, string> = { subscription: 'Assinatura', free: 'Grátis', ads: 'Com anúncios', rent: 'Aluguel', buy: 'Compra' }
 
   const owners = $derived(MEMBERS.filter(m => m.username in film.owners))
 
@@ -16,7 +14,7 @@
     const byProvider = new Map<string, Offer[]>()
     for (const o of film.offers.toSorted((a, b) => RANK.indexOf(a.type) - RANK.indexOf(b.type)))
       byProvider.set(o.provider, [...(byProvider.get(o.provider) ?? []), o])
-    return [...byProvider.values()].map(offers => ({ ...offers[0], types: offers.map(o => TYPE[o.type]).join(', ') }))
+    return [...byProvider.values()].map(offers => ({ ...offers[0], types: offers.map(o => OFFER_TYPES[o.type]).join(', ') }))
   })
 
   const runtime = $derived(`${Math.floor(film.runtime / 60)}h${film.runtime % 60 ? ` ${film.runtime % 60}min` : ''}`)

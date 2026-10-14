@@ -3,6 +3,11 @@
 
 export type OfferType = 'subscription' | 'free' | 'ads' | 'rent' | 'buy'
 
+// Labels, best Offer Type first.
+export const OFFER_TYPES: Record<OfferType, string> = { subscription: 'Assinatura', free: 'Grátis', ads: 'Com anúncios', rent: 'Aluguel', buy: 'Compra' }
+
+export const img = (size: string, path: string) => `https://image.tmdb.org/t/p/${size}${path}`
+
 export interface Offer {
   providerId: number // TMDB provider id
   provider: string // base Provider name; channels (Amazon, Apple TV, Roku) already merged by Sync
