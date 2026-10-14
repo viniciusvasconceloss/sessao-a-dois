@@ -2,7 +2,7 @@
   import data from '../data/combined-watchlist.json'
   import { img, OFFER_TYPES, type CombinedWatchlist, type Offer, type OfferType } from './contract'
   import { MEMBERS } from './members'
-  import { matches, query, type Filters, type OwnersFilter, type Sort } from './query'
+  import { decadeOf, matches, query, RUNTIMES, type Filters, type OwnersFilter, type Sort } from './query'
   import Card from './Card.svelte'
 
   const watchlist = data as CombinedWatchlist
@@ -23,8 +23,27 @@
     return [...byId.values()].sort((a, b) => b.films.size - a.films.size).map(p => p.offer)
   })()
 
-  let filters: Required<Filters> = $state({ owners: 'all', providers: [], offerTypes: [], search: '' })
+  // "O quê" options, built from the data.
+  const uniq = <T,>(xs: T[]) => [...new Set(xs)]
+  const byLabel = (a: [unknown, string], b: [unknown, string]) => a[1].localeCompare(b[1], 'pt')
+  const country = new Intl.DisplayNames('pt-BR', { type: 'region' })
+  const lang = new Intl.DisplayNames('pt-BR', { type: 'language' })
+  const capital = (s: string) => s[0].toUpperCase() + s.slice(1)
+  const GENRES = uniq(watchlist.films.flatMap(f => f.genres)).sort((a, b) => a.localeCompare(b, 'pt'))
+  const DECADES = uniq(watchlist.films.map(decadeOf)).sort((a, b) => b - a)
+  // TMDB keeps codes of countries that no longer exist; Intl doesn't know them or names their successor.
+  const GONE: Record<string, string> = { XC: 'Tchecoslováquia', SU: 'União Soviética', AN: 'Antilhas Holandesas' }
+  const COUNTRIES = uniq(watchlist.films.flatMap(f => f.countries)).map(c => [c, GONE[c] ?? country.of(c) ?? c] as [string, string]).sort(byLabel)
+  // TMDB uses 'cn' for Cantonese.
+  const LANGUAGES = uniq(watchlist.films.map(f => f.language)).map(l => [l, capital(lang.of(l === 'cn' ? 'yue' : l) ?? l)] as [string, string]).sort(byLabel)
+
+  const NO_FILTERS: Required<Filters> = { owners: 'all', providers: [], offerTypes: [], search: '', genre: '', decade: 0, runtime: '', country: '', language: '', minRating: 0 }
+  let filters: Required<Filters> = $state({ ...NO_FILTERS })
   let providerSearch = $state('')
+  const reset = () => {
+    filters = { ...NO_FILTERS }
+    providerSearch = ''
+  }
   const shownProviders = $derived(PROVIDERS.filter(p => matches(p.provider, providerSearch)))
   const toggle = <T,>(list: T[], item: T) => (list.includes(item) ? list.filter(x => x !== item) : [...list, item])
   let sort: Sort = $state('added')
@@ -67,6 +86,34 @@
         {/each}
       </div>
     </fieldset>
+    <fieldset class="what">
+      <legend>O quê</legend>
+      <select bind:value={filters.genre} aria-label="Gênero">
+        <option value="">Todos os gêneros</option>
+        {#each GENRES as g (g)}<option value={g}>{g}</option>{/each}
+      </select>
+      <select bind:value={filters.decade} aria-label="Década">
+        <option value={0}>Qualquer década</option>
+        {#each DECADES as d (d)}<option value={d}>Anos {d}</option>{/each}
+      </select>
+      <select bind:value={filters.runtime} aria-label="Duração">
+        <option value="">Qualquer duração</option>
+        {#each Object.entries(RUNTIMES) as [value, r] (value)}<option {value}>{r.label}</option>{/each}
+      </select>
+      <select bind:value={filters.country} aria-label="País">
+        <option value="">Todos os países</option>
+        {#each COUNTRIES as [value, label] (value)}<option {value}>{label}</option>{/each}
+      </select>
+      <select bind:value={filters.language} aria-label="Idioma">
+        <option value="">Todos os idiomas</option>
+        {#each LANGUAGES as [value, label] (value)}<option {value}>{label}</option>{/each}
+      </select>
+    </fieldset>
+    <fieldset class="rating">
+      <legend>Nota TMDB mínima: {filters.minRating ? filters.minRating.toLocaleString('pt-BR') : 'qualquer'}</legend>
+      <input type="range" min="0" max="9" step="0.5" bind:value={filters.minRating} aria-label="Nota TMDB mínima" />
+    </fieldset>
+    <button class="reset" onclick={reset}>Limpar filtros</button>
   </aside>
 
   <main class="wrap">
@@ -125,6 +172,10 @@
   .types { display: flex; flex-wrap: wrap; gap: 6px }
   .types button { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 4px 12px; font: inherit; font-size: 13px; color: var(--muted); cursor: pointer }
   .types button[aria-pressed="true"] { border-color: var(--accent); color: var(--fg); background: color-mix(in srgb, var(--accent) 18%, transparent) }
+  .what { gap: 8px }
+  .what select, .rating input { width: 100%; accent-color: var(--accent) }
+  .reset { justify-self: start; border: 1px solid var(--line); background: none; border-radius: 6px; padding: 6px 12px; font: inherit; font-size: 14px; color: var(--muted); cursor: pointer }
+  .reset:hover { color: var(--fg); border-color: var(--accent) }
   .who small { font: 400 13px "Manrope", sans-serif; font-variant-numeric: tabular-nums }
 
   main { min-width: 0 }

@@ -83,3 +83,63 @@ test('search matches the pt-BR or original title, ignoring case and accents', ()
   expect(ids(query(films, { ...all, search: 'PEQUENÍNOS' }))).toEqual([2])
   expect(ids(query(films, { ...all, search: ' ' }))).toEqual([1, 2, 3])
 })
+
+const meta = [
+  film(1, { sarateves: 0 }, { genres: ['Drama', 'Romance'], year: 1994, runtime: 95, countries: ['FR', 'PL'], language: 'fr', rating: 7.8 }),
+  film(2, { sarateves: 1 }, { genres: ['Comédia'], year: 2019, runtime: 120, countries: ['KR'], language: 'ko', rating: 8.5 }),
+  film(3, { sarateves: 2 }, { genres: ['Drama'], year: 2023, runtime: 140, countries: ['US'], language: 'en', rating: 6.0 }),
+  film(4, { sarateves: 3 }, { genres: [], year: 1990, runtime: 0, countries: [], language: 'en', rating: 0 }),
+]
+const what = (f: Partial<Filters>) => ids(query(meta, { ...all, ...f }))
+
+test('genre shows Films having that genre among theirs', () => {
+  expect(what({ genre: 'Drama' })).toEqual([1, 3])
+})
+
+test('decade shows Films released in it', () => {
+  expect(what({ decade: 1990 })).toEqual([1, 4])
+  expect(what({ decade: 2010 })).toEqual([2])
+})
+
+test('runtime keeps Films up to 1h40, up to 2h10 or over 2h10, dropping unknown runtimes', () => {
+  expect(what({ runtime: 'short' })).toEqual([1])
+  expect(what({ runtime: 'mid' })).toEqual([1, 2])
+  expect(what({ runtime: 'long' })).toEqual([3])
+})
+
+test('country shows Films produced there, co-productions included', () => {
+  expect(what({ country: 'PL' })).toEqual([1])
+  expect(what({ country: 'US' })).toEqual([3])
+})
+
+test('language shows Films in that original language', () => {
+  expect(what({ language: 'en' })).toEqual([3, 4])
+})
+
+test('minimum rating keeps Films rated at least that', () => {
+  expect(what({ minRating: 7.8 })).toEqual([1, 2])
+  expect(what({ minRating: 0 })).toEqual([1, 2, 3, 4])
+})
+
+test('filters from every section combine with AND: short dramas on Netflix we both want', () => {
+  const m = (tmdbId: number, owners: Film['owners'], genres: string[], runtime: number, providerId: number) =>
+    film(tmdbId, owners, { genres, runtime, offers: [offer(providerId)], year: 2020, countries: ['BR'], language: 'pt', rating: 7, title: 'x', originalTitle: 'x' })
+  const both = { sarateves: 0, v_inicius: 0 }
+  const films = [
+    m(1, both, ['Drama'], 90, NETFLIX),
+    m(2, { sarateves: 1 }, ['Drama'], 90, NETFLIX),
+    m(3, both, ['Comédia'], 90, NETFLIX),
+    m(4, both, ['Drama'], 150, NETFLIX),
+    m(5, both, ['Drama'], 90, MUBI),
+  ]
+  const f: Filters = { owners: 'both', providers: [NETFLIX], genre: 'Drama', runtime: 'short', decade: 2020, country: 'BR', language: 'pt', minRating: 6.5, search: 'x' }
+  expect(ids(query(films, f))).toEqual([1])
+  expect(ids(query(films, { ...f, minRating: 7.5 }))).toEqual([])
+})
+
+test('runtime ranges include their limits: 1h40 is short, 2h10 is mid, 2h11 is long', () => {
+  const films = [100, 101, 130, 131].map((runtime, i) => film(i + 1, { sarateves: i }, { runtime }))
+  expect(ids(query(films, { ...all, runtime: 'short' }))).toEqual([1])
+  expect(ids(query(films, { ...all, runtime: 'mid' }))).toEqual([1, 2, 3])
+  expect(ids(query(films, { ...all, runtime: 'long' }))).toEqual([4])
+})
