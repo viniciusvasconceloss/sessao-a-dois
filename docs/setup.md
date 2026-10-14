@@ -22,7 +22,7 @@ Display name, Letterboxd username and badge colour live in `src/members.ts`. The
 3. Copy the **API Read Access Token** (the long one starting with `eyJ`, not the short "API Key").
 4. On GitHub, open the repo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**. Name: `TMDB_API_TOKEN`, value: the token.
 
-The token is only used by the Sync inside GitHub Actions; it never reaches the site.
+The token is used by the Sync in GitHub Actions, and locally (from `.env.local`) by the Sync and `record-tmdb`; it never reaches the site.
 
 ## Sync
 
@@ -49,12 +49,21 @@ Distro-packaged Node (e.g. apt's `/usr/bin/node`) may lack TypeScript type strip
 
 `npm install` also points git at `.githooks/`, whose `pre-push` runs `check`, `test` and `build` and blocks the push if any fails. It checks the working tree, so commit or stash edits first. Skip it in an emergency with `git push --no-verify`.
 
+For the Sync and `record-tmdb`, put the token in `.env.local` at the repo root (git-ignored); an exported `TMDB_API_TOKEN` takes precedence:
+
+```sh
+TMDB_API_TOKEN=eyJ...
+```
+
+`record-tmdb` fetches real TMDB responses for every movie the `lb-film-*.html` fixtures point at, plus the BR Provider catalog. Re-recording changes the values some Sync tests assert on, so update those in the same commit.
+
 ```sh
 npm install
 npm run dev     # local site
 npm test        # unit tests
 npm run check   # typecheck
-TMDB_API_TOKEN=eyJ... npm run sync   # run the Sync locally
+npm run sync    # run the Sync locally (token from .env.local)
+npm run record-tmdb   # re-record the TMDB fixtures in sync/fixtures
 npm run shot -- / iphone --click .toggle   # screenshot → shots/iphone.jpg
 ```
 

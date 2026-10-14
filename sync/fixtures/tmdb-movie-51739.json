@@ -1,7 +1,13 @@
 {
  "adult": false,
- "backdrop_path": "/7Z0uNWlEnzEjSGhH6ShFZpuwbJl.jpg",
+ "backdrop_path": "/7Z7WVzJsSReG8B0CaPk0bvWD7tK.jpg",
+ "belongs_to_collection": null,
+ "budget": 23000000,
  "genres": [
+  {
+   "id": 14,
+   "name": "Fantasia"
+  },
   {
    "id": 16,
    "name": "Animação"
@@ -9,33 +15,100 @@
   {
    "id": 10751,
    "name": "Família"
-  },
-  {
-   "id": 14,
-   "name": "Fantasia"
   }
  ],
+ "homepage": "https://studioghibli.com.br/filmografia/o-mundos-dos-pequeninos/",
  "id": 51739,
- "imdb_id": null,
+ "imdb_id": "tt1568921",
  "origin_country": [
   "JP"
  ],
  "original_language": "ja",
  "original_title": "借りぐらしのアリエッティ",
- "overview": "Arrietty vive com a família sob o assoalho de uma casa.",
- "popularity": 10.0,
- "poster_path": "/oc2OB2KDmSRDMelKEAA1n4YgQx2.jpg",
- "production_countries": [
+ "overview": "Nos subúrbios de Tóquio, sob o assoalho de uma casa velha, Arrietty vive em seu minúsculo mundo com a família, fazendo de tudo para manter em segredo a existência de todos. Sobrevivendo como pequenos ladrões, eles conhecem as regras para que nunca sejam percebidos pelos verdadeiros – e grandes – donos da casa. Para isso, procuram manter a desconfiança deles em cima dos gatos e ratos e tomam todos os cuidados possíveis para evitar de serem vistos. Contudo, quando um jovem rapaz se hospeda na casa, a pequenina Arrietty acredita que poderá manter uma amizade com ele, apesar da diferença de tamanhos.",
+ "popularity": 16.0509,
+ "poster_path": "/yovlgDFP53N7IW7O4irM6INBxmp.jpg",
+ "production_companies": [
   {
-   "iso_3166_1": "JP",
-   "name": "JP"
+   "id": 10342,
+   "logo_path": "/uFuxPEZRUcBTEiYIxjHJq62Vr77.png",
+   "name": "Studio Ghibli",
+   "origin_country": "JP"
+  },
+  {
+   "id": 11846,
+   "logo_path": "/es3LvDA6wLWVDvZnAYYuAT6x8lJ.png",
+   "name": "Hakuhodo DY Media Partners",
+   "origin_country": "JP"
+  },
+  {
+   "id": 1778,
+   "logo_path": "/b5rT6VbYza3LyfltCmz1OcqzWJM.png",
+   "name": "dentsu",
+   "origin_country": "JP"
+  },
+  {
+   "id": 882,
+   "logo_path": "/fRSWWjquvzcHjACbtF53utZFIll.png",
+   "name": "TOHO",
+   "origin_country": "JP"
+  },
+  {
+   "id": 6755,
+   "logo_path": "/bWiM2iY82B32NGmPCOFatgfekIR.png",
+   "name": "Nippon Television Network Corporation",
+   "origin_country": "JP"
+  },
+  {
+   "id": 856,
+   "logo_path": "/3tfzS2CrX6Ntbu927XzHXEPDA6y.png",
+   "name": "Wild Bunch",
+   "origin_country": "FR"
+  },
+  {
+   "id": 272654,
+   "logo_path": null,
+   "name": "Walt Disney Japan",
+   "origin_country": "JP"
+  },
+  {
+   "id": 12518,
+   "logo_path": "/qJZAVb8vx6qFLQJ6cunRkVUJVdB.png",
+   "name": "d-rights",
+   "origin_country": "JP"
+  },
+  {
+   "id": 11847,
+   "logo_path": "/gW5RN3ylzsAwQ1uGHBpezUZ0vXF.png",
+   "name": "Mitsubishi",
+   "origin_country": "JP"
   }
  ],
- "release_date": "2010-07-17",
+ "production_countries": [
+  {
+   "iso_3166_1": "FR",
+   "name": "France"
+  },
+  {
+   "iso_3166_1": "JP",
+   "name": "Japan"
+  }
+ ],
+ "release_date": "2010-07-16",
+ "revenue": 149660003,
  "runtime": 94,
+ "softcore": false,
+ "spoken_languages": [
+  {
+   "english_name": "Japanese",
+   "iso_639_1": "ja",
+   "name": "日本語"
+  }
+ ],
  "status": "Released",
+ "tagline": "Descubra um mundo secreto, dentro de sua própria casa.",
  "title": "O Mundo dos Pequeninos",
  "video": false,
- "vote_average": 7.3,
- "vote_count": 1000
+ "vote_average": 7.683,
+ "vote_count": 3302
 }

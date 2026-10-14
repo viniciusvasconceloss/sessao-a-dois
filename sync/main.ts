@@ -6,7 +6,7 @@ import { sync } from './sync.ts'
 
 const file = new URL('../data/combined-watchlist.json', import.meta.url)
 const tmdbToken = process.env.TMDB_API_TOKEN
-if (!tmdbToken) throw new Error('TMDB_API_TOKEN is not set')
+if (!tmdbToken) throw new Error('TMDB_API_TOKEN is not set (export it or put it in .env.local)')
 
 const http = async (url: string, headers?: Record<string, string>) => {
   const res = await fetch(url, { headers })

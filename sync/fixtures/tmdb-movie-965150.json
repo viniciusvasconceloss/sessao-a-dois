@@ -1,37 +1,98 @@
 {
  "adult": false,
- "backdrop_path": "/7yCXDq2Mq1PTaMr1gc2dzXzmSY8.jpg",
+ "backdrop_path": "/4jdduww9j5RyzO4ITRcuBFhqNN1.jpg",
+ "belongs_to_collection": null,
+ "budget": 0,
  "genres": [
   {
    "id": 18,
    "name": "Drama"
   }
  ],
+ "homepage": "",
  "id": 965150,
- "imdb_id": null,
+ "imdb_id": "tt19770238",
  "origin_country": [
-  "GB"
+  "US"
  ],
  "original_language": "en",
  "original_title": "Aftersun",
- "overview": "Sophie reflete sobre as férias que passou com o pai.",
- "popularity": 10.0,
- "poster_path": "/evKz85EKouVbIr51zy5fOtpNRPg.jpg",
+ "overview": "Em um resort decadente, Sophie, de 11 anos, aproveita o raro tempo com seu pai amoroso e idealista, Calum. Vinte anos depois, as lembranças de Sophie de suas últimas férias se tornam um retrato poderoso e doloroso do relacionamento deles.",
+ "popularity": 10.4567,
+ "poster_path": "/kXk5veq5oOh6SefMyXq6xtUBevw.jpg",
+ "production_companies": [
+  {
+   "id": 103697,
+   "logo_path": "/9gsomzlpj1lLR7kupysQ7nSFcHh.png",
+   "name": "PASTEL",
+   "origin_country": "US"
+  },
+  {
+   "id": 288,
+   "logo_path": "/aW0IpM9d4Zjj978EqgDVSxXXhTj.png",
+   "name": "BBC Film",
+   "origin_country": "GB"
+  },
+  {
+   "id": 168181,
+   "logo_path": "/adHpT0fRW86W80jPtJRo96pqJE4.png",
+   "name": "Tango Entertainment",
+   "origin_country": "US"
+  },
+  {
+   "id": 173869,
+   "logo_path": null,
+   "name": "Unified Theory",
+   "origin_country": "GB"
+  },
+  {
+   "id": 110197,
+   "logo_path": "/hAF2iSJDnOXG39VQQoMeF413SQf.png",
+   "name": "Screen Scotland",
+   "origin_country": "GB"
+  },
+  {
+   "id": 7281,
+   "logo_path": "/iI7qdR1OFPo0U41BlpKBLD3xesh.png",
+   "name": "BFI",
+   "origin_country": "GB"
+  }
+ ],
  "production_countries": [
   {
    "iso_3166_1": "GB",
-   "name": "GB"
+   "name": "United Kingdom"
   },
   {
    "iso_3166_1": "US",
-   "name": "US"
+   "name": "United States of America"
   }
  ],
  "release_date": "2022-10-21",
+ "revenue": 7834405,
  "runtime": 102,
+ "softcore": false,
+ "spoken_languages": [
+  {
+   "english_name": "Turkish",
+   "iso_639_1": "tr",
+   "name": "Türkçe"
+  },
+  {
+   "english_name": "English",
+   "iso_639_1": "en",
+   "name": "English"
+  },
+  {
+   "english_name": "Spanish",
+   "iso_639_1": "es",
+   "name": "Español"
+  }
+ ],
  "status": "Released",
+ "tagline": "A memória queima.",
  "title": "Aftersun",
  "video": false,
  "vote_average": 7.7,
- "vote_count": 1000
+ "vote_count": 2010
 }

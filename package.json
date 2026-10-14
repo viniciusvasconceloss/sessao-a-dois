@@ -13,9 +13,10 @@
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
     "test": "vitest run",
-    "sync": "node sync/main.ts",
+    "sync": "node --env-file-if-exists=.env.local sync/main.ts",
     "shot": "node scripts/shot.js",
-    "browsers": "playwright install chromium webkit"
+    "browsers": "playwright install chromium webkit",
+    "record-tmdb": "node --env-file-if-exists=.env.local scripts/record-tmdb.js"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.0",

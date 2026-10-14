@@ -1,37 +1,69 @@
 {
  "adult": false,
- "backdrop_path": null,
+ "backdrop_path": "/hjWxngV6tidwDkfJDEgMjHD2KEz.jpg",
+ "belongs_to_collection": null,
+ "budget": 14000000,
  "genres": [
   {
    "id": 18,
    "name": "Drama"
   }
  ],
+ "homepage": "",
  "id": 976893,
- "imdb_id": null,
+ "imdb_id": "tt27503384",
  "origin_country": [
   "JP"
  ],
  "original_language": "ja",
- "original_title": "Perfect Days",
- "overview": "Hirayama limpa banheiros públicos em Tóquio.",
- "popularity": 10.0,
- "poster_path": "/mjEk5Wwx5TBFx1fFIEXyBtB3MsR.jpg",
- "production_countries": [
+ "original_title": "PERFECT DAYS",
+ "overview": "A história de Hirayama, um homem de meia idade reflexivo que vive sua vida de forma modesta como zelador e limpando banheiros em Tóquio. Sua vida é revelada ao espectador através da música que ouve, dos livros que lê e das fotos que tira das árvores, uma vez que são suas três paixões. À medida que a vida de Hirayama avança, encontros inesperados começam a surgir revelando um passado sombrio e não tão metódico do zelador.",
+ "popularity": 35.4472,
+ "poster_path": "/p4oCDJgtYPg8lWqmeNIsqPwzZ7X.jpg",
+ "production_companies": [
   {
-   "iso_3166_1": "JP",
-   "name": "JP"
+   "id": 197904,
+   "logo_path": null,
+   "name": "Master Mind",
+   "origin_country": "JP"
   },
   {
+   "id": 197905,
+   "logo_path": null,
+   "name": "Wenders Images",
+   "origin_country": "DE"
+  }
+ ],
+ "production_countries": [
+  {
    "iso_3166_1": "DE",
-   "name": "DE"
+   "name": "Germany"
+  },
+  {
+   "iso_3166_1": "JP",
+   "name": "Japan"
   }
  ],
  "release_date": "2023-11-10",
+ "revenue": 24094016,
  "runtime": 124,
+ "softcore": false,
+ "spoken_languages": [
+  {
+   "english_name": "English",
+   "iso_639_1": "en",
+   "name": "English"
+  },
+  {
+   "english_name": "Japanese",
+   "iso_639_1": "ja",
+   "name": "日本語"
+  }
+ ],
  "status": "Released",
+ "tagline": "Em um mundo de momentos fugazes, encontre a beleza que perdura.",
  "title": "Dias Perfeitos",
  "video": false,
- "vote_average": 7.8,
- "vote_count": 1000
+ "vote_average": 7.819,
+ "vote_count": 2108
 }

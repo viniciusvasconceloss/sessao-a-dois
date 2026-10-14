@@ -4,9 +4,9 @@
 
 **Blocked by:** 03
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] **Human step:** the user puts `TMDB_API_TOKEN` in a git-ignored local env file (`*.local` is already ignored). The agent never prints the token
-- [ ] `npm run sync` reads the token from that file when the variable is not set
-- [ ] A script records TMDB responses for a few real Films into the test fixtures, including plan variants and channels
-- [ ] The Sync tests run against those fixtures, and the merge of variants and channels into the base Provider is still covered
+- [x] **Human step:** the user puts `TMDB_API_TOKEN` in a git-ignored local env file (`*.local` is already ignored). The agent never prints the token
+- [x] `npm run sync` reads the token from that file when the variable is not set
+- [x] A script records TMDB responses for a few real Films into the test fixtures, including plan variants and channels
+- [x] The Sync tests run against those fixtures, and the merge of variants and channels into the base Provider is still covered

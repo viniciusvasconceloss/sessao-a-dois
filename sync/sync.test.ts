@@ -31,6 +31,16 @@ function recordedHttp() {
   return { http, requests }
 }
 
+// Recorded responses, except TMDB's watch providers of one Film.
+function withProviders(tmdbId: number, results: object) {
+  const recorded = recordedHttp()
+  const http: Http = async (url, headers) =>
+    url.endsWith(`/movie/${tmdbId}/watch/providers`)
+      ? JSON.stringify({ id: tmdbId, results })
+      : recorded.http(url, headers)
+  return http
+}
+
 const now = new Date('2026-10-15T06:00:00.000Z')
 const run = (usernames: string[], http: Http, previous: CombinedWatchlist | null = null) =>
   sync({ usernames, previous, http, tmdbToken: 'test-token', now, delayMs: 0 })
@@ -46,24 +56,22 @@ test('a Watchlist becomes Films with pt-BR details, in Watchlist order', async (
       slug: 'aftersun',
       title: 'Aftersun',
       originalTitle: 'Aftersun',
-      overview: 'Sophie reflete sobre as férias que passou com o pai.',
+      overview: expect.stringMatching(/^Em um resort decadente, Sophie/),
       year: 2022,
       runtime: 102,
       genres: ['Drama'],
       countries: ['GB', 'US'],
       language: 'en',
       rating: 7.7,
-      poster: '/evKz85EKouVbIr51zy5fOtpNRPg.jpg',
-      backdrop: '/7yCXDq2Mq1PTaMr1gc2dzXzmSY8.jpg',
+      poster: '/kXk5veq5oOh6SefMyXq6xtUBevw.jpg',
+      backdrop: '/4jdduww9j5RyzO4ITRcuBFhqNN1.jpg',
       owners: { v_inicius: 0 },
       addedAt: { v_inicius: '2026-10-15T06:00:00.000Z' },
       offers: [
-        { providerId: 11, provider: 'MUBI', logo: '/mubi.jpg', type: 'subscription' },
-        { providerId: 300, provider: 'Pluto TV', logo: '/plutotv.jpg', type: 'free' },
-        { providerId: 192, provider: 'YouTube', logo: '/youtube.jpg', type: 'ads' },
-        { providerId: 2, provider: 'Apple TV', logo: '/appletv.jpg', type: 'rent' },
-        { providerId: 2, provider: 'Apple TV', logo: '/appletv.jpg', type: 'buy' },
-        { providerId: 3, provider: 'Google Play Movies', logo: '/googleplay.jpg', type: 'buy' },
+        // "MUBI Amazon Channel" merges into MUBI.
+        { providerId: 11, provider: 'MUBI', logo: '/k7iSlvgWzZuO4zU5PcBjhABMuia.png', type: 'subscription' },
+        { providerId: 2, provider: 'Apple TV Store', logo: '/qdEGArH3lKfFnAtYXMkSYk5wxuG.png', type: 'rent' },
+        { providerId: 2, provider: 'Apple TV Store', logo: '/qdEGArH3lKfFnAtYXMkSYk5wxuG.png', type: 'buy' },
       ],
       justwatch: 'https://www.themoviedb.org/movie/965150-aftersun/watch?locale=BR',
       filmFetchedAt: '2026-10-15T06:00:00.000Z',
@@ -75,7 +83,7 @@ test('a Watchlist becomes Films with pt-BR details, in Watchlist order', async (
       title: 'O Mundo dos Pequeninos',
       originalTitle: '借りぐらしのアリエッティ',
       year: 2010,
-      genres: ['Animação', 'Família', 'Fantasia'],
+      genres: ['Fantasia', 'Animação', 'Família'],
       owners: { v_inicius: 1 },
     }),
   ])
@@ -151,25 +159,59 @@ test('a later run only fetches new Films, and drops Films removed from every Wat
 test('channels and plan variants merge into their base Provider, without duplicate Offers', async () => {
   const { http, requests } = recordedHttp()
   const data = await run(['sarateves'], http)
-  const offersOf = (slug: string) => data.films.find(f => f.slug === slug)!.offers
+  const film = (slug: string) => data.films.find(f => f.slug === slug)!
+  const offersOf = (slug: string) => film(slug).offers.map(o => [o.provider, o.type])
 
+  // TMDB lists Netflix, "Netflix Standard with Ads", Amazon Prime Video and "Amazon Prime Video with Ads".
   expect(offersOf('parasite-2019')).toEqual([
-    { providerId: 1899, provider: 'HBO Max', logo: '/hbomax.jpg', type: 'subscription' },
-    { providerId: 531, provider: 'Paramount Plus', logo: '/paramount.jpg', type: 'subscription' },
-    // Base not in TMDB's BR catalog: keeps the channel's id and logo under the base name.
-    { providerId: 9999, provider: 'Belas Artes à La Carte', logo: '/belasartes-apple.jpg', type: 'subscription' },
-    { providerId: 8, provider: 'Netflix', logo: '/netflix.jpg', type: 'ads' },
-    { providerId: 119, provider: 'Amazon Prime Video', logo: '/primevideo.jpg', type: 'rent' },
+    ['Netflix', 'subscription'],
+    ['Amazon Prime Video', 'subscription'],
+    ['Claro tv+', 'subscription'],
+    ['Telecine', 'subscription'],
+    ['Apple TV Store', 'rent'],
+    ['Apple TV Store', 'buy'],
   ])
-  expect(offersOf('perfect-days-2023')).toEqual([
-    { providerId: 11, provider: 'MUBI', logo: '/mubi.jpg', type: 'subscription' },
-    { providerId: 2142, provider: 'MGM+', logo: '/mgm.jpg', type: 'subscription' },
+  // "Telecine Amazon Channel": base not in TMDB's BR catalog, so it keeps the channel's id and logo.
+  expect(film('parasite-2019').offers.find(o => o.provider === 'Telecine')).toEqual({
+    providerId: 2156, provider: 'Telecine', logo: '/jRpdu5KkWx8ZvPCmBY5c4YHhWuK.png', type: 'subscription',
+  })
+  // Netflix, MUBI, "Netflix Standard with Ads", "MUBI Amazon Channel".
+  expect(offersOf('perfect-days-2023').filter(([, type]) => type === 'subscription')).toEqual([
+    ['Netflix', 'subscription'],
+    ['MUBI', 'subscription'],
   ])
   expect(requests.filter(u => u.includes('/watch/providers/movie'))).toHaveLength(1)
 })
 
+test('channels match their base by loose name, case and trailing spaces; two channels of a missing base are one Offer', async () => {
+  const catalog = JSON.parse(fixture('tmdb-providers-catalog-br.json')).results
+  const fromCatalog = (name: string) => catalog.find((p: { provider_name: string }) => p.provider_name.trim() === name)
+  const br = {
+    link: 'https://tmdb/watch',
+    flatrate: [
+      'Paramount+ Amazon Channel',
+      'Paramount Plus Premium',
+      // Base "Adrenalina Pura" isn't in the catalog; lowercase "channel" as TMDB lists it.
+      'Adrenalina Pura Amazon channel',
+      'Adrenalina Pura Apple TV channel',
+    ].map(fromCatalog),
+    free: [fromCatalog('Pluto TV')],
+    ads: [fromCatalog('Netflix Standard with Ads'), { ...fromCatalog('MUBI Amazon Channel'), provider_name: 'MUBI Amazon Channel ' }],
+  }
+  const data = await run(['v_inicius'], withProviders(965150, { BR: br }))
+
+  expect(data.films.find(f => f.slug === 'aftersun')!.offers).toEqual([
+    { providerId: 531, provider: 'Paramount Plus', logo: '/pkx3klJlwW5JdtaulvDx6hDNtch.png', type: 'subscription' },
+    { providerId: 2106, provider: 'Adrenalina Pura', logo: '/32EpjQJMkjRsfW7XccIV0RnmXcj.png', type: 'subscription' },
+    { providerId: br.free[0].provider_id, provider: 'Pluto TV', logo: br.free[0].logo_path, type: 'free' },
+    { providerId: 8, provider: 'Netflix', logo: '/rK1KljqmbvO9HQa1PBFLILWah72.png', type: 'ads' },
+    { providerId: 11, provider: 'MUBI', logo: '/k7iSlvgWzZuO4zU5PcBjhABMuia.png', type: 'ads' },
+  ])
+})
+
 test('a Film with no Offers in Brazil is kept with an empty Offer list', async () => {
-  const data = await run(['v_inicius'], recordedHttp().http)
+  const { results } = JSON.parse(fixture('tmdb-providers-51739.json'))
+  const data = await run(['v_inicius'], withProviders(51739, { ...results, BR: undefined }))
 
   expect(data.films.find(f => f.slug === 'the-secret-world-of-arrietty')).toMatchObject({
     offers: [],
