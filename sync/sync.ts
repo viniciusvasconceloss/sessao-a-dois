@@ -107,17 +107,31 @@ export async function sync(opts: SyncOptions): Promise<CombinedWatchlist> {
     return { offers, justwatch: br?.link ?? null, offersFetchedAt: now.toISOString() }
   }
 
-  // "HBO Max Amazon Channel" → HBO Max from TMDB's BR catalog; a base missing there keeps the channel's id and logo.
+  // "HBO Max Amazon Channel" or "Netflix Standard with Ads" → its base from TMDB's BR catalog;
+  // a base missing there keeps the original id and logo.
   async function baseProvider(p: TmdbProvider): Promise<TmdbProvider> {
-    const name = p.provider_name.trim().replace(CHANNEL, '')
+    const stripped = p.provider_name.trim().replace(CHANNEL, '')
+    const name = PLAN_VARIANTS[stripped] ?? stripped
     if (name === p.provider_name.trim()) return p
     catalog ??= tmdb('/watch/providers/movie?watch_region=BR').then(r => r.results)
-    return (await catalog).find(c => sameName(c.provider_name, name)) ?? { ...p, provider_name: name }
+    const known = await catalog
+    return (
+      known.find(c => c.provider_name === name) ??
+      known.find(c => sameName(c.provider_name, name)) ?? { ...p, provider_name: name }
+    )
   }
 }
 
 // ponytail: known reseller stores only; add one here if TMDB shows a new "<Provider> <Store> Channel"
 const CHANNEL = / (Amazon|Apple TV|Roku Premium) Channel$/i
+// Plans of one service that TMDB lists as separate Providers. ponytail: add new ones as they show up in the data.
+const PLAN_VARIANTS: Record<string, string> = {
+  'Netflix Standard with Ads': 'Netflix',
+  'Amazon Prime Video with Ads': 'Amazon Prime Video',
+  'Paramount Plus Premium': 'Paramount Plus',
+  'MGM Plus': 'MGM+',
+  'Plex Channel': 'Plex',
+}
 const sameName = (a: string, b: string) => {
   const key = (s: string) => s.toLowerCase().replaceAll('+', 'plus').replace(/[^a-z0-9]/g, '')
   return key(a) === key(b)

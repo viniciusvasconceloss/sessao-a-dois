@@ -10,6 +10,9 @@
     { "logo_path": "/belasartes-apple.jpg", "provider_id": 9999, "provider_name": "Belas Artes à La Carte Apple TV Channel", "display_priority": 50 },
     { "logo_path": "/belasartes-amazon.jpg", "provider_id": 9998, "provider_name": "Belas Artes à La Carte Amazon Channel ", "display_priority": 51 }
    ],
+   "ads": [
+    { "logo_path": "/netflix-ads.jpg", "provider_id": 1796, "provider_name": "Netflix Standard with Ads", "display_priority": 70 }
+   ],
    "rent": [
     { "logo_path": "/primevideo.jpg", "provider_id": 119, "provider_name": "Amazon Prime Video", "display_priority": 3 }
    ]

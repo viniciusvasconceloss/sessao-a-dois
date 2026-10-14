@@ -1,5 +1,8 @@
 {
  "results": [
+  { "display_priority": 1, "logo_path": "/netflix.jpg", "provider_name": "Netflix", "provider_id": 8 },
+  { "display_priority": 30, "logo_path": "/mgmplus.jpg", "provider_name": "MGM Plus", "provider_id": 2141 },
+  { "display_priority": 31, "logo_path": "/mgm.jpg", "provider_name": "MGM+", "provider_id": 2142 },
   { "display_priority": 2, "logo_path": "/hbomax.jpg", "provider_name": "HBO Max", "provider_id": 1899 },
   { "display_priority": 9, "logo_path": "/mubi.jpg", "provider_name": "MUBI", "provider_id": 11 },
   { "display_priority": 10, "logo_path": "/paramount.jpg", "provider_name": "Paramount Plus", "provider_id": 531 },

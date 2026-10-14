@@ -132,7 +132,7 @@ test('a later run only fetches new Films, and drops Films removed from every Wat
   ])
 })
 
-test('channels resold through another store merge into their base Provider, without duplicate Offers', async () => {
+test('channels and plan variants merge into their base Provider, without duplicate Offers', async () => {
   const { http, requests } = recordedHttp()
   const data = await run(['sarateves'], http)
   const offersOf = (slug: string) => data.films.find(f => f.slug === slug)!.offers
@@ -142,10 +142,12 @@ test('channels resold through another store merge into their base Provider, with
     { providerId: 531, provider: 'Paramount Plus', logo: '/paramount.jpg', type: 'subscription' },
     // Base not in TMDB's BR catalog: keeps the channel's id and logo under the base name.
     { providerId: 9999, provider: 'Belas Artes à La Carte', logo: '/belasartes-apple.jpg', type: 'subscription' },
+    { providerId: 8, provider: 'Netflix', logo: '/netflix.jpg', type: 'ads' },
     { providerId: 119, provider: 'Amazon Prime Video', logo: '/primevideo.jpg', type: 'rent' },
   ])
   expect(offersOf('perfect-days-2023')).toEqual([
     { providerId: 11, provider: 'MUBI', logo: '/mubi.jpg', type: 'subscription' },
+    { providerId: 2142, provider: 'MGM+', logo: '/mgm.jpg', type: 'subscription' },
   ])
   expect(requests.filter(u => u.includes('/watch/providers/movie'))).toHaveLength(1)
 })
