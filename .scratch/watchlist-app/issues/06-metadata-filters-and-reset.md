@@ -8,6 +8,6 @@
 
 - [ ] "O quê": genre, decade, runtime range, country, language as stacked selects (no side-by-side truncation), options built from the data
 - [ ] "Nota TMDB mínima": slider 0–9, step 0.5
-- [ ] "Limpar filtros" resets every filter (Owners back to Todos), not the sort
+- [ ] "Limpar filtros" resets every filter (Owners back to Todos), including "Buscar filme" and "Buscar serviço", not the sort
 - [ ] All filters combine with AND across sections
 - [ ] Query tests cover each filter and a multi-filter combination
