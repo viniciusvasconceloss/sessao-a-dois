@@ -4,8 +4,8 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] A git pre-push hook, installed by `npm install`, runs `check`, `test` and `build`, and stops the push if any fails
-- [ ] The project declares Node 24 (`.nvmrc` and `engines`), and the setup doc explains how to switch
-- [ ] With Node 24, `npm run sync` gets past the TypeScript loader (`ERR_UNKNOWN_FILE_EXTENSION` no longer appears; a missing token is still fine)
+- [x] A git pre-push hook, installed by `npm install`, runs `check`, `test` and `build`, and stops the push if any fails
+- [x] The project declares Node 24 (`.nvmrc` and `engines`), and the setup doc explains how to switch
+- [x] With Node 24, `npm run sync` gets past the TypeScript loader (`ERR_UNKNOWN_FILE_EXTENSION` no longer appears; a missing token is still fine)

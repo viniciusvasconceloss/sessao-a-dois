@@ -37,12 +37,24 @@ The first run fetches every Film (~600, about 15 minutes, since Letterboxd is ca
 
 ## Local development
 
+The project runs on Node 24 (`.nvmrc`), the same as CI. Switch with [nvm](https://github.com/nvm-sh/nvm):
+
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash   # once, then open a new shell
+nvm install     # reads .nvmrc; installs and switches to Node 24
+nvm use         # in later shells
+```
+
+Distro-packaged Node (e.g. apt's `/usr/bin/node`) may lack TypeScript type stripping, so `npm run sync` fails with `ERR_UNKNOWN_FILE_EXTENSION`; nvm's official build does not.
+
+`npm install` also points git at `.githooks/`, whose `pre-push` runs `check`, `test` and `build` and blocks the push if any fails. It checks the working tree, so commit or stash edits first. Skip it in an emergency with `git push --no-verify`.
+
 ```sh
 npm install
 npm run dev     # local site
 npm test        # unit tests
 npm run check   # typecheck
-TMDB_API_TOKEN=eyJ... npm run sync   # run the Sync locally (needs an official Node.js build ≥ 22.18)
+TMDB_API_TOKEN=eyJ... npm run sync   # run the Sync locally
 npm run shot -- / iphone --click .toggle   # screenshot → shots/iphone.jpg
 ```
 
