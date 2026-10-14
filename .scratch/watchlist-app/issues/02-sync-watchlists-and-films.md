@@ -15,3 +15,7 @@
 - [ ] Workflow runs on a daily schedule and via manual dispatch, commits only when data changed, and the commit triggers a Pages redeploy
 - [ ] TMDB API Read Access Token (v4, sent as Bearer) read from the GitHub Actions secret `TMDB_API_TOKEN` (already created by Vinicius), never shipped to the site
 - [ ] Setup guide covers getting a TMDB key, adding the secret, and running the Sync manually from GitHub (incl. the mobile app)
+
+## Comments
+
+- (from 01) A push made with the default `GITHUB_TOKEN` does not trigger other workflows, so the Sync's data commit won't fire `deploy.yml` on its own. Have the Sync workflow call the deploy (e.g. make `deploy.yml` a `workflow_call` and invoke it after committing) instead of relying on the push.

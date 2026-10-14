@@ -1,0 +1,30 @@
+/* Single dark "cinema" look on purpose. */
+:root {
+  color-scheme: dark;
+  --bg: #141417;
+  --panel: #1d1d22;
+  --line: #2c2c33;
+  --fg: #ecebe6;
+  --muted: #9d9ca5;
+  --accent: #cfae6e;
+  --display: "Fraunces", Georgia, serif;
+}
+* { box-sizing: border-box }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.5 "Manrope", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block }
+a { color: inherit }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.wrap {
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important }
+}

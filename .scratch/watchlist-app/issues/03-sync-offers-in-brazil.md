@@ -12,3 +12,7 @@
 - [ ] Offers older than ~7 days are refetched; fresher ones are kept as is
 - [ ] Films with no BR Offers are stored with an empty Offer list (site shows "indisponível")
 - [ ] Tests (same seam as 02) cover flattening, channel merge, empty Offers and the refresh rule
+
+## Comments
+
+- (from 01) The contract has no Provider id yet (the sample data had none); add `providerId` to `Offer` in `src/contract.ts` here, when the Sync produces real ids.

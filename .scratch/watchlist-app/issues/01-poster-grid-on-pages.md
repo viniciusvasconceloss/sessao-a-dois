@@ -10,15 +10,15 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Grid of 2:3 posters, A's layout (auto-fill ~150px columns; 3 fixed columns on phone)
-- [ ] Owners badge (S/V circles in Member colours), up to 3 Provider logos then "+N", Offer Type mark on logo when best Offer isn't subscription (R$ for rent/buy, AD for ads)
-- [ ] Films with no Offers render greyscale/dimmed with an "indisponível" badge
-- [ ] Hover lifts card and reveals title + year
-- [ ] Default order: date added to a Watchlist, newest first
-- [ ] Posters use native lazy loading; ~600 cards scroll smoothly (no pagination)
-- [ ] Fraunces + Manrope, A's palette (graphite, brass accent), UI in pt-BR
-- [ ] GitHub Action builds and deploys the site to GitHub Pages on push to the main branch
-- [ ] Setup guide in the repo covers enabling GitHub Pages and the deploy Action
-- [ ] TMDB/JustWatch attribution in the footer
+- [x] Grid of 2:3 posters, A's layout (auto-fill ~150px columns; 3 fixed columns on phone)
+- [x] Owners badge (S/V circles in Member colours), up to 3 Provider logos then "+N", Offer Type mark on logo when best Offer isn't subscription (R$ for rent/buy, AD for ads)
+- [x] Films with no Offers render greyscale/dimmed with an "indisponível" badge
+- [x] Hover lifts card and reveals title + year
+- [x] Default order: date added to a Watchlist, newest first
+- [x] Posters use native lazy loading; ~600 cards scroll smoothly (no pagination)
+- [x] Fraunces + Manrope, A's palette (graphite, brass accent), UI in pt-BR
+- [x] GitHub Action builds and deploys the site to GitHub Pages on push to the main branch
+- [x] Setup guide in the repo covers enabling GitHub Pages and the deploy Action
+- [x] TMDB/JustWatch attribution in the footer
