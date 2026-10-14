@@ -1,46 +1,39 @@
 <script lang="ts">
-  import { img, OFFER_TYPES, type Film, type Offer, type OfferType } from './contract'
+  import { img, OFFER_TYPES, type Film, type OfferType } from './contract'
+  import { providersOf, runtimeLabel } from './format'
   import { MEMBERS } from './members'
 
-  let { film }: { film: Film } = $props()
+  let { film, onclick }: { film: Film; onclick: () => void } = $props()
 
-  const RANK = Object.keys(OFFER_TYPES)
   const MARK: Partial<Record<OfferType, string>> = { ads: 'AD', rent: 'R$', buy: 'R$' }
 
   const owners = $derived(MEMBERS.filter(m => m.username in film.owners))
 
-  // One entry per Provider: its best Offer (best first) plus every Offer Type it has.
-  const providers = $derived.by(() => {
-    const byProvider = new Map<string, Offer[]>()
-    for (const o of film.offers.toSorted((a, b) => RANK.indexOf(a.type) - RANK.indexOf(b.type)))
-      byProvider.set(o.provider, [...(byProvider.get(o.provider) ?? []), o])
-    return [...byProvider.values()].map(offers => ({ ...offers[0], types: offers.map(o => OFFER_TYPES[o.type]).join(', ') }))
-  })
-
-  const runtime = $derived(`${Math.floor(film.runtime / 60)}h${film.runtime % 60 ? ` ${film.runtime % 60}min` : ''}`)
+  const providers = $derived(providersOf(film.offers))
 </script>
 
-<article class="card" class:na={!film.offers.length}>
+<button class="card" class:na={!film.offers.length} aria-label={film.title} {onclick}>
   {#if film.poster}<img src={img('w342', film.poster)} alt="" loading="lazy" />{/if}
   <span class="own" title={owners.map(m => m.name).join(' e ')}>
     {#each owners as m (m.username)}<i style:background={m.colour}>{m.name[0]}</i>{/each}
   </span>
   <span class="offers">
-    {#each providers.slice(0, 3) as p (p.provider)}
-      <span class="logo" title="{p.provider}: {p.types}">
+    {#each providers.slice(0, 3) as p (p.providerId)}
+      <span class="logo" title="{p.provider}: {p.types.map(t => OFFER_TYPES[t]).join(', ')}">
         <img src={img('w92', p.logo)} alt={p.provider} loading="lazy" />
-        {#if MARK[p.type]}<b>{MARK[p.type]}</b>{/if}
+        {#if MARK[p.types[0]]}<b>{MARK[p.types[0]]}</b>{/if}
       </span>
     {:else}
       <span class="na-badge">indisponível</span>
     {/each}
     {#if providers.length > 3}<span class="plus">+{providers.length - 3}</span>{/if}
   </span>
-  <span class="tip"><b>{film.title}</b><small>{film.year}, {runtime}</small></span>
-</article>
+  <span class="tip"><b>{film.title}</b><small>{film.year}, {runtimeLabel(film.runtime)}</small></span>
+</button>
 
 <style>
   .card {
+    display: block; width: 100%; padding: 0; border: 0; font: inherit; color: inherit; text-align: left; cursor: pointer;
     position: relative;
     aspect-ratio: 2 / 3;
     overflow: hidden;
@@ -49,7 +42,7 @@
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
     transition: transform .18s, box-shadow .18s;
   }
-  .card:hover { transform: translateY(-3px); box-shadow: 0 0 0 2px var(--accent), 0 14px 30px rgba(0, 0, 0, .5) }
+  .card:hover, .card:focus-visible { transform: translateY(-3px); box-shadow: 0 0 0 2px var(--accent), 0 14px 30px rgba(0, 0, 0, .5) }
   .card > img { width: 100%; height: 100%; object-fit: cover }
   .na > img { filter: grayscale(.85) brightness(.7) }
 
@@ -84,5 +77,5 @@
   }
   .tip b { display: block; font: 600 15px/1.2 var(--display) }
   .tip small { color: var(--muted) }
-  .card:hover .tip { opacity: 1 }
+  .card:hover .tip, .card:focus-visible .tip { opacity: 1 }
 </style>

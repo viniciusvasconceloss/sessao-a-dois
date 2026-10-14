@@ -1,10 +1,12 @@
 <script lang="ts">
   import data from '../data/combined-watchlist.json'
-  import { img, OFFER_TYPES, type CombinedWatchlist, type Offer, type OfferType } from './contract'
+  import { img, OFFER_TYPES, type CombinedWatchlist, type Film, type Offer, type OfferType } from './contract'
+  import { countryName, languageName } from './format'
   import { MEMBERS } from './members'
   import { activeFilters, decadeOf, matches, NO_FILTERS, query, RUNTIMES, type Filters, type Names, type OwnersFilter, type Sort } from './query'
   import { tick } from 'svelte'
   import Card from './Card.svelte'
+  import Detail from './Detail.svelte'
 
   const watchlist = data as CombinedWatchlist
 
@@ -27,16 +29,10 @@
   // "O quê" options, built from the data.
   const uniq = <T,>(xs: T[]) => [...new Set(xs)]
   const byLabel = (a: [unknown, string], b: [unknown, string]) => a[1].localeCompare(b[1], 'pt')
-  const country = new Intl.DisplayNames('pt-BR', { type: 'region' })
-  const lang = new Intl.DisplayNames('pt-BR', { type: 'language' })
-  const capital = (s: string) => s[0].toUpperCase() + s.slice(1)
   const GENRES = uniq(watchlist.films.flatMap(f => f.genres)).sort((a, b) => a.localeCompare(b, 'pt'))
   const DECADES = uniq(watchlist.films.map(decadeOf)).sort((a, b) => b - a)
-  // TMDB keeps codes of countries that no longer exist; Intl doesn't know them or names their successor.
-  const GONE: Record<string, string> = { XC: 'Tchecoslováquia', SU: 'União Soviética', AN: 'Antilhas Holandesas' }
-  const COUNTRIES = uniq(watchlist.films.flatMap(f => f.countries)).map(c => [c, GONE[c] ?? country.of(c) ?? c] as [string, string]).sort(byLabel)
-  // TMDB uses 'cn' for Cantonese.
-  const LANGUAGES = uniq(watchlist.films.map(f => f.language)).map(l => [l, capital(lang.of(l === 'cn' ? 'yue' : l) ?? l)] as [string, string]).sort(byLabel)
+  const COUNTRIES = uniq(watchlist.films.flatMap(f => f.countries)).map(c => [c, countryName(c)] as [string, string]).sort(byLabel)
+  const LANGUAGES = uniq(watchlist.films.map(f => f.language)).map(l => [l, languageName(l)] as [string, string]).sort(byLabel)
 
   let filters: Required<Filters> = $state({ ...NO_FILTERS })
   let providerSearch = $state('')
@@ -78,6 +74,7 @@
   const sheetOpen = $derived(phone && open)
 
   const films = $derived(query(watchlist.films, filters, sort))
+  let selected: Film | null = $state(null)
   const ownersCount = (owners: OwnersFilter) => query(watchlist.films, { ...filters, owners }).length
 </script>
 
@@ -171,11 +168,13 @@
     {/if}
     <div class="grid">
       {#each films as film (film.tmdbId)}
-        <Card {film} />
+        <Card {film} onclick={() => (selected = film)} />
       {/each}
     </div>
   </main>
 </div>
+
+<Detail film={selected} onclose={() => (selected = null)} />
 
 <footer class="wrap" inert={sheetOpen}>
   <p>
