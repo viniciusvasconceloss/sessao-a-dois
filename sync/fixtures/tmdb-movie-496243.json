@@ -1,0 +1,41 @@
+{
+ "adult": false,
+ "backdrop_path": "/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
+ "genres": [
+  {
+   "id": 35,
+   "name": "Comédia"
+  },
+  {
+   "id": 53,
+   "name": "Thriller"
+  },
+  {
+   "id": 18,
+   "name": "Drama"
+  }
+ ],
+ "id": 496243,
+ "imdb_id": null,
+ "origin_country": [
+  "KR"
+ ],
+ "original_language": "ko",
+ "original_title": "기생충",
+ "overview": "Toda a família de Ki-taek está desempregada.",
+ "popularity": 10.0,
+ "poster_path": "/bNGW8zYA91VqTZfV3jnKHPEKKvB.jpg",
+ "production_countries": [
+  {
+   "iso_3166_1": "KR",
+   "name": "KR"
+  }
+ ],
+ "release_date": "2019-05-30",
+ "runtime": 133,
+ "status": "Released",
+ "title": "Parasita",
+ "video": false,
+ "vote_average": 8.5,
+ "vote_count": 1000
+}

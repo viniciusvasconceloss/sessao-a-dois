@@ -1,0 +1,37 @@
+{
+ "adult": false,
+ "backdrop_path": null,
+ "genres": [
+  {
+   "id": 18,
+   "name": "Drama"
+  }
+ ],
+ "id": 976893,
+ "imdb_id": null,
+ "origin_country": [
+  "JP"
+ ],
+ "original_language": "ja",
+ "original_title": "Perfect Days",
+ "overview": "Hirayama limpa banheiros públicos em Tóquio.",
+ "popularity": 10.0,
+ "poster_path": "/mjEk5Wwx5TBFx1fFIEXyBtB3MsR.jpg",
+ "production_countries": [
+  {
+   "iso_3166_1": "JP",
+   "name": "JP"
+  },
+  {
+   "iso_3166_1": "DE",
+   "name": "DE"
+  }
+ ],
+ "release_date": "2023-11-10",
+ "runtime": 124,
+ "status": "Released",
+ "title": "Dias Perfeitos",
+ "video": false,
+ "vote_average": 7.8,
+ "vote_count": 1000
+}

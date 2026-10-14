@@ -1,0 +1,37 @@
+{
+ "adult": false,
+ "backdrop_path": "/7yCXDq2Mq1PTaMr1gc2dzXzmSY8.jpg",
+ "genres": [
+  {
+   "id": 18,
+   "name": "Drama"
+  }
+ ],
+ "id": 965150,
+ "imdb_id": null,
+ "origin_country": [
+  "GB"
+ ],
+ "original_language": "en",
+ "original_title": "Aftersun",
+ "overview": "Sophie reflete sobre as férias que passou com o pai.",
+ "popularity": 10.0,
+ "poster_path": "/evKz85EKouVbIr51zy5fOtpNRPg.jpg",
+ "production_countries": [
+  {
+   "iso_3166_1": "GB",
+   "name": "GB"
+  },
+  {
+   "iso_3166_1": "US",
+   "name": "US"
+  }
+ ],
+ "release_date": "2022-10-21",
+ "runtime": 102,
+ "status": "Released",
+ "title": "Aftersun",
+ "video": false,
+ "vote_average": 7.7,
+ "vote_count": 1000
+}

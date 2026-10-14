@@ -1,0 +1,41 @@
+{
+ "adult": false,
+ "backdrop_path": "/7Z0uNWlEnzEjSGhH6ShFZpuwbJl.jpg",
+ "genres": [
+  {
+   "id": 16,
+   "name": "Animação"
+  },
+  {
+   "id": 10751,
+   "name": "Família"
+  },
+  {
+   "id": 14,
+   "name": "Fantasia"
+  }
+ ],
+ "id": 51739,
+ "imdb_id": null,
+ "origin_country": [
+  "JP"
+ ],
+ "original_language": "ja",
+ "original_title": "借りぐらしのアリエッティ",
+ "overview": "Arrietty vive com a família sob o assoalho de uma casa.",
+ "popularity": 10.0,
+ "poster_path": "/oc2OB2KDmSRDMelKEAA1n4YgQx2.jpg",
+ "production_countries": [
+  {
+   "iso_3166_1": "JP",
+   "name": "JP"
+  }
+ ],
+ "release_date": "2010-07-17",
+ "runtime": 94,
+ "status": "Released",
+ "title": "O Mundo dos Pequeninos",
+ "video": false,
+ "vote_average": 7.3,
+ "vote_count": 1000
+}

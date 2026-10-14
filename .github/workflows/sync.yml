@@ -1,0 +1,45 @@
+name: Sync
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # daily, 06:00 in Brasília
+  workflow_dispatch:
+
+concurrency:
+  group: sync
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24 # runs the .ts Sync natively
+      - run: npm run sync
+        env:
+          TMDB_API_TOKEN: ${{ secrets.TMDB_API_TOKEN }}
+      - id: commit
+        run: |
+          git add data
+          if git diff --cached --quiet; then echo changed=false >> "$GITHUB_OUTPUT"; exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Sync Combined Watchlist'
+          git pull --rebase
+          git push
+          echo changed=true >> "$GITHUB_OUTPUT"
+
+  # A push with GITHUB_TOKEN doesn't trigger deploy.yml, so call it directly.
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml
