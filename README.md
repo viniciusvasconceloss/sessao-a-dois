@@ -4,9 +4,16 @@
 
 [Português](#português) · [English](#english)
 
+<p>
+  <img src="docs/screenshots/iphone.jpg" alt="Sessão a dois no iPhone" height="420">
+  <img src="docs/screenshots/desktop.jpg" alt="Sessão a dois no navegador do computador" height="420">
+</p>
+
 ## Português
 
 Eu e minha namorada temos cada um uma watchlist no Letterboxd. O app junta as duas numa lista só e mostra onde cada filme pode ser visto no Brasil, pra gente decidir rápido o que assistir.
+
+Foi feito pensando no iPhone (Safari), mas funciona em qualquer navegador, no celular, tablet ou computador.
 
 - **Lista combinada**: filtra por filmes que estão na lista de um, do outro ou dos dois.
 - **Onde assistir**: serviços de streaming, grátis, com anúncios, aluguel ou compra (dados do TMDB).
@@ -22,6 +29,8 @@ Pra configurar e rodar localmente, veja [docs/setup.md](docs/setup.md).
 ## English
 
 My girlfriend and I each keep a Letterboxd watchlist. This app merges both into one list and shows where each film can be watched in Brazil, so we can quickly pick something together.
+
+It was designed for the iPhone (Safari) first, but works in any browser, on phone, tablet or desktop.
 
 - **Combined list**: filter by films on one person's list, the other's, or both.
 - **Where to watch**: subscription, free, ads, rent or buy (data from TMDB).
