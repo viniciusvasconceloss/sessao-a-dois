@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-22T14:17:06.630Z",
+  "syncedAt": "2026-10-23T14:00:15.440Z",
   "films": [
     {
       "tmdbId": 16307,
@@ -187,7 +187,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/886755-el-suplente/watch?locale=BR",
       "filmFetchedAt": "2026-10-16T13:41:34.387Z",
-      "offersFetchedAt": "2026-10-16T13:41:34.387Z",
+      "offersFetchedAt": "2026-10-23T14:00:15.440Z",
       "owners": {
         "sarateves": 4
       },
@@ -224,7 +224,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/49984-silvia-prieto/watch?locale=BR",
       "filmFetchedAt": "2026-10-16T13:41:34.387Z",
-      "offersFetchedAt": "2026-10-16T13:41:34.387Z",
+      "offersFetchedAt": "2026-10-23T14:00:15.440Z",
       "owners": {
         "sarateves": 5
       },
@@ -268,7 +268,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/1587-what-s-eating-gilbert-grape/watch?locale=BR",
       "filmFetchedAt": "2026-10-16T13:41:34.387Z",
-      "offersFetchedAt": "2026-10-16T13:41:34.387Z",
+      "offersFetchedAt": "2026-10-23T14:00:15.440Z",
       "owners": {
         "sarateves": 6
       },
