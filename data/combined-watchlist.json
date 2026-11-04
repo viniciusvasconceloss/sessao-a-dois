@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-03T16:46:27.994Z",
+  "syncedAt": "2026-11-04T16:45:29.965Z",
   "films": [
     {
       "tmdbId": 256057,
@@ -147,7 +147,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/93934-je-tu-il-elle/watch?locale=BR",
       "filmFetchedAt": "2026-10-28T15:40:43.293Z",
-      "offersFetchedAt": "2026-10-28T15:40:43.293Z",
+      "offersFetchedAt": "2026-11-04T16:45:29.965Z",
       "owners": {
         "sarateves": 4
       },
@@ -176,7 +176,7 @@
       "offers": [],
       "justwatch": null,
       "filmFetchedAt": "2026-10-28T15:40:43.293Z",
-      "offersFetchedAt": "2026-10-28T15:40:43.293Z",
+      "offersFetchedAt": "2026-11-04T16:45:29.965Z",
       "owners": {
         "sarateves": 5
       },
@@ -207,7 +207,7 @@
       "offers": [],
       "justwatch": null,
       "filmFetchedAt": "2026-10-28T15:40:43.293Z",
-      "offersFetchedAt": "2026-10-28T15:40:43.293Z",
+      "offersFetchedAt": "2026-11-04T16:45:29.965Z",
       "owners": {
         "sarateves": 6
       },
@@ -286,7 +286,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/318846-the-big-short/watch?locale=BR",
       "filmFetchedAt": "2026-10-28T15:40:43.293Z",
-      "offersFetchedAt": "2026-10-28T15:40:43.293Z",
+      "offersFetchedAt": "2026-11-04T16:45:29.965Z",
       "owners": {
         "sarateves": 7
       },
