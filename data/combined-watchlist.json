@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-06T16:32:04.681Z",
+  "syncedAt": "2026-11-07T15:20:22.591Z",
   "films": [
     {
       "tmdbId": 256057,
@@ -17333,7 +17333,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/27850-halloweentown/watch?locale=BR",
       "filmFetchedAt": "2026-10-31T14:57:14.210Z",
-      "offersFetchedAt": "2026-10-31T14:57:14.210Z",
+      "offersFetchedAt": "2026-11-07T15:20:22.591Z",
       "owners": {
         "v_inicius": 1
       },
