@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-07T15:20:22.591Z",
+  "syncedAt": "2026-11-08T15:42:33.378Z",
   "films": [
     {
       "tmdbId": 256057,
@@ -17294,7 +17294,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/792293-dumb-money/watch?locale=BR",
       "filmFetchedAt": "2026-11-01T15:40:45.574Z",
-      "offersFetchedAt": "2026-11-01T15:40:45.574Z",
+      "offersFetchedAt": "2026-11-08T15:42:33.378Z",
       "owners": {
         "v_inicius": 0
       },
