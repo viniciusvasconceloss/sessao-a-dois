@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-12T17:16:53.548Z",
+  "syncedAt": "2026-11-13T16:53:15.179Z",
   "films": [
     {
       "tmdbId": 11654,
@@ -678,7 +678,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/886755-el-suplente/watch?locale=BR",
       "filmFetchedAt": "2026-10-16T13:41:34.387Z",
-      "offersFetchedAt": "2026-11-06T16:32:04.681Z",
+      "offersFetchedAt": "2026-11-13T16:53:15.179Z",
       "owners": {
         "sarateves": 16
       },
@@ -715,7 +715,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/49984-silvia-prieto/watch?locale=BR",
       "filmFetchedAt": "2026-10-16T13:41:34.387Z",
-      "offersFetchedAt": "2026-11-06T16:32:04.681Z",
+      "offersFetchedAt": "2026-11-13T16:53:15.179Z",
       "owners": {
         "sarateves": 17
       },
@@ -14895,44 +14895,6 @@
       }
     },
     {
-      "tmdbId": 508965,
-      "slug": "klaus",
-      "title": "Klaus",
-      "originalTitle": "Klaus",
-      "overview": "Um carteiro egoísta e um fabricante de brinquedos solitário cultivam uma amizade improvável e levam alegria a uma cidade fria e sombria.",
-      "year": 2019,
-      "runtime": 97,
-      "genres": [
-        "Animação",
-        "Família",
-        "Comédia"
-      ],
-      "countries": [
-        "ES"
-      ],
-      "language": "en",
-      "rating": 8.216,
-      "poster": "/guyZW9AQdTMp2F4esttjyIMMK1k.jpg",
-      "backdrop": "/cYQvXNPZLow73lhspVQ7CYlT3Mi.jpg",
-      "offers": [
-        {
-          "providerId": 8,
-          "provider": "Netflix",
-          "logo": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
-          "type": "subscription"
-        }
-      ],
-      "justwatch": "https://www.themoviedb.org/movie/508965-klaus/watch?locale=BR",
-      "filmFetchedAt": "2026-10-14T14:14:37.824Z",
-      "offersFetchedAt": "2026-11-12T17:16:53.548Z",
-      "owners": {
-        "sarateves": 314
-      },
-      "addedAt": {
-        "sarateves": "2026-10-14T17:04:55.058Z"
-      }
-    },
-    {
       "tmdbId": 203158,
       "slug": "they-dont-wear-black-tie",
       "title": "Eles Não Usam Black-Tie",
@@ -14968,7 +14930,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 315,
+        "sarateves": 314,
         "v_inicius": 164
       },
       "addedAt": {
@@ -15008,7 +14970,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 316
+        "sarateves": 315
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15072,7 +15034,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 317
+        "sarateves": 316
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15140,7 +15102,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 318
+        "sarateves": 317
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15178,7 +15140,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 319
+        "sarateves": 318
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15240,7 +15202,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 320
+        "sarateves": 319
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15270,7 +15232,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 321
+        "sarateves": 320
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15331,7 +15293,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 322,
+        "sarateves": 321,
         "v_inicius": 228
       },
       "addedAt": {
@@ -15381,7 +15343,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 323
+        "sarateves": 322
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15439,7 +15401,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 324
+        "sarateves": 323
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15501,7 +15463,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 325
+        "sarateves": 324
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15546,7 +15508,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 326,
+        "sarateves": 325,
         "v_inicius": 264
       },
       "addedAt": {
@@ -15604,7 +15566,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 327
+        "sarateves": 326
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15650,7 +15612,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 328
+        "sarateves": 327
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15680,7 +15642,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 329
+        "sarateves": 328
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15741,7 +15703,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 330,
+        "sarateves": 329,
         "v_inicius": 101
       },
       "addedAt": {
@@ -15779,7 +15741,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 331
+        "sarateves": 330
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15811,7 +15773,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 332
+        "sarateves": 331
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15842,7 +15804,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 333,
+        "sarateves": 332,
         "v_inicius": 212
       },
       "addedAt": {
@@ -15884,7 +15846,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 334
+        "sarateves": 333
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15915,7 +15877,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 335
+        "sarateves": 334
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -15973,7 +15935,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 336
+        "sarateves": 335
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16029,7 +15991,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 337
+        "sarateves": 336
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16089,7 +16051,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 338
+        "sarateves": 337
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16120,7 +16082,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 339
+        "sarateves": 338
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16156,7 +16118,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 340
+        "sarateves": 339
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16187,7 +16149,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 341
+        "sarateves": 340
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16219,7 +16181,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 342
+        "sarateves": 341
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16255,7 +16217,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 343
+        "sarateves": 342
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16299,7 +16261,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 344
+        "sarateves": 343
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16367,7 +16329,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 345
+        "sarateves": 344
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16413,7 +16375,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 346
+        "sarateves": 345
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16444,7 +16406,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 347,
+        "sarateves": 346,
         "v_inicius": 197
       },
       "addedAt": {
@@ -16507,7 +16469,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 348
+        "sarateves": 347
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16556,7 +16518,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 349
+        "sarateves": 348
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16605,7 +16567,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 350
+        "sarateves": 349
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16635,7 +16597,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 351,
+        "sarateves": 350,
         "v_inicius": 248
       },
       "addedAt": {
@@ -16705,7 +16667,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 352
+        "sarateves": 351
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16790,7 +16752,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 353,
+        "sarateves": 352,
         "v_inicius": 202
       },
       "addedAt": {
@@ -16830,7 +16792,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 354
+        "sarateves": 353
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16869,7 +16831,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 355
+        "sarateves": 354
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16898,7 +16860,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 356
+        "sarateves": 355
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -16972,7 +16934,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 357
+        "sarateves": 356
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -17040,7 +17002,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 358
+        "sarateves": 357
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -17070,7 +17032,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 359
+        "sarateves": 358
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -17118,7 +17080,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 360
+        "sarateves": 359
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -17149,7 +17111,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 361
+        "sarateves": 360
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -17179,7 +17141,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 362
+        "sarateves": 361
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -17247,7 +17209,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 363
+        "sarateves": 362
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -17309,7 +17271,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 364
+        "sarateves": 363
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -17339,7 +17301,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 365
+        "sarateves": 364
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -17400,7 +17362,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-12T17:16:53.548Z",
       "owners": {
-        "sarateves": 366
+        "sarateves": 365
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
