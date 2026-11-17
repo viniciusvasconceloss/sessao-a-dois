@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-15T16:00:32.101Z",
+  "syncedAt": "2026-11-17T18:03:40.561Z",
   "films": [
     {
       "tmdbId": 403431,
@@ -297,7 +297,7 @@
       "offers": [],
       "justwatch": null,
       "filmFetchedAt": "2026-11-10T16:43:25.731Z",
-      "offersFetchedAt": "2026-11-10T16:43:25.731Z",
+      "offersFetchedAt": "2026-11-17T18:03:40.561Z",
       "owners": {
         "sarateves": 5
       },
@@ -640,7 +640,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/8983-felidae/watch?locale=BR",
       "filmFetchedAt": "2026-10-26T15:43:35.274Z",
-      "offersFetchedAt": "2026-11-09T19:25:39.256Z",
+      "offersFetchedAt": "2026-11-17T18:03:40.561Z",
       "owners": {
         "sarateves": 14
       },
@@ -681,7 +681,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/445-cache/watch?locale=BR",
       "filmFetchedAt": "2026-10-26T15:43:35.274Z",
-      "offersFetchedAt": "2026-11-09T19:25:39.256Z",
+      "offersFetchedAt": "2026-11-17T18:03:40.561Z",
       "owners": {
         "sarateves": 15
       },
