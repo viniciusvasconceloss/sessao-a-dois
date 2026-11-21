@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-20T17:28:03.585Z",
+  "syncedAt": "2026-11-21T16:32:57.876Z",
   "films": [
     {
       "tmdbId": 403431,
@@ -54,7 +54,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/403431-brigsby-bear/watch?locale=BR",
       "filmFetchedAt": "2026-11-14T15:27:40.162Z",
-      "offersFetchedAt": "2026-11-14T15:27:40.162Z",
+      "offersFetchedAt": "2026-11-21T16:32:57.876Z",
       "owners": {
         "sarateves": 0
       },
@@ -115,7 +115,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/443463-leave-no-trace/watch?locale=BR",
       "filmFetchedAt": "2026-11-14T15:27:40.162Z",
-      "offersFetchedAt": "2026-11-14T15:27:40.162Z",
+      "offersFetchedAt": "2026-11-21T16:32:57.876Z",
       "owners": {
         "sarateves": 1
       },
@@ -17725,7 +17725,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/27850-halloweentown/watch?locale=BR",
       "filmFetchedAt": "2026-10-31T14:57:14.210Z",
-      "offersFetchedAt": "2026-11-14T15:27:40.162Z",
+      "offersFetchedAt": "2026-11-21T16:32:57.876Z",
       "owners": {
         "v_inicius": 6
       },
