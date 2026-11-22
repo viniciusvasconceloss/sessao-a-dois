@@ -1,6 +1,37 @@
 {
-  "syncedAt": "2026-11-21T16:32:57.876Z",
+  "syncedAt": "2026-11-22T16:49:54.654Z",
   "films": [
+    {
+      "tmdbId": 1061798,
+      "slug": "jim-queen",
+      "title": "Jim Queen à la Recherche de la Chloroqueer",
+      "originalTitle": "Jim Queen à la Recherche de la Chloroqueer",
+      "overview": "Jim, ícone sexy da cena queer, vê sua vida virar de cabeça pra baixo quando contrai Heterotopzis, um vírus estranho que transforma homens gays... em héteros. A partir de então, todos viram as costas pra ele, exceto seu último seguidor (e primeiro admirador), Lucien, um jovem que luta pra se aceitar. Juntos, eles partirão em busca de um remédio misterioso capaz de curar Jim e evitar a extinção da sua comunidade.",
+      "year": 2026,
+      "runtime": 85,
+      "genres": [
+        "Animação",
+        "Comédia"
+      ],
+      "countries": [
+        "FR",
+        "BE"
+      ],
+      "language": "fr",
+      "rating": 7.8,
+      "poster": "/bILLk1YLaCWmJrhBXXWfYqZpMr8.jpg",
+      "backdrop": "/gZDF8oChSplhdwTCjFR1SHwKw8s.jpg",
+      "offers": [],
+      "justwatch": null,
+      "filmFetchedAt": "2026-11-22T16:49:54.654Z",
+      "offersFetchedAt": "2026-11-22T16:49:54.654Z",
+      "owners": {
+        "sarateves": 0
+      },
+      "addedAt": {
+        "sarateves": "2026-11-22T16:49:54.654Z"
+      }
+    },
     {
       "tmdbId": 403431,
       "slug": "brigsby-bear",
@@ -56,7 +87,7 @@
       "filmFetchedAt": "2026-11-14T15:27:40.162Z",
       "offersFetchedAt": "2026-11-21T16:32:57.876Z",
       "owners": {
-        "sarateves": 0
+        "sarateves": 1
       },
       "addedAt": {
         "sarateves": "2026-11-14T15:27:40.162Z"
@@ -117,7 +148,7 @@
       "filmFetchedAt": "2026-11-14T15:27:40.162Z",
       "offersFetchedAt": "2026-11-21T16:32:57.876Z",
       "owners": {
-        "sarateves": 1
+        "sarateves": 2
       },
       "addedAt": {
         "sarateves": "2026-11-14T15:27:40.162Z"
@@ -172,7 +203,7 @@
       "filmFetchedAt": "2026-11-12T17:16:53.548Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 2
+        "sarateves": 3
       },
       "addedAt": {
         "sarateves": "2026-11-12T17:16:53.548Z"
@@ -234,7 +265,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 3,
+        "sarateves": 4,
         "v_inicius": 67
       },
       "addedAt": {
@@ -268,7 +299,7 @@
       "filmFetchedAt": "2026-11-11T16:49:26.749Z",
       "offersFetchedAt": "2026-11-18T17:43:51.700Z",
       "owners": {
-        "sarateves": 4
+        "sarateves": 5
       },
       "addedAt": {
         "sarateves": "2026-11-11T16:49:26.749Z"
@@ -299,7 +330,7 @@
       "filmFetchedAt": "2026-11-10T16:43:25.731Z",
       "offersFetchedAt": "2026-11-17T18:03:40.561Z",
       "owners": {
-        "sarateves": 5
+        "sarateves": 6
       },
       "addedAt": {
         "sarateves": "2026-11-10T16:43:25.731Z"
@@ -329,7 +360,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 6,
+        "sarateves": 7,
         "v_inicius": 120
       },
       "addedAt": {
@@ -361,7 +392,7 @@
       "filmFetchedAt": "2026-10-29T15:47:04.057Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 7
+        "sarateves": 8
       },
       "addedAt": {
         "sarateves": "2026-10-29T15:47:04.057Z"
@@ -388,7 +419,7 @@
       "filmFetchedAt": "2026-10-29T15:47:04.057Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 8
+        "sarateves": 9
       },
       "addedAt": {
         "sarateves": "2026-10-29T15:47:04.057Z"
@@ -426,7 +457,7 @@
       "filmFetchedAt": "2026-10-28T15:40:43.293Z",
       "offersFetchedAt": "2026-11-18T17:43:51.700Z",
       "owners": {
-        "sarateves": 9
+        "sarateves": 10
       },
       "addedAt": {
         "sarateves": "2026-10-28T15:40:43.293Z"
@@ -455,7 +486,7 @@
       "filmFetchedAt": "2026-10-28T15:40:43.293Z",
       "offersFetchedAt": "2026-11-18T17:43:51.700Z",
       "owners": {
-        "sarateves": 10
+        "sarateves": 11
       },
       "addedAt": {
         "sarateves": "2026-10-28T15:40:43.293Z"
@@ -486,7 +517,7 @@
       "filmFetchedAt": "2026-10-28T15:40:43.293Z",
       "offersFetchedAt": "2026-11-18T17:43:51.700Z",
       "owners": {
-        "sarateves": 11
+        "sarateves": 12
       },
       "addedAt": {
         "sarateves": "2026-10-28T15:40:43.293Z"
@@ -565,7 +596,7 @@
       "filmFetchedAt": "2026-10-28T15:40:43.293Z",
       "offersFetchedAt": "2026-11-18T17:43:51.700Z",
       "owners": {
-        "sarateves": 12
+        "sarateves": 13
       },
       "addedAt": {
         "sarateves": "2026-10-28T15:40:43.293Z"
@@ -615,7 +646,7 @@
       "filmFetchedAt": "2026-10-26T15:43:35.274Z",
       "offersFetchedAt": "2026-11-17T18:03:40.561Z",
       "owners": {
-        "sarateves": 13
+        "sarateves": 14
       },
       "addedAt": {
         "sarateves": "2026-10-26T15:43:35.274Z"
@@ -656,7 +687,7 @@
       "filmFetchedAt": "2026-10-26T15:43:35.274Z",
       "offersFetchedAt": "2026-11-17T18:03:40.561Z",
       "owners": {
-        "sarateves": 14
+        "sarateves": 15
       },
       "addedAt": {
         "sarateves": "2026-10-26T15:43:35.274Z"
@@ -694,7 +725,7 @@
       "filmFetchedAt": "2026-10-19T16:06:32.453Z",
       "offersFetchedAt": "2026-11-18T17:43:51.700Z",
       "owners": {
-        "sarateves": 15
+        "sarateves": 16
       },
       "addedAt": {
         "sarateves": "2026-10-19T16:06:32.453Z"
@@ -732,7 +763,7 @@
       "filmFetchedAt": "2026-10-19T16:06:32.453Z",
       "offersFetchedAt": "2026-11-18T17:43:51.700Z",
       "owners": {
-        "sarateves": 16
+        "sarateves": 17
       },
       "addedAt": {
         "sarateves": "2026-10-19T16:06:32.453Z"
@@ -775,7 +806,7 @@
       "filmFetchedAt": "2026-10-16T13:41:34.387Z",
       "offersFetchedAt": "2026-11-20T17:28:03.585Z",
       "owners": {
-        "sarateves": 17
+        "sarateves": 18
       },
       "addedAt": {
         "sarateves": "2026-10-16T13:41:34.387Z"
@@ -812,7 +843,7 @@
       "filmFetchedAt": "2026-10-16T13:41:34.387Z",
       "offersFetchedAt": "2026-11-20T17:28:03.585Z",
       "owners": {
-        "sarateves": 18
+        "sarateves": 19
       },
       "addedAt": {
         "sarateves": "2026-10-16T13:41:34.387Z"
@@ -880,7 +911,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 19,
+        "sarateves": 20,
         "v_inicius": 175
       },
       "addedAt": {
@@ -912,7 +943,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 20,
+        "sarateves": 21,
         "v_inicius": 13
       },
       "addedAt": {
@@ -952,7 +983,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 21,
+        "sarateves": 22,
         "v_inicius": 218
       },
       "addedAt": {
@@ -1004,7 +1035,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 22,
+        "sarateves": 23,
         "v_inicius": 158
       },
       "addedAt": {
@@ -1067,7 +1098,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 23,
+        "sarateves": 24,
         "v_inicius": 103
       },
       "addedAt": {
@@ -1138,7 +1169,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 24,
+        "sarateves": 25,
         "v_inicius": 33
       },
       "addedAt": {
@@ -1170,7 +1201,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 25
+        "sarateves": 26
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1201,7 +1232,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 26
+        "sarateves": 27
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1230,7 +1261,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 27,
+        "sarateves": 28,
         "v_inicius": 16
       },
       "addedAt": {
@@ -1262,7 +1293,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 28,
+        "sarateves": 29,
         "v_inicius": 14
       },
       "addedAt": {
@@ -1294,7 +1325,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 29
+        "sarateves": 30
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1324,7 +1355,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 30
+        "sarateves": 31
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1359,7 +1390,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 31
+        "sarateves": 32
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1388,7 +1419,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 32,
+        "sarateves": 33,
         "v_inicius": 148
       },
       "addedAt": {
@@ -1420,7 +1451,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 33
+        "sarateves": 34
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1471,7 +1502,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 34
+        "sarateves": 35
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1500,7 +1531,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 35
+        "sarateves": 36
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1536,7 +1567,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 36
+        "sarateves": 37
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1592,7 +1623,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 37
+        "sarateves": 38
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1636,7 +1667,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 38
+        "sarateves": 39
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1691,7 +1722,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 39
+        "sarateves": 40
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1729,7 +1760,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 40
+        "sarateves": 41
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1796,7 +1827,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 41
+        "sarateves": 42
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1856,7 +1887,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 42
+        "sarateves": 43
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1918,7 +1949,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 43
+        "sarateves": 44
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -1957,7 +1988,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 44
+        "sarateves": 45
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2005,7 +2036,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 45
+        "sarateves": 46
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2047,7 +2078,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 46
+        "sarateves": 47
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2114,7 +2145,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 47
+        "sarateves": 48
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2145,7 +2176,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 48
+        "sarateves": 49
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2181,7 +2212,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 49
+        "sarateves": 50
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2231,7 +2262,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 50
+        "sarateves": 51
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2275,7 +2306,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 51
+        "sarateves": 52
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2336,7 +2367,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 52
+        "sarateves": 53
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2367,7 +2398,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 53
+        "sarateves": 54
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2396,7 +2427,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 54
+        "sarateves": 55
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2432,7 +2463,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 55
+        "sarateves": 56
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2500,7 +2531,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 56
+        "sarateves": 57
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2580,7 +2611,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 57
+        "sarateves": 58
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2636,7 +2667,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 58
+        "sarateves": 59
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2674,7 +2705,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 59
+        "sarateves": 60
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
@@ -2714,50 +2745,10 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "sarateves": 60
+        "sarateves": 61
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z"
-      }
-    },
-    {
-      "tmdbId": 1329016,
-      "slug": "tony-2026",
-      "title": "Tony",
-      "originalTitle": "Tony",
-      "overview": "Aos 19 anos, Anthony Bourdain viaja para Provincetown e acaba entrando no mundo caótico de uma cozinha de restaurante, dando início a um verão que moldará o rumo de sua vida.",
-      "year": 2026,
-      "runtime": 106,
-      "genres": [
-        "Drama",
-        "Comédia"
-      ],
-      "countries": [
-        "US",
-        "CA"
-      ],
-      "language": "en",
-      "rating": 7.462,
-      "poster": "/uwZF5guNR5EnXkjIVTk4UPTVGiS.jpg",
-      "backdrop": "/uQvz6NdyhoWE6dMurFn0BriLIv9.jpg",
-      "offers": [
-        {
-          "providerId": 119,
-          "provider": "Amazon Prime Video",
-          "logo": "/gMZdpavHmxFNnLpMHwVxfqeux2g.png",
-          "type": "subscription"
-        }
-      ],
-      "justwatch": "https://www.themoviedb.org/movie/1329016-tony/watch?locale=BR",
-      "filmFetchedAt": "2026-10-14T14:14:37.824Z",
-      "offersFetchedAt": "2026-11-19T17:54:56.973Z",
-      "owners": {
-        "sarateves": 61,
-        "v_inicius": 10
-      },
-      "addedAt": {
-        "sarateves": "2026-10-14T17:04:55.058Z",
-        "v_inicius": "2026-10-14T17:04:55.058Z"
       }
     },
     {
@@ -17686,7 +17677,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/792293-dumb-money/watch?locale=BR",
       "filmFetchedAt": "2026-11-01T15:40:45.574Z",
-      "offersFetchedAt": "2026-11-15T16:00:32.101Z",
+      "offersFetchedAt": "2026-11-22T16:49:54.654Z",
       "owners": {
         "v_inicius": 5
       },
@@ -17888,6 +17879,44 @@
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
         "v_inicius": 9
+      },
+      "addedAt": {
+        "v_inicius": "2026-10-14T17:04:55.058Z"
+      }
+    },
+    {
+      "tmdbId": 1329016,
+      "slug": "tony-2026",
+      "title": "Tony",
+      "originalTitle": "Tony",
+      "overview": "Aos 19 anos, Anthony Bourdain viaja para Provincetown e acaba entrando no mundo caótico de uma cozinha de restaurante, dando início a um verão que moldará o rumo de sua vida.",
+      "year": 2026,
+      "runtime": 106,
+      "genres": [
+        "Drama",
+        "Comédia"
+      ],
+      "countries": [
+        "US",
+        "CA"
+      ],
+      "language": "en",
+      "rating": 7.462,
+      "poster": "/uwZF5guNR5EnXkjIVTk4UPTVGiS.jpg",
+      "backdrop": "/uQvz6NdyhoWE6dMurFn0BriLIv9.jpg",
+      "offers": [
+        {
+          "providerId": 119,
+          "provider": "Amazon Prime Video",
+          "logo": "/gMZdpavHmxFNnLpMHwVxfqeux2g.png",
+          "type": "subscription"
+        }
+      ],
+      "justwatch": "https://www.themoviedb.org/movie/1329016-tony/watch?locale=BR",
+      "filmFetchedAt": "2026-10-14T14:14:37.824Z",
+      "offersFetchedAt": "2026-11-19T17:54:56.973Z",
+      "owners": {
+        "v_inicius": 10
       },
       "addedAt": {
         "v_inicius": "2026-10-14T17:04:55.058Z"
