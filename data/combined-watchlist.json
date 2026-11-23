@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-22T16:49:54.654Z",
+  "syncedAt": "2026-11-23T20:48:04.025Z",
   "films": [
     {
       "tmdbId": 1061798,
@@ -26,10 +26,12 @@
       "filmFetchedAt": "2026-11-22T16:49:54.654Z",
       "offersFetchedAt": "2026-11-22T16:49:54.654Z",
       "owners": {
-        "sarateves": 0
+        "sarateves": 0,
+        "v_inicius": 0
       },
       "addedAt": {
-        "sarateves": "2026-11-22T16:49:54.654Z"
+        "sarateves": "2026-11-22T16:49:54.654Z",
+        "v_inicius": "2026-11-23T20:48:04.025Z"
       }
     },
     {
@@ -9826,7 +9828,7 @@
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
         "sarateves": 206,
-        "v_inicius": 2
+        "v_inicius": 3
       },
       "addedAt": {
         "sarateves": "2026-10-14T17:04:55.058Z",
@@ -17439,7 +17441,7 @@
       "filmFetchedAt": "2026-11-19T17:54:56.973Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "v_inicius": 0
+        "v_inicius": 1
       },
       "addedAt": {
         "v_inicius": "2026-11-19T17:54:56.973Z"
@@ -17500,7 +17502,7 @@
       "filmFetchedAt": "2026-11-19T17:54:56.973Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "v_inicius": 1
+        "v_inicius": 2
       },
       "addedAt": {
         "v_inicius": "2026-11-19T17:54:56.973Z"
@@ -17550,7 +17552,7 @@
       "filmFetchedAt": "2026-11-18T17:43:51.700Z",
       "offersFetchedAt": "2026-11-18T17:43:51.700Z",
       "owners": {
-        "v_inicius": 3
+        "v_inicius": 4
       },
       "addedAt": {
         "v_inicius": "2026-11-18T17:43:51.700Z"
@@ -17617,7 +17619,7 @@
       "filmFetchedAt": "2026-11-18T17:43:51.700Z",
       "offersFetchedAt": "2026-11-18T17:43:51.700Z",
       "owners": {
-        "v_inicius": 4
+        "v_inicius": 5
       },
       "addedAt": {
         "v_inicius": "2026-11-18T17:43:51.700Z"
@@ -17679,7 +17681,7 @@
       "filmFetchedAt": "2026-11-01T15:40:45.574Z",
       "offersFetchedAt": "2026-11-22T16:49:54.654Z",
       "owners": {
-        "v_inicius": 5
+        "v_inicius": 6
       },
       "addedAt": {
         "v_inicius": "2026-11-01T15:40:45.574Z"
@@ -17718,7 +17720,7 @@
       "filmFetchedAt": "2026-10-31T14:57:14.210Z",
       "offersFetchedAt": "2026-11-21T16:32:57.876Z",
       "owners": {
-        "v_inicius": 6
+        "v_inicius": 7
       },
       "addedAt": {
         "v_inicius": "2026-10-31T14:57:14.210Z"
@@ -17776,7 +17778,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "v_inicius": 7
+        "v_inicius": 8
       },
       "addedAt": {
         "v_inicius": "2026-10-26T15:43:35.274Z"
@@ -17839,7 +17841,7 @@
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
-        "v_inicius": 8
+        "v_inicius": 9
       },
       "addedAt": {
         "v_inicius": "2026-10-14T17:04:55.058Z"
@@ -17875,44 +17877,6 @@
         }
       ],
       "justwatch": "https://www.themoviedb.org/movie/51739-jie-rigurashinoariettei/watch?locale=BR",
-      "filmFetchedAt": "2026-10-14T14:14:37.824Z",
-      "offersFetchedAt": "2026-11-19T17:54:56.973Z",
-      "owners": {
-        "v_inicius": 9
-      },
-      "addedAt": {
-        "v_inicius": "2026-10-14T17:04:55.058Z"
-      }
-    },
-    {
-      "tmdbId": 1329016,
-      "slug": "tony-2026",
-      "title": "Tony",
-      "originalTitle": "Tony",
-      "overview": "Aos 19 anos, Anthony Bourdain viaja para Provincetown e acaba entrando no mundo caótico de uma cozinha de restaurante, dando início a um verão que moldará o rumo de sua vida.",
-      "year": 2026,
-      "runtime": 106,
-      "genres": [
-        "Drama",
-        "Comédia"
-      ],
-      "countries": [
-        "US",
-        "CA"
-      ],
-      "language": "en",
-      "rating": 7.462,
-      "poster": "/uwZF5guNR5EnXkjIVTk4UPTVGiS.jpg",
-      "backdrop": "/uQvz6NdyhoWE6dMurFn0BriLIv9.jpg",
-      "offers": [
-        {
-          "providerId": 119,
-          "provider": "Amazon Prime Video",
-          "logo": "/gMZdpavHmxFNnLpMHwVxfqeux2g.png",
-          "type": "subscription"
-        }
-      ],
-      "justwatch": "https://www.themoviedb.org/movie/1329016-tony/watch?locale=BR",
       "filmFetchedAt": "2026-10-14T14:14:37.824Z",
       "offersFetchedAt": "2026-11-19T17:54:56.973Z",
       "owners": {
