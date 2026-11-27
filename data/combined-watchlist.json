@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-26T18:46:28.079Z",
+  "syncedAt": "2026-11-27T18:38:31.110Z",
   "films": [
     {
       "tmdbId": 1117319,
@@ -720,7 +720,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/886755-el-suplente/watch?locale=BR",
       "filmFetchedAt": "2026-10-16T13:41:34.387Z",
-      "offersFetchedAt": "2026-11-20T17:28:03.585Z",
+      "offersFetchedAt": "2026-11-27T18:38:31.110Z",
       "owners": {
         "sarateves": 16
       },
@@ -757,7 +757,7 @@
       ],
       "justwatch": "https://www.themoviedb.org/movie/49984-silvia-prieto/watch?locale=BR",
       "filmFetchedAt": "2026-10-16T13:41:34.387Z",
-      "offersFetchedAt": "2026-11-20T17:28:03.585Z",
+      "offersFetchedAt": "2026-11-27T18:38:31.110Z",
       "owners": {
         "sarateves": 17
       },
